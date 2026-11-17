@@ -143,6 +143,22 @@ test.describe('Firebase Authentication emulator', () => {
     }), { timeout: 15000 }).toBe(true);
   });
 
+  test('blocked Google popup falls back to redirect through the Auth Emulator', async ({ page }) => {
+    await page.addInitScript(() => {
+      window.open = () => null;
+    });
+    await openAuth(page);
+    await page.locator('#auth-google').click({ noWaitAfter: true });
+    await expect.poll(() => page.url(), { timeout: 15000 })
+      .toMatch(/127\.0\.0\.1:9099\/emulator\/auth\/handler.*authType=signInViaRedirect/);
+    await page.getByRole('button', { name: 'Add new account' }).click({ noWaitAfter: true });
+    await page.locator('#autogen-button').click();
+    await expect(page.locator('#email-input')).not.toHaveValue('');
+    await page.locator('#sign-in').click({ noWaitAfter: true });
+    await expect(page.locator('#auth-action-btn')).toHaveText('Sign out', { timeout: 20000 });
+    await expect(page.locator('body')).toHaveAttribute('data-auth-state', 'authenticated');
+  });
+
   test('password visibility toggle is accessible and reversible', async ({ page }) => {
     await openAuth(page);
     const password = page.locator('#auth-password');
