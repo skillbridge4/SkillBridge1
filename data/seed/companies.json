@@ -10,7 +10,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "hexaware",
@@ -23,7 +26,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "persistent-systems",
@@ -36,7 +42,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "coforge",
@@ -49,7 +58,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "zensar",
@@ -62,7 +74,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "ltimindtree",
@@ -75,7 +90,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "birlasoft",
@@ -88,7 +106,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "cyient",
@@ -101,7 +122,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "kpit",
@@ -114,7 +138,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "sonata-software",
@@ -127,7 +154,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "happiest-minds",
@@ -140,7 +170,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "deloitte-india",
@@ -153,7 +186,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "ey-gds",
@@ -166,7 +202,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "kpmg-india",
@@ -179,7 +218,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "pwc-india",
@@ -192,7 +234,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "oracle-india",
@@ -205,7 +250,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "sap-labs-india",
@@ -218,7 +266,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "salesforce-india",
@@ -231,7 +282,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "cisco-india",
@@ -244,7 +298,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "dell",
@@ -257,7 +314,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "qualcomm-india",
@@ -270,7 +330,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "nvidia-india",
@@ -283,7 +346,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "samsung-randd-india",
@@ -296,7 +362,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "texas-instruments-india",
@@ -309,7 +378,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "honeywell-india",
@@ -322,7 +394,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "goldman-sachs-india",
@@ -335,7 +410,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "jp-morgan-india",
@@ -348,7 +426,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "morgan-stanley-india",
@@ -361,7 +442,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "walmart-global-tech-india",
@@ -374,7 +458,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "atlassian-india",
@@ -387,7 +474,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "uber-india",
@@ -400,7 +490,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "ibm-india",
@@ -413,7 +506,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "wipro",
@@ -426,7 +522,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "hcltech",
@@ -439,7 +538,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "cognizant-india",
@@ -452,7 +554,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "tcs",
@@ -465,7 +570,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "zoho",
@@ -478,7 +586,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "freshworks",
@@ -491,7 +602,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "razorpay",
@@ -504,7 +618,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "cred",
@@ -517,7 +634,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "meesho",
@@ -530,7 +650,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "groww",
@@ -543,7 +666,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "zerodha",
@@ -556,7 +682,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "phonepe",
@@ -569,7 +698,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "paytm",
@@ -582,7 +714,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "swiggy",
@@ -595,7 +730,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "zomato",
@@ -608,7 +746,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "flipkart",
@@ -621,7 +762,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "ola",
@@ -634,7 +778,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "nykaa",
@@ -647,7 +794,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "postman",
@@ -660,7 +810,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "browserstack",
@@ -673,7 +826,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "chargebee",
@@ -686,7 +842,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "juspay",
@@ -699,7 +858,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "zepto",
@@ -712,7 +874,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "dream11",
@@ -725,7 +890,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "upgrad",
@@ -738,7 +906,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "physicswallah",
@@ -751,7 +922,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "unacademy",
@@ -764,7 +938,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "lenskart",
@@ -777,7 +954,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "urban-company",
@@ -790,7 +970,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "delhivery",
@@ -803,7 +986,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "pine-labs",
@@ -816,7 +1002,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "cars24",
@@ -829,7 +1018,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "licious",
@@ -842,7 +1034,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "darwinbox",
@@ -855,7 +1050,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "landt",
@@ -868,7 +1066,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "tata-motors",
@@ -881,7 +1082,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "tata-steel",
@@ -894,7 +1098,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "tata-power",
@@ -907,7 +1114,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "mahindra",
@@ -920,7 +1130,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "bajaj-auto",
@@ -933,7 +1146,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "tvs-motor",
@@ -946,7 +1162,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "hero-motocorp",
@@ -959,7 +1178,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "ashok-leyland",
@@ -972,7 +1194,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "bosch-india",
@@ -985,7 +1210,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "siemens-india",
@@ -998,7 +1226,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "abb-india",
@@ -1011,7 +1242,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "schneider-electric-india",
@@ -1024,7 +1258,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "ge-vernova-india",
@@ -1037,7 +1274,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "reliance-industries",
@@ -1050,7 +1290,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "adani-group",
@@ -1063,7 +1306,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "jsw",
@@ -1076,7 +1322,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "godrej",
@@ -1089,7 +1338,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "havells",
@@ -1102,7 +1354,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "isro",
@@ -1115,7 +1370,10 @@
     "careersUrl": "https://www.isro.gov.in/InternshipAndProjects.html",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://www.isro.gov.in/",
+    "isDemo": false
   },
   {
     "id": "drdo",
@@ -1128,7 +1386,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "barc",
@@ -1141,7 +1402,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "csir",
@@ -1154,7 +1418,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "niti-aayog",
@@ -1167,7 +1434,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "ongc",
@@ -1180,7 +1450,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "bhel",
@@ -1193,7 +1466,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "ntpc",
@@ -1206,7 +1482,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "indian-oil",
@@ -1219,7 +1498,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "hal",
@@ -1232,7 +1514,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "bel",
@@ -1245,7 +1530,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "gail",
@@ -1258,7 +1546,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "sail",
@@ -1271,7 +1562,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "coal-india",
@@ -1284,7 +1578,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "power-grid",
@@ -1297,7 +1594,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "c-dac",
@@ -1310,7 +1610,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "nic",
@@ -1323,7 +1626,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "pm-internship-scheme",
@@ -1336,7 +1642,10 @@
     "careersUrl": "https://pminternship.mca.gov.in/",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://pminternship.mca.gov.in/",
+    "isDemo": false
   },
   {
     "id": "skill-india-digital",
@@ -1349,7 +1658,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "iisc",
@@ -1362,7 +1674,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "infosys-springboard",
@@ -1375,7 +1690,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "tcs-ion",
@@ -1388,7 +1706,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "nptel",
@@ -1401,7 +1722,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "swayam",
@@ -1414,7 +1738,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "google-career-certificates",
@@ -1427,7 +1754,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "microsoft-learn-india",
@@ -1440,7 +1770,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "aws-educate",
@@ -1453,7 +1786,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "internshala-trainings",
@@ -1466,7 +1802,10 @@
     "careersUrl": null,
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-10"
+    "lastVerified": "2026-11-10",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "google-summer-of-code",
@@ -1479,7 +1818,10 @@
     "careersUrl": "https://summerofcode.withgoogle.com/",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://summerofcode.withgoogle.com/",
+    "isDemo": false
   },
   {
     "id": "isro-centre-ursc",
@@ -1492,7 +1834,10 @@
     "careersUrl": "https://www.ursc.gov.in/hrd/students.jsp",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://www.ursc.gov.in/",
+    "isDemo": false
   },
   {
     "id": "isro-centre-sac",
@@ -1505,7 +1850,10 @@
     "careersUrl": "https://www.sac.gov.in/srtd",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://www.sac.gov.in/",
+    "isDemo": false
   },
   {
     "id": "isro-centre-mcf",
@@ -1518,7 +1866,10 @@
     "careersUrl": "https://www.mcf.gov.in/website/Internship",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://www.mcf.gov.in/",
+    "isDemo": false
   },
   {
     "id": "isro-centre-vssc",
@@ -1531,7 +1882,10 @@
     "careersUrl": "https://www.vssc.gov.in/STUDENTS/",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://www.vssc.gov.in/",
+    "isDemo": false
   },
   {
     "id": "isro-centre-iirs",
@@ -1544,7 +1898,10 @@
     "careersUrl": "https://www.iirs.gov.in/content/external-student-internship",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://www.iirs.gov.in/",
+    "isDemo": false
   },
   {
     "id": "isro-centre-lpsc",
@@ -1557,7 +1914,10 @@
     "careersUrl": "https://www.lpsc.gov.in/Internship.html",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://www.lpsc.gov.in/",
+    "isDemo": false
   },
   {
     "id": "isro-centre-nrsc",
@@ -1570,7 +1930,10 @@
     "careersUrl": "https://www.nrsc.gov.in/nrscnew/Training_Student_Eligibility.php",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://www.nrsc.gov.in/",
+    "isDemo": false
   },
   {
     "id": "isro-centre-narl",
@@ -1583,7 +1946,10 @@
     "careersUrl": "https://www.narl.gov.in/",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://www.narl.gov.in/",
+    "isDemo": false
   },
   {
     "id": "prl",
@@ -1596,7 +1962,10 @@
     "careersUrl": "https://www.prl.res.in/prl-eng/opportunities/summer_internship_program",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://www.prl.res.in/prl-eng/",
+    "isDemo": false
   },
   {
     "id": "sdsc-shar",
@@ -1609,7 +1978,10 @@
     "careersUrl": "https://www.shar.gov.in/sdscshar/internship.jsp",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://www.shar.gov.in/",
+    "isDemo": false
   },
   {
     "id": "istrac",
@@ -1622,7 +1994,10 @@
     "careersUrl": "https://www.istrac.gov.in/Student_Internship.html",
     "logo": null,
     "verified": true,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": "https://www.istrac.gov.in/",
+    "isDemo": false
   },
   {
     "id": "cag",
@@ -1635,7 +2010,10 @@
     "careersUrl": "https://cag.gov.in/en/student-internship-programme",
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "nhrc",
@@ -1648,7 +2026,10 @@
     "careersUrl": "https://nhrc.nic.in/training-programmes/internship-programmes",
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
   },
   {
     "id": "nicsi",
@@ -1661,6 +2042,329 @@
     "careersUrl": "https://nicsi.nic.in/nicsi/pdfs/internship/Internship_Notification_2026.pdf",
     "logo": null,
     "verified": false,
-    "lastVerified": "2026-11-11"
+    "lastVerified": "2026-11-11",
+    "description": null,
+    "sourceUrl": null,
+    "isDemo": false
+  },
+  {
+    "id": "demo-company-01",
+    "name": "Demo Cedar Finch Studio",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-02",
+    "name": "Demo Copper Vale Lab",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-03",
+    "name": "Demo Fern Harbor Works",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-04",
+    "name": "Demo Flint Meadow Studio",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-05",
+    "name": "Demo Golden Birch Lab",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-06",
+    "name": "Demo Harbor Quartz Works",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-07",
+    "name": "Demo Indigo Sparrow Studio",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-08",
+    "name": "Demo Juniper Moss Lab",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-09",
+    "name": "Demo Kestrel Orchard Works",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-10",
+    "name": "Demo Lantern Grove Studio",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-11",
+    "name": "Demo Maple Thistle Lab",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-12",
+    "name": "Demo Northwind Willow Works",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-13",
+    "name": "Demo Ochre Prairie Studio",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-14",
+    "name": "Demo Pebble River Lab",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-15",
+    "name": "Demo Quartz Meadow Works",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-16",
+    "name": "Demo Redwood Finch Studio",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-17",
+    "name": "Demo Saffron Hollow Lab",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-18",
+    "name": "Demo Tidal Cedar Works",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-19",
+    "name": "Demo Umber Lantern Studio",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
+  },
+  {
+    "id": "demo-company-20",
+    "name": "Demo Willow Harbor Lab",
+    "sector": "Demo data",
+    "type": "Program",
+    "city": null,
+    "state": null,
+    "website": null,
+    "careersUrl": null,
+    "logo": null,
+    "verified": false,
+    "lastVerified": null,
+    "sourceUrl": null,
+    "isDemo": true,
+    "description": "Fictional sample organization for interface testing; not a real employer."
   }
 ]

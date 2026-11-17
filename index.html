@@ -120,6 +120,10 @@
         <div id="home-stats-banner" class="stats-grid" aria-label="Platform Statistics">
           <!-- Populated by app.js -->
         </div>
+        <label class="form-group filter-check demo-data-toggle">
+          <input id="home-include-demo" type="checkbox">
+          Include clearly labelled demo data
+        </label>
 
         <!-- How It Works Section -->
         <div style="margin: 4rem 0;">
@@ -215,6 +219,7 @@
           </div>
 
           <div class="filter-selects-row">
+            <label class="form-group filter-check"><input id="filter-include-demo" type="checkbox"> Include demo data</label>
             <div class="form-group">
               <label for="filter-field" class="form-label">Field</label>
               <select id="filter-field" class="form-select">
@@ -320,6 +325,27 @@
             <div class="filter-search-box search-box">
               <input id="company-search-input" class="search-input" type="search" placeholder="Search companies and programs..." aria-label="Search companies">
             </div>
+            <button type="button" class="btn btn-outline" id="company-reset-filters">Reset filters</button>
+          </div>
+          <div class="filter-selects-row">
+            <div class="form-group">
+              <label class="form-label" for="company-sector-filter">Industry / sector</label>
+              <select id="company-sector-filter" class="form-select"><option value="all">All industries</option></select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="company-type-filter">Company type</label>
+              <select id="company-type-filter" class="form-select"><option value="all">All company types</option></select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="company-state-filter">State</label>
+              <select id="company-state-filter" class="form-select"><option value="all">All states</option></select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="company-city-filter">City</label>
+              <select id="company-city-filter" class="form-select"><option value="all">All cities</option></select>
+            </div>
+            <label class="form-group filter-check"><input id="company-has-internships" type="checkbox"> Has internships</label>
+            <label class="form-group filter-check"><input id="company-include-demo" type="checkbox"> Include demo data</label>
           </div>
           <div class="filter-bottom-status">
             <span id="companies-result-count" class="font-semibold" aria-live="polite"></span>

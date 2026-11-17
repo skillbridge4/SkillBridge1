@@ -66,6 +66,7 @@ function isDeadlineSoon(deadline, now) {
 export function filterInternships(records, filters = {}, now = new Date()) {
   const query = filters.q ?? filters.search ?? '';
   return records.filter(record => {
+    if (record.isDemo === true && filters.includeDemoData !== true) return false;
     if (!matchesSearch(record, query)) return false;
     if (filters.field && filters.field !== 'all' && record.field !== filters.field) return false;
     if (filters.state && filters.state !== 'all' && record.state !== filters.state) return false;
@@ -84,6 +85,36 @@ export function filterInternships(records, filters = {}, now = new Date()) {
       && !isWithinStipendRange(record, filters.stipendRange)) return false;
     if (filters.verifiedOnly && record.verified !== true) return false;
     if (filters.deadlineSoon && !isDeadlineSoon(record.deadline, now)) return false;
+    return true;
+  });
+}
+
+export function filterCompanies(records, filters = {}, internshipCounts = new Map()) {
+  const query = filters.q ?? filters.search ?? '';
+  const countFor = companyId => internshipCounts instanceof Map
+    ? internshipCounts.get(companyId) || 0
+    : internshipCounts[companyId] || 0;
+  return records.filter(company => {
+    if (company.isDemo === true && filters.includeDemoData !== true) return false;
+    const searchableCompany = {
+      title: company.name,
+      companyName: company.name,
+      companyType: company.type,
+      field: company.sector,
+      city: company.city,
+      state: company.state,
+      skills: [],
+      searchTokens: [
+        company.description,
+        ...(filters.programTitlesByCompany?.get?.(company.id) || [])
+      ].filter(Boolean)
+    };
+    if (!matchesSearch(searchableCompany, query)) return false;
+    if (filters.sector && filters.sector !== 'all' && company.sector !== filters.sector) return false;
+    if (filters.type && filters.type !== 'all' && company.type !== filters.type) return false;
+    if (filters.state && filters.state !== 'all' && company.state !== filters.state) return false;
+    if (filters.city && filters.city !== 'all' && company.city !== filters.city) return false;
+    if (filters.hasInternships === true && countFor(company.id) === 0) return false;
     return true;
   });
 }

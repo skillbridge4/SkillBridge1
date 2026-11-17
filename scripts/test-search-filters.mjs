@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { filterInternships, matchesSearch, normalizeSearchText, sortInternships } from '../client/src/services/search.js';
+import { filterCompanies, filterInternships, matchesSearch, normalizeSearchText, sortInternships } from '../client/src/services/search.js';
 
 const catalog = JSON.parse(await readFile(new URL('../data/seed/internships.json', import.meta.url), 'utf8'));
 const fixtures = [
@@ -95,6 +95,39 @@ test('sorting keeps unknown values last', () => {
   assert.ok(sortInternships(fixtures, 'relevance', 'machine learning')[0].id === 'a');
 });
 
+const demoFixture = { ...fixtures[0], id: 'demo-a', isDemo: true };
+test('demo internships are hidden unless explicitly included', () => {
+  assert.equal(filterInternships([...fixtures, demoFixture]).some(item => item.isDemo), false);
+  assert.equal(filterInternships([...fixtures, demoFixture], { includeDemoData: true }).length, fixtures.length + 1);
+});
+
+const companyFixtures = [
+  { id: 'company-a', name: 'Cedar Works', sector: 'Software', type: 'Startup', city: 'Pune', state: 'Maharashtra', isDemo: false },
+  { id: 'company-b', name: 'Northwind Group', sector: 'Research', type: 'Research', city: 'Bengaluru', state: 'Karnataka', isDemo: false },
+  { id: 'company-demo', name: 'Demo Sample Studio', sector: 'Demo data', type: 'Program', city: null, state: null, isDemo: true }
+];
+const companyCounts = new Map([['company-a', 2], ['company-b', 0], ['company-demo', 1]]);
+const programTitlesByCompany = new Map([['company-a', ['Frontend Development Intern']]]);
+
+for (const [name, filters, expected] of [
+  ['company search', { q: 'cedar' }, ['company-a']],
+  ['industry search', { q: 'research' }, ['company-b']],
+  ['company type', { type: 'Startup' }, ['company-a']],
+  ['company state and city', { state: 'Maharashtra', city: 'Pune' }, ['company-a']],
+  ['companies with internships', { hasInternships: true }, ['company-a']],
+  ['company program search', { q: 'frontend' }, ['company-a']],
+  ['demo companies hidden', {}, ['company-a', 'company-b']],
+  ['demo companies included', { includeDemoData: true }, ['company-a', 'company-b', 'company-demo']]
+]) {
+  test(`company filter: ${name}`, () => {
+    assert.deepEqual(
+      filterCompanies(companyFixtures, { ...filters, programTitlesByCompany }, companyCounts)
+        .map(company => company.id).sort(),
+      expected.sort()
+    );
+  });
+}
+
 for (let index = 0; index < 12; index += 1) {
   test(`empty data handling ${index + 1}`, () => {
     assert.deepEqual(filterInternships([], { field: 'Data & AI', q: 'ml' }), []);
@@ -103,7 +136,10 @@ for (let index = 0; index < 12; index += 1) {
 
 for (const record of catalog) {
   const recordId = record.id;
-  const recordResult = (filters = {}) => filterInternships(catalog, filters).some(item => item.id === recordId);
+  const recordResult = (filters = {}) => filterInternships(catalog, {
+    ...filters,
+    includeDemoData: true
+  }).some(item => item.id === recordId);
   test(`catalog title search: ${record.id}`, () => assert.ok(matchesSearch(record, record.title)));
   test(`catalog company search: ${record.id}`, () => assert.ok(matchesSearch(record, record.companyName)));
   for (const word of normalizeSearchText(record.title).split(' ')) {

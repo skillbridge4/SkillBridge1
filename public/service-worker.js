@@ -1,4 +1,4 @@
-const CACHE_NAME = 'skillbridge-vite-v1.6.1';
+const CACHE_NAME = 'skillbridge-vite-v1.6.2';
 const APP_SHELL = ['./', './manifest.json'];
 
 self.addEventListener('install', event => {

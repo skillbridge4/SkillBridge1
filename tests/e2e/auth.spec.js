@@ -119,6 +119,30 @@ test.describe('Firebase Authentication emulator', () => {
     await expect(page.locator('#profile-auth-notice')).toBeVisible();
   });
 
+  test('Google sign-in completes through the Auth Emulator provider flow', async ({ page }) => {
+    await openAuth(page);
+    const popupPromise = page.waitForEvent('popup', { timeout: 5000 }).catch(() => null);
+    await page.locator('#auth-google').click({ noWaitAfter: true });
+    const popup = await popupPromise;
+    const providerPage = popup || page;
+    await expect.poll(() => providerPage.url(), { timeout: 15000 })
+      .toMatch(/127\.0\.0\.1:9099\/emulator\/auth\/handler/);
+    await providerPage.getByRole('button', { name: 'Add new account' }).click({ noWaitAfter: true });
+    await providerPage.locator('#autogen-button').click();
+    await expect(providerPage.locator('#email-input')).not.toHaveValue('');
+    await providerPage.locator('#sign-in').click({ noWaitAfter: true });
+    await expect(page.locator('#auth-action-btn')).toHaveText('Sign out', { timeout: 20000 });
+    await expect(page.locator('body')).toHaveAttribute('data-auth-state', 'authenticated');
+    await expect.poll(() => page.evaluate(async () => {
+      const { auth, db, firestoreApi } = await import('/client/src/services/firebase.js');
+      if (!auth.currentUser) return false;
+      const profile = await firestoreApi.getDoc(
+        firestoreApi.doc(db, 'users', auth.currentUser.uid)
+      );
+      return profile.exists();
+    }), { timeout: 15000 }).toBe(true);
+  });
+
   test('password visibility toggle is accessible and reversible', async ({ page }) => {
     await openAuth(page);
     const password = page.locator('#auth-password');

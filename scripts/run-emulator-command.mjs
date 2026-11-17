@@ -1,3 +1,4 @@
+import { randomBytes } from 'node:crypto';
 import { spawn } from 'node:child_process';
 
 const npmScript = process.argv[2];
@@ -19,7 +20,9 @@ const child = spawn(process.execPath, [process.env.npm_execpath, 'run', npmScrip
     FIREBASE_PROJECT_ID: 'demo-skillbridge',
     GCLOUD_PROJECT: 'demo-skillbridge',
     FIREBASE_AUTH_EMULATOR_HOST: '127.0.0.1:9099',
-    FIRESTORE_EMULATOR_HOST: '127.0.0.1:8080'
+    FIRESTORE_EMULATOR_HOST: '127.0.0.1:8080',
+    CERTIFICATE_HMAC_SECRET: process.env.CERTIFICATE_HMAC_SECRET
+      || randomBytes(48).toString('base64url')
   },
   stdio: 'inherit'
 });

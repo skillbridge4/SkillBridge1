@@ -15,9 +15,9 @@ SkillBridge is a youth skill development and internship finder with a local-firs
 
 ## Current catalog status
 
-The supplied project previously contained internship-shaped records with placeholder `careers.example.com` links and none verified. Those placeholder listings have been removed from the app and the deployable internship seed is intentionally empty until official program pages can be checked. The organization catalog contains 113 requested India-based/India-operating organizations; every record is marked `verified: false` and its unknown location and URLs are `null`. Course and internship totals on the home page are computed from the currently loaded catalogs. The video catalog includes 128 internship-preparation entries: 48 videos whose titles and channels have been matched against YouTube oEmbed, and 80 unverified search links. The video catalog does not claim that search results are verified videos.
+The bundled catalogs currently contain 148 organizations (128 non-demo and 20 demo), 60 internship listings (20 existing records and 40 demo), 26 courses, and 128 video entries. The existing seed includes 14 companies and 17 internships marked verified with source and `lastVerified` metadata; verify current details on each official site before acting on them. Demo companies and internships are fictional, marked `isDemo: true`, unverified, and have no real application links. Demo data is hidden by default; the home, internship, and company views include controls to show it. The video catalog includes 48 entries matched against YouTube oEmbed and 80 unverified YouTube search links; search links are not presented as verified videos.
 
-Do not treat unverified catalog records as current openings or application instructions. Add a verified internship only after confirming the program and application page on the organization's official site.
+Bundled JSON is the canonical local fallback. When Firebase is configured, a non-empty Firestore collection replaces only that collection; an empty collection or read error keeps its bundled catalog. Home totals are computed from the currently visible data. Do not treat unverified records as current openings or application instructions. Add or mark a real record verified only after checking its facts and application page on the organization's official site.
 
 ## Running on Windows
 
@@ -71,6 +71,9 @@ guest activity remains in `localStorage`.
 After installing dependencies once, start the project from this folder with
 `npm run dev` (or `npm.cmd run dev` in PowerShell if script execution is
 restricted).
+
+To verify the production bundle locally, run `npm run build` followed by
+`npm run preview`. Vite serves the preview on port 4173 by default.
 
 ## AI Guidance and Resume Analyser
 
@@ -205,7 +208,9 @@ origin. The `/api/**` Hosting rewrite targets the `skillbridge-api` Cloud Run
 service in `us-central1`.
 
    For local emulator testing, no production Firebase config or service-account
-   file is needed. From the `youth` project root run:
+   file is needed. From the `youth` project root, `npm run emulators` starts only
+   the Auth and Firestore emulators. To start both the emulators and app together,
+   run:
 
    ```powershell
    npm run dev:emulator
@@ -215,6 +220,9 @@ service in `us-central1`.
    project and launches the web app and API with the explicit
    `VITE_USE_AUTH_EMULATOR=true` flag. The client uses demo config values and
    connects only to `127.0.0.1`; it does not use a production Firebase project.
+   The helper supplies a random, process-local certificate signing secret when
+   `CERTIFICATE_HMAC_SECRET` is absent, so emulator certificate routes can run
+   without a committed or production secret.
    Open the app at http://localhost:3000, the Auth emulator at
    http://127.0.0.1:4000/auth, and the Firestore emulator at
    http://127.0.0.1:4000/firestore. Keep the app origin consistent while signing

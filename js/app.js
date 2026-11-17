@@ -50,7 +50,7 @@ import {
   internshipsService,
   videosService
 } from '../client/src/services/catalog.js';
-import { filterInternships, sortInternships } from '../client/src/services/search.js';
+import { filterCompanies, filterInternships, sortInternships } from '../client/src/services/search.js';
 import {
   deleteCompany,
   deleteInternship,
@@ -59,6 +59,7 @@ import {
   saveInternship
 } from '../client/src/services/admin.js';
 import {
+  ensureUserProfile,
   saveUserProfile,
   syncWatchedVideos,
   updateWatchedVideo
@@ -111,6 +112,7 @@ const STORAGE_KEYS = {
   SAVED_VIDEOS: 'skillbridge_saved_videos',
   WATCHED_VIDEOS: 'skillbridge_watched_videos',
   GUEST_MODE: 'skillbridge_guest_mode',
+  SHOW_DEMO_DATA: 'skillbridge_show_demo_data',
   PATH_COURSE_DECLARATIONS: 'skillbridge_path_course_declarations',
   PATH_QUIZ_RESULTS: 'skillbridge_path_quiz_results'
 };
@@ -260,6 +262,12 @@ function adaptInternship(record) {
   };
 }
 
+function hasVerificationEvidence(record) {
+  return record?.verified === true
+    && Boolean(record.sourceUrl || record.source)
+    && Boolean(record.lastVerified);
+}
+
 async function fetchAll(service) {
   const records = [];
   let cursor = null;
@@ -272,12 +280,29 @@ async function fetchAll(service) {
 }
 
 function showCatalogError() {
+  if (!import.meta.env.DEV) return;
   const banner = document.getElementById('catalog-error-banner');
   if (!banner) return;
   banner.hidden = false;
   banner.querySelector('[data-error-dismiss]')?.addEventListener('click', () => {
     banner.hidden = true;
   }, { once: true });
+  if (banner.dataset.retryBound !== 'true') {
+    banner.dataset.retryBound = 'true';
+    banner.querySelector('[data-error-retry]')?.addEventListener('click', async event => {
+      const button = event.currentTarget;
+      button.disabled = true;
+      try {
+        await loadCatalogs();
+        renderHome();
+        renderInternships();
+        renderCompanies();
+        renderVideos();
+      } finally {
+        button.disabled = false;
+      }
+    });
+  }
 }
 
 async function loadCatalogs() {
@@ -292,13 +317,22 @@ async function loadCatalogs() {
   const failures = [];
   await Promise.all(requests.map(async ([name, service, apply]) => {
     try {
-      apply(await fetchAll(service));
+      const records = await fetchAll(service);
+      if (!records.length) {
+        console.info(`[Catalog] Firestore ${name} is empty; using bundled seed data.`);
+        return;
+      }
+      apply(records);
     } catch (error) {
-      console.error(`[SkillBridge] Failed to load ${name} from Firestore.`, error);
+      console.error(`[Catalog] Failed to load ${name} from Firestore; keeping bundled seed data.`, error);
       failures.push(name);
     }
   }));
   if (failures.length) showCatalogError();
+  else {
+    const banner = document.getElementById('catalog-error-banner');
+    if (banner) banner.hidden = true;
+  }
 }
 
 async function loadLearningPaths() {
@@ -347,6 +381,17 @@ function updateAuthPresentation() {
 }
 
 async function syncAuthenticatedUser(user) {
+  try {
+    await ensureUserProfile(user.uid, {
+      name: user.displayName || state.profile.name || 'SkillBridge student',
+      email: user.email || state.profile.email || '',
+      ...(user.photoURL ? { photoURL: user.photoURL } : {})
+    });
+  } catch (error) {
+    console.error('[Auth] Could not initialize the user profile.', error);
+    showToast('Your account profile could not be initialized. Some synced features may be unavailable.', 'warning');
+    return;
+  }
   try {
     state.isAdmin = await hasAdminAccess(user.uid);
   } catch (error) {
@@ -568,7 +613,7 @@ function showLoginModal({ initialError = '', triggerElement = null } = {}) {
   const configured = isFirebaseConfigured();
   const message = configured
     ? 'Sign in to sync your profile and saved activity.'
-    : `Firebase is not configured. Copy the project-root .env.example to .env and set: ${getMissingFirebaseConfig().join(', ')}. Restart npm run dev.`;
+    : 'Email and Google sign-in are unavailable right now. You can continue browsing as a guest.';
   const authControlsDisabled = !configured
     || state.authStatus === 'loading'
     || state.authRequestInProgress;
@@ -788,6 +833,7 @@ const state = {
   user: null,
   authStatus: 'loading',
   guestMode: Boolean(safeStorageGet(STORAGE_KEYS.GUEST_MODE, false)),
+  showDemoData: Boolean(safeStorageGet(STORAGE_KEYS.SHOW_DEMO_DATA, false)),
   authRequestInProgress: false,
   isAdmin: false,
   theme: safeStorageGet(STORAGE_KEYS.THEME, 'system'),
@@ -812,6 +858,13 @@ const state = {
     verifiedOnly: false,
     deadlineSoon: false,
     sort: 'newest'
+  },
+  companyFilters: {
+    sector: 'all',
+    type: 'all',
+    state: 'all',
+    city: 'all',
+    hasInternships: false
   },
 
   // Filters for Courses
@@ -1214,11 +1267,34 @@ function renderHome() {
   renderHomeCategories();
 }
 
+function getVisibleInternships() {
+  return rawInternships.filter(internship => state.showDemoData || internship.isDemo !== true);
+}
+
+function syncDemoDataControls() {
+  ['home-include-demo', 'filter-include-demo', 'company-include-demo']
+    .forEach(id => {
+      const input = document.getElementById(id);
+      if (input) input.checked = state.showDemoData;
+    });
+}
+
+function setShowDemoData(show) {
+  state.showDemoData = Boolean(show);
+  safeStorageSet(STORAGE_KEYS.SHOW_DEMO_DATA, state.showDemoData);
+  syncDemoDataControls();
+  renderHomeStats();
+  renderHomeFeatured();
+  renderInternships();
+  renderCompanies();
+  if (state.currentRoute === 'skill-gap') renderSkillGapResults();
+}
+
 function renderHomeStats() {
   const statsContainer = document.getElementById('home-stats-banner');
   if (!statsContainer) return;
 
-  const totalInternships = rawInternships.length;
+  const totalInternships = getVisibleInternships().length;
   const totalCourses = rawCourses.length;
   const activeApplications = state.applications.filter(a => ['Applied', 'Interview'].includes(a.status)).length;
   const completedCoursesCount = state.completedCourses.length;
@@ -1292,7 +1368,7 @@ function renderHomeFeatured() {
   const container = document.getElementById('home-featured-grid');
   if (!container) return;
 
-  const featured = rawInternships.filter(i => i.featured).slice(0, 6);
+  const featured = getVisibleInternships().filter(i => i.featured).slice(0, 6);
   container.innerHTML = featured.map(internship => createInternshipCardHtml(internship)).join('');
   attachInternshipCardEvents(container);
 }
@@ -1353,8 +1429,8 @@ function createInternshipCardHtml(internship) {
       <div class="card-footer">
         <div>
           <div class="card-stipend">${escapeHtml(internship.stipend)}</div>
-          <div class="card-deadline">Deadline: ${escapeHtml(internship.deadline || 'Check official site')}</div>
-          <div class="verification-label">${internship.verified === true ? 'Verified' : 'Check official site'}${internship.lastVerified ? ` · Last checked ${escapeHtml(internship.lastVerified)}` : ''}</div>
+          <div class="card-deadline">Deadline: ${escapeHtml(internship.isDemo ? 'Demo only - no real deadline' : internship.deadline || 'Rolling / Check site')}</div>
+          <div class="verification-label">${internship.isDemo ? '<span class="badge badge-warning badge-demo">Demo data</span>' : hasVerificationEvidence(internship) ? `Verified · Last checked ${escapeHtml(internship.lastVerified)}` : 'Check official site'}</div>
         </div>
         <div class="card-actions">
           <button class="btn btn-outline btn-sm" data-action="view-details" data-id="${internship.id}">
@@ -1362,7 +1438,7 @@ function createInternshipCardHtml(internship) {
           </button>
           ${applyUrl
             ? `<button class="btn btn-primary btn-sm" data-action="quick-apply" data-id="${escapeHtml(internship.id)}">Check official site</button>`
-            : '<span class="btn btn-primary btn-sm" aria-disabled="true">Check official site</span>'}
+            : `<span class="btn btn-primary btn-sm" aria-disabled="true">${internship.isDemo ? 'Demo only - no application link' : 'Check official site'}</span>`}
         </div>
       </div>
     </article>
@@ -1476,7 +1552,8 @@ function renderInternships() {
     companyType: filters.companyType,
     eligibility: filters.eligibility,
     verifiedOnly: filters.verifiedOnly,
-    deadlineSoon: filters.deadlineSoon
+    deadlineSoon: filters.deadlineSoon,
+    includeDemoData: state.showDemoData
   };
   const results = sortInternships(
     filterInternships(rawInternships, engineFilters),
@@ -1527,6 +1604,7 @@ function syncInternshipFiltersToUrl(filters) {
     eligibility: filters.eligibility,
     verified: filters.verifiedOnly ? 'true' : '',
     deadlineSoon: filters.deadlineSoon ? 'true' : '',
+    demo: state.showDemoData ? 'true' : '',
     sort: filters.sort === 'newest' ? '' : filters.sort
   };
   for (const [key, value] of Object.entries(values)) {
@@ -1553,6 +1631,7 @@ function renderActiveFilterChips(filters) {
     ['eligibility', 'Eligibility', filters.eligibility !== 'all' ? filters.eligibility : ''],
     ['verifiedOnly', 'Verified only', filters.verifiedOnly ? 'Yes' : ''],
     ['deadlineSoon', 'Deadline soon', filters.deadlineSoon ? 'Yes' : ''],
+    ['showDemoData', 'Demo data', state.showDemoData ? 'Included' : 'Hidden'],
     ['sort', 'Sort', filters.sort !== 'newest' ? filters.sort : '']
   ].filter(([, , value]) => value);
   container.innerHTML = entries.map(([key, label, value]) =>
@@ -1577,9 +1656,14 @@ function clearInternshipFilter(key) {
     eligibility: 'all',
     verifiedOnly: false,
     deadlineSoon: false,
+    showDemoData: false,
     sort: 'newest'
   };
   if (!(key in defaults)) return;
+  if (key === 'showDemoData') {
+    setShowDemoData(false);
+    return;
+  }
   state.internshipFilters[key] = defaults[key];
   if (key === 'state') state.internshipFilters.location = 'all';
   const controls = {
@@ -1595,11 +1679,12 @@ function clearInternshipFilter(key) {
     eligibility: 'filter-eligibility',
     verifiedOnly: 'filter-verified',
     deadlineSoon: 'filter-deadline-soon',
+    showDemoData: 'filter-include-demo',
     sort: 'filter-sort'
   };
   const control = document.getElementById(controls[key]);
   if (control) {
-    if (key === 'verifiedOnly' || key === 'deadlineSoon') control.checked = false;
+    if (key === 'verifiedOnly' || key === 'deadlineSoon' || key === 'showDemoData') control.checked = false;
     else control.value = defaults[key];
   }
   if (key === 'state') {
@@ -1616,20 +1701,78 @@ function clearInternshipFilter(key) {
   renderInternships();
 }
 
+function getCompanyProgramIndex() {
+  const programsByCompany = new Map();
+  getVisibleInternships().forEach(internship => {
+    const programs = programsByCompany.get(internship.companyId) || [];
+    programs.push(internship);
+    programsByCompany.set(internship.companyId, programs);
+  });
+  const counts = new Map([...programsByCompany].map(([id, programs]) => [id, programs.length]));
+  const titles = new Map([...programsByCompany].map(([id, programs]) => [
+    id,
+    programs.map(program => program.title)
+  ]));
+  return { programsByCompany, counts, titles };
+}
+
+function showCompanyDetailModal(companyId, triggerElement) {
+  const company = rawCompanies.find(record => record.id === companyId);
+  if (!company) return;
+  const { programsByCompany } = getCompanyProgramIndex();
+  const programs = programsByCompany.get(companyId) || [];
+  const website = safeExternalUrl(company.website);
+  const careersUrl = safeExternalUrl(company.careersUrl);
+  const links = [
+    website ? `<a href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Website</a>` : '',
+    careersUrl ? `<a href="${escapeHtml(careersUrl)}" target="_blank" rel="noopener noreferrer">Careers</a>` : ''
+  ].filter(Boolean).join(' · ');
+  openModal(`
+    <div class="modal-header">
+      <div>
+        <h2 id="modal-title">${escapeHtml(company.name)}</h2>
+        <p class="text-muted">${escapeHtml(company.sector || 'Industry: Check official site')} · ${escapeHtml(company.type || 'Type: Check official site')}</p>
+      </div>
+      <button class="btn btn-ghost btn-sm" data-close-modal aria-label="Close modal">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p class="verification-label">${company.isDemo ? '<span class="badge badge-warning badge-demo">Demo data</span>' : hasVerificationEvidence(company) ? `Verified · Last checked ${escapeHtml(company.lastVerified)}` : 'Check official site'}</p>
+      <p>${escapeHtml(company.description || 'Description: Check official site')}</p>
+      <p class="text-muted">${escapeHtml([company.city, company.state].filter(Boolean).join(', ') || 'Headquarters: Check official site')}</p>
+      <p>${links || 'Official website: Check official site'}</p>
+      <h3>Internship programs (${programs.length})</h3>
+      ${programs.length ? `<ul class="company-program-list">${programs.map(program => `
+        <li>
+          <button type="button" class="btn btn-ghost btn-sm" data-company-program="${escapeHtml(program.id)}">${escapeHtml(program.title)}</button>
+          <span class="text-muted">${program.isDemo ? 'Demo data - not a real opening' : escapeHtml(program.deadline || 'Rolling / Check site')}</span>
+        </li>`).join('')}</ul>` : '<p class="text-muted">No internship programs are currently listed.</p>'}
+    </div>
+  `, triggerElement);
+  document.querySelectorAll('[data-company-program]').forEach(button => {
+    button.addEventListener('click', () => {
+      const internshipId = button.dataset.companyProgram;
+      closeModal();
+      navigateTo('internships');
+      showInternshipDetailModal(internshipId, triggerElement);
+    });
+  });
+}
+
 function renderCompanies() {
   const container = document.getElementById('companies-list');
   const countDisplay = document.getElementById('companies-result-count');
   if (!container) return;
-  const query = normalizeCompanyQuery(document.getElementById('company-search-input')?.value || '');
-  const companies = rawCompanies.filter(company => {
-    const text = normalizeCompanyQuery([
-      company.name, company.sector, company.type, company.city, company.state
-    ].filter(Boolean).join(' '));
-    return !query || text.includes(query);
-  });
+  const { counts, titles } = getCompanyProgramIndex();
+  const companies = filterCompanies(rawCompanies, {
+    ...state.companyFilters,
+    q: document.getElementById('company-search-input')?.value || '',
+    includeDemoData: state.showDemoData,
+    programTitlesByCompany: titles
+  }, counts);
   if (countDisplay) countDisplay.textContent = `Showing ${companies.length} of ${rawCompanies.length} organizations`;
   if (!companies.length) {
-    container.innerHTML = '<div class="empty-state"><h3 class="empty-state-title">No organizations found</h3><p class="empty-state-text">Try another company or program name.</p></div>';
+    container.innerHTML = '<div class="empty-state"><h3 class="empty-state-title">No organizations found</h3><p class="empty-state-text">Try changing the search or filters.</p><button class="btn btn-primary" type="button" id="btn-reset-company-filters">Reset filters</button></div>';
+    container.querySelector('#btn-reset-company-filters')?.addEventListener('click', resetCompanyFilters);
     return;
   }
   container.innerHTML = companies.map(company => {
@@ -1637,23 +1780,36 @@ function renderCompanies() {
     const website = safeExternalUrl(company.website);
     const careersUrl = safeExternalUrl(company.careersUrl);
     const officialLinks = [
-      website ? `<a href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Official site</a>` : '',
+      website ? `<a href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Website</a>` : '',
       careersUrl ? `<a href="${escapeHtml(careersUrl)}" target="_blank" rel="noopener noreferrer">Careers</a>` : ''
     ].filter(Boolean).join(' · ');
+    const programCount = counts.get(company.id) || 0;
+    const location = [company.city, company.state].filter(Boolean).join(', ')
+      || 'Headquarters: Check official site';
+    const verification = company.isDemo
+      ? '<span class="badge badge-warning badge-demo">Demo data</span>'
+      : hasVerificationEvidence(company)
+        ? `Verified · Last checked ${escapeHtml(company.lastVerified)}`
+        : 'Check official site';
     return `
       <article class="course-card company-card">
         <div class="company-card-heading">
           <div class="company-initials" aria-hidden="true">${escapeHtml(initials)}</div>
           <div>
             <h2 class="course-title">${escapeHtml(company.name)}</h2>
-            <p class="course-provider">${escapeHtml(company.sector)} · ${escapeHtml(company.type)}</p>
+            <p class="course-provider">${escapeHtml(company.sector || 'Industry: Check official site')} · ${escapeHtml(company.type || 'Type: Check official site')}</p>
           </div>
         </div>
-        <p class="card-desc">${escapeHtml([company.city, company.state].filter(Boolean).join(', ') || 'Headquarters: Check official site')}</p>
-        <p class="verification-label">${company.verified === true ? 'Verified' : 'Check official site'}${company.lastVerified ? ` · Last checked ${escapeHtml(company.lastVerified)}` : ''}</p>
+        <p class="card-desc">${escapeHtml(company.description || 'Description: Check official site')}</p>
+        <p class="text-muted">${escapeHtml(location)}</p>
+        <p class="verification-label">${verification}</p>
+        <p class="text-muted">${programCount} internship program${programCount === 1 ? '' : 's'}</p>
         <div class="card-footer">
-          <div class="card-actions">${officialLinks || '<span class="text-muted">Official links need manual verification</span>'}</div>
-          <button type="button" class="btn btn-outline btn-sm" data-company-filter="${escapeHtml(company.name)}">Browse internships</button>
+          <div class="card-actions">${officialLinks || '<span class="text-muted">Official links: Check official site</span>'}</div>
+          <div class="card-actions">
+            <button type="button" class="btn btn-outline btn-sm" data-company-details="${escapeHtml(company.id)}">Details</button>
+            <button type="button" class="btn btn-outline btn-sm" data-company-filter="${escapeHtml(company.name)}">Browse internships</button>
+          </div>
         </div>
       </article>
     `;
@@ -1733,9 +1889,105 @@ async function deleteAdminRecord(remove, label) {
   }
 }
 
-function normalizeCompanyQuery(value) {
-  return String(value).normalize('NFKD').replace(/\p{Diacritic}/gu, '')
-    .toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim().replace(/\s+/g, ' ');
+function updateCompanyCityOptions() {
+  const citySelect = document.getElementById('company-city-filter');
+  if (!citySelect) return;
+  const selectedState = state.companyFilters.state;
+  const cities = [...new Set(rawCompanies
+    .filter(company => selectedState === 'all' || company.state === selectedState)
+    .map(company => company.city)
+    .filter(Boolean))].sort();
+  citySelect.innerHTML = [
+    '<option value="all">All cities</option>',
+    ...cities.map(city => `<option value="${escapeHtml(city)}">${escapeHtml(city)}</option>`)
+  ].join('');
+  if (!cities.includes(state.companyFilters.city)) state.companyFilters.city = 'all';
+  citySelect.value = state.companyFilters.city;
+}
+
+function initCompanyFilters() {
+  const sectorSelect = document.getElementById('company-sector-filter');
+  if (sectorSelect) {
+    const sectors = [...new Set(rawCompanies.map(company => company.sector).filter(Boolean))].sort();
+    sectorSelect.innerHTML = [
+      '<option value="all">All industries</option>',
+      ...sectors.map(sector => `<option value="${escapeHtml(sector)}">${escapeHtml(sector)}</option>`)
+    ].join('');
+    sectorSelect.value = state.companyFilters.sector;
+    sectorSelect.addEventListener('change', event => {
+      state.companyFilters.sector = event.target.value;
+      renderCompanies();
+    });
+  }
+
+  const typeSelect = document.getElementById('company-type-filter');
+  if (typeSelect) {
+    typeSelect.innerHTML = [
+      '<option value="all">All company types</option>',
+      ...COMPANY_TYPES.map(type => `<option value="${escapeHtml(type)}">${escapeHtml(type)}</option>`)
+    ].join('');
+    typeSelect.value = state.companyFilters.type;
+    typeSelect.addEventListener('change', event => {
+      state.companyFilters.type = event.target.value;
+      renderCompanies();
+    });
+  }
+
+  const stateSelect = document.getElementById('company-state-filter');
+  if (stateSelect) {
+    const states = [...new Set(rawCompanies.map(company => company.state)
+      .filter(value => INDIAN_STATES.includes(value)))].sort();
+    stateSelect.innerHTML = [
+      '<option value="all">All states</option>',
+      ...states.map(value => `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`)
+    ].join('');
+    stateSelect.value = state.companyFilters.state;
+    stateSelect.addEventListener('change', event => {
+      state.companyFilters.state = event.target.value;
+      state.companyFilters.city = 'all';
+      updateCompanyCityOptions();
+      renderCompanies();
+    });
+  }
+  updateCompanyCityOptions();
+
+  const citySelect = document.getElementById('company-city-filter');
+  citySelect?.addEventListener('change', event => {
+    state.companyFilters.city = event.target.value;
+    renderCompanies();
+  });
+
+  const hasInternships = document.getElementById('company-has-internships');
+  if (hasInternships) {
+    hasInternships.checked = state.companyFilters.hasInternships;
+    hasInternships.addEventListener('change', event => {
+      state.companyFilters.hasInternships = event.target.checked;
+      renderCompanies();
+    });
+  }
+  document.getElementById('company-reset-filters')?.addEventListener('click', resetCompanyFilters);
+}
+
+function resetCompanyFilters() {
+  state.companyFilters = {
+    sector: 'all',
+    type: 'all',
+    state: 'all',
+    city: 'all',
+    hasInternships: false
+  };
+  const search = document.getElementById('company-search-input');
+  if (search) search.value = '';
+  ['company-sector-filter', 'company-type-filter', 'company-state-filter']
+    .forEach(id => {
+      const select = document.getElementById(id);
+      if (select) select.value = 'all';
+    });
+  const hasInternships = document.getElementById('company-has-internships');
+  if (hasInternships) hasInternships.checked = false;
+  updateCompanyCityOptions();
+  setShowDemoData(false);
+  renderCompanies();
 }
 
 function resetInternshipFilters() {
@@ -1791,6 +2043,9 @@ function resetInternshipFilters() {
   if (verifiedSelect) verifiedSelect.checked = false;
   const deadlineSelect = document.getElementById('filter-deadline-soon');
   if (deadlineSelect) deadlineSelect.checked = false;
+  state.showDemoData = false;
+  safeStorageSet(STORAGE_KEYS.SHOW_DEMO_DATA, false);
+  syncDemoDataControls();
 
   const sortSelect = document.getElementById('filter-sort');
   if (sortSelect) sortSelect.value = 'newest';
@@ -3103,7 +3358,8 @@ function showInternshipDetailModal(internshipId, triggerElement) {
   const isSaved = isInternshipSaved(item.id);
   const skills = Array.isArray(item.skills) ? item.skills : [];
   const matchInfo = calculateInternshipMatch(skills, state.selectedSkills);
-  const sourceUrl = safeExternalUrl(item.source);
+  const sourceUrl = safeExternalUrl(item.sourceUrl || item.source);
+  const applyUrl = safeExternalUrl(item.applyLink);
 
   const skillsHtml = skills.map(skill => {
     const isMatched = matchInfo.matched.some(m => m.toLowerCase() === skill.toLowerCase());
@@ -3137,9 +3393,9 @@ function showInternshipDetailModal(internshipId, triggerElement) {
         <span class="badge badge-success">${escapeHtml(item.mode)}</span>
         <span class="badge badge-primary">${escapeHtml(item.duration)}</span>
         <span class="badge badge-neutral">Stipend: ${escapeHtml(item.stipend)}</span>
-        <span class="badge badge-warning">Deadline: ${escapeHtml(item.deadline || 'Check official site')}</span>
+        <span class="badge badge-warning">Deadline: ${escapeHtml(item.isDemo ? 'Demo only - no real deadline' : item.deadline || 'Rolling / Check site')}</span>
       </div>
-      <p class="verification-label">${item.verified === true ? 'Verified' : 'Check official site'}${item.lastVerified ? ` · Last checked ${escapeHtml(item.lastVerified)}` : ''}${sourceUrl ? ` · <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">Official source</a>` : ''}</p>
+      <p class="verification-label">${item.isDemo ? '<span class="badge badge-warning badge-demo">Demo data</span>' : hasVerificationEvidence(item) ? `Verified · Last checked ${escapeHtml(item.lastVerified)}` : 'Check official site'}${sourceUrl && !item.isDemo ? ` · <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">Official source</a>` : ''}</p>
 
       <h4 style="margin-bottom: 0.5rem;">About the Role</h4>
       <p style="margin-bottom: 1.25rem;">${escapeHtml(item.description)}</p>
@@ -3169,9 +3425,9 @@ function showInternshipDetailModal(internshipId, triggerElement) {
       <button class="btn ${isSaved ? 'btn-danger' : 'btn-outline'}" id="modal-save-btn" data-id="${escapeHtml(item.id)}">
         ${isSaved ? 'Remove from Tracker' : 'Bookmark / Track'}
       </button>
-      <button class="btn btn-primary" id="modal-apply-btn" data-id="${escapeHtml(item.id)}">
-        Apply Now ↗
-      </button>
+      ${applyUrl
+        ? `<button class="btn btn-primary" id="modal-apply-btn" data-id="${escapeHtml(item.id)}">Check official site ↗</button>`
+        : `<span class="btn btn-secondary" aria-disabled="true">${item.isDemo ? 'Demo only - no application link' : 'Check official site'}</span>`}
     </div>
   `;
 
@@ -3510,6 +3766,10 @@ function hydrateInternshipFiltersFromUrl() {
   const companyType = params.get('type');
   const eligibility = params.get('eligibility');
   const sort = params.get('sort');
+  if (params.get('demo') === 'true') {
+    state.showDemoData = true;
+    safeStorageSet(STORAGE_KEYS.SHOW_DEMO_DATA, true);
+  }
   if (FIELDS.includes(field)) filters.field = field;
   if (INDIAN_STATES.includes(selectedState)) filters.state = selectedState;
   if ((CITIES_BY_STATE[filters.state] || []).includes(selectedCity)
@@ -3585,6 +3845,14 @@ function initRouter() {
 
 function initEventHandlers() {
   initLearningPathHandlers();
+  initCompanyFilters();
+  syncDemoDataControls();
+  ['home-include-demo', 'filter-include-demo', 'company-include-demo']
+    .forEach(id => {
+      document.getElementById(id)?.addEventListener('change', event => {
+        setShowDemoData(event.target.checked);
+      });
+    });
   document.addEventListener('click', event => {
     const prompt = event.target.closest('[data-auth-prompt]');
     if (!prompt) return;
@@ -3639,6 +3907,11 @@ function initEventHandlers() {
   const companySearch = document.getElementById('company-search-input');
   companySearch?.addEventListener('input', debounce(renderCompanies, 200));
   document.getElementById('companies-list')?.addEventListener('click', event => {
+    const detailsButton = event.target.closest('[data-company-details]');
+    if (detailsButton) {
+      showCompanyDetailModal(detailsButton.dataset.companyDetails, detailsButton);
+      return;
+    }
     const button = event.target.closest('[data-company-filter]');
     if (!button) return;
     state.internshipFilters.search = button.dataset.companyFilter;

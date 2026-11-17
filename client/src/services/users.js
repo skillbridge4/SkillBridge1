@@ -25,6 +25,25 @@ export async function saveUserProfile(uid, profile) {
   }, { merge: true });
 }
 
+export async function ensureUserProfile(uid, profile) {
+  const api = requireFirestore();
+  if (!uid || !profile || typeof profile !== 'object' || Array.isArray(profile)) {
+    throw new TypeError('A user ID and profile object are required.');
+  }
+  const reference = api.doc(db, 'users', uid);
+  return api.runTransaction(db, async transaction => {
+    const snapshot = await transaction.get(reference);
+    if (snapshot.exists()) return snapshot.data();
+    const initialData = {
+      uid,
+      profile,
+      updatedAt: api.serverTimestamp()
+    };
+    transaction.set(reference, initialData, { merge: true });
+    return initialData;
+  });
+}
+
 export async function mergeUserData(uid, guestData) {
   const api = requireFirestore();
   if (!uid || !guestData || typeof guestData !== 'object') {

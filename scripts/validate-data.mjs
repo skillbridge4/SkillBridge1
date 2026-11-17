@@ -29,12 +29,15 @@ const paths = JSON.parse(await readFile(resolve(root, 'data/seed/paths.json'), '
 const publicPaths = JSON.parse(await readFile(resolve(root, 'public/learning-paths.json'), 'utf8'));
 const errors = [];
 const today = new Date().toISOString().slice(0, 10);
-const requiredCompanyFields = ['id', 'name', 'sector', 'type', 'city', 'state', 'website', 'careersUrl', 'logo', 'verified', 'lastVerified'];
+const requiredCompanyFields = [
+  'id', 'name', 'sector', 'type', 'city', 'state', 'website', 'careersUrl',
+  'logo', 'description', 'sourceUrl', 'verified', 'lastVerified', 'isDemo'
+];
 const requiredInternshipFields = [
   'id', 'title', 'companyId', 'companyName', 'field', 'skills', 'city', 'state',
   'mode', 'durationMonths', 'stipendMin', 'stipendMax', 'isPaid', 'eligibility',
-  'companyType', 'applyUrl', 'source', 'verified', 'lastVerified', 'deadline',
-  'description', 'searchTokens'
+  'companyType', 'applyUrl', 'source', 'sourceUrl', 'verified', 'lastVerified',
+  'deadline', 'description', 'searchTokens', 'isDemo'
 ];
 const companyIds = new Set();
 const internshipIds = new Set();
@@ -117,9 +120,18 @@ for (const company of companies) {
   validateId(company, companyIds, 'company');
   if (typeof company.id === 'string') companyById.set(company.id, company);
   if (company.type != null && !allowedTypes.has(company.type)) errors.push(`${company.id}: unknown company type ${company.type}`);
+  if (typeof company.isDemo !== 'boolean') errors.push(`${company.id}: isDemo must be a boolean`);
+  if (company.isDemo === true && company.verified === true) errors.push(`${company.id}: demo records cannot be verified`);
+  if (company.verified === true && (!company.sourceUrl || !company.lastVerified)) {
+    errors.push(`${company.id}: verified company must include sourceUrl and lastVerified`);
+  }
+  if (company.isDemo === true && (company.website || company.careersUrl || company.sourceUrl)) {
+    errors.push(`${company.id}: demo companies cannot include real website or careers links`);
+  }
   validateLocation(company, company.id);
   validateUrl(company.website, `${company.id}.website`);
   validateUrl(company.careersUrl, `${company.id}.careersUrl`);
+  validateUrl(company.sourceUrl, `${company.id}.sourceUrl`);
 }
 
 for (const internship of internships) {
@@ -160,12 +172,20 @@ for (const internship of internships) {
   }
   if (!Array.isArray(internship.skills)) errors.push(`${internship.id}: skills must be an array`);
   if (!Array.isArray(internship.searchTokens)) errors.push(`${internship.id}: searchTokens must be an array`);
+  if (typeof internship.isDemo !== 'boolean') errors.push(`${internship.id}: isDemo must be a boolean`);
   if (typeof internship.verified !== 'boolean') errors.push(`${internship.id}: verified must be a boolean`);
-  if (internship.verified === true && !internship.source) {
-    errors.push(`${internship.id}: verified record must include a source URL`);
+  if (internship.verified === true && (!internship.sourceUrl || !internship.lastVerified)) {
+    errors.push(`${internship.id}: verified record must include sourceUrl and lastVerified`);
+  }
+  if (internship.isDemo === true && internship.verified === true) {
+    errors.push(`${internship.id}: demo records cannot be verified`);
+  }
+  if (internship.isDemo === true && (internship.applyUrl || internship.source || internship.sourceUrl)) {
+    errors.push(`${internship.id}: demo internships cannot include application or source links`);
   }
   validateUrl(internship.applyUrl, `${internship.id}.applyUrl`);
   validateUrl(internship.source, `${internship.id}.source`);
+  validateUrl(internship.sourceUrl, `${internship.id}.sourceUrl`);
 }
 
 for (const course of courses) {
