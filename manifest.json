@@ -1,0 +1,55 @@
+{
+  "name": "SkillBridge - Youth Skill Development and Internship Finder",
+  "short_name": "SkillBridge",
+  "description": "SkillBridge, Youth Skill Development and Internship Finder. Discover skills, explore internships, and track your career growth.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#090d16",
+  "theme_color": "#4f46e5",
+  "categories": ["education", "business", "productivity"],
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Find Internships",
+      "short_name": "Internships",
+      "description": "Browse and search latest verified internships",
+      "url": "./index.html#internships",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Skill-Gap Matcher",
+      "short_name": "Skill Gap",
+      "description": "Check match percentages and recommended courses",
+      "url": "./index.html#skill-gap",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Application Tracker",
+      "short_name": "Tracker",
+      "description": "View application statuses and stages",
+      "url": "./index.html#tracker",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
+

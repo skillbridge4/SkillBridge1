@@ -1,0 +1,1081 @@
+{
+  "generatedAt": "2026-11-10T18:16:27.231Z",
+  "total": 128,
+  "verified": 48,
+  "unverified": 80,
+  "validationErrors": [],
+  "videos": [
+    {
+      "id": "prep-001",
+      "title": "Find internships on LinkedIn as a student",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+internship+search+students+India+Internshala",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-002",
+      "title": "How to apply for internships on Internshala",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=Internshala+how+to+apply+internship+Hindi+official",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-003",
+      "title": "Find internships on company career pages and Naukri",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=how+to+find+internships+company+career+pages+Naukri+students+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-004",
+      "title": "PM Internship Scheme and internship scam awareness",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=PM+Internship+Scheme+official+how+to+apply+fake+internship+scam+Hindi",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-005",
+      "title": "ATS-friendly resume for freshers with no experience",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=ATS+friendly+resume+for+freshers+no+experience+students+India+English",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-006",
+      "title": "Build a fresher resume projects section",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=fresher+resume+projects+section+Hindi+students",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-007",
+      "title": "One-page CV and resume mistakes to avoid",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=one+page+CV+resume+mistakes+freshers+internship+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-008",
+      "title": "Write a cover letter for an internship",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=how+to+write+cover+letter+internship+students+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-009",
+      "title": "Cold email recruiters for internships",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=cold+email+recruiter+internship+students+India+template",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-010",
+      "title": "Message a recruiter on LinkedIn professionally",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+recruiter+message+internship+Hindi+students",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-011",
+      "title": "Optimize a LinkedIn profile for students",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+profile+optimization+students+internships+India+English",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-012",
+      "title": "LinkedIn headline and About section for freshers",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+headline+About+section+freshers+Hindi+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-013",
+      "title": "Build a student GitHub profile recruiters can review",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=GitHub+profile+README+students+internship+recruiters",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-014",
+      "title": "Make a portfolio website for your first internship",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=portfolio+website+for+students+internship+Hindi+CodeWithHarry",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-015",
+      "title": "Host a student portfolio with GitHub Pages",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=GitHub+Pages+portfolio+website+students+freeCodeCamp",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-016",
+      "title": "HR interview questions and answers for freshers",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=HR+interview+questions+answers+freshers+internship+India+English",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-017",
+      "title": "Answer tell me about yourself as a student",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=tell+me+about+yourself+students+interview+Hindi+freshers",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-018",
+      "title": "Technical interview basics for internship candidates",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=technical+interview+basics+internship+students+India+projects",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-019",
+      "title": "Group discussion and communication skills for campus interviews",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=group+discussion+communication+skills+campus+placement+students+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-020",
+      "title": "Interview body language and confidence for freshers",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=interview+body+language+confidence+freshers+Hindi+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-021",
+      "title": "Aptitude preparation roadmap for campus placements",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=aptitude+preparation+roadmap+campus+placements+India+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-022",
+      "title": "Logical reasoning basics for off-campus tests",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=logical+reasoning+basics+off+campus+placement+Hindi+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-023",
+      "title": "Timed aptitude test practice and problem solving",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=aptitude+test+practice+timed+placement+students+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-024",
+      "title": "DSA roadmap for internship coding tests",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=Striver+DSA+roadmap+internship+coding+test+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-025",
+      "title": "Arrays and strings interview problems for beginners",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=Love+Babbar+arrays+strings+interview+questions+Hindi",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-026",
+      "title": "Sorting and searching coding interview basics",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=take+U+forward+sorting+searching+interview+problems",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-027",
+      "title": "C, C++, Java, Python and SQL interview questions for freshers",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=C+C%2B%2B+Java+Python+SQL+interview+questions+freshers+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-028",
+      "title": "Web development internship interview preparation",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=web+development+internship+interview+preparation+students+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-029",
+      "title": "Data analyst and AI internship interview preparation",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=data+analyst+AI+internship+interview+preparation+students+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-030",
+      "title": "Create a UI/UX case study portfolio for internships",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=UI+UX+case+study+portfolio+internship+Hindi+students",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-031",
+      "title": "Data analyst portfolio projects for entry-level roles",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=data+analyst+portfolio+projects+entry+level+students+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-032",
+      "title": "Open source contributions for first-time contributors",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=Kunal+Kushwaha+open+source+first+contribution+beginner",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-033",
+      "title": "Google Summer of Code and MLH hackathons explained",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=Google+Summer+of+Code+MLH+hackathon+beginner+students+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-034",
+      "title": "Professional email writing for students and interns",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=professional+email+writing+students+interns+English+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-035",
+      "title": "Time management and teamwork during an internship",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=time+management+teamwork+internship+Hindi+students",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-036",
+      "title": "Remote work etiquette and internship report writing",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=remote+work+etiquette+internship+report+writing+students",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-037",
+      "title": "Free certifications from NPTEL, SWAYAM and Google",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=free+certifications+NPTEL+SWAYAM+Google+students+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-038",
+      "title": "FreeCodeCamp certifications and learning paths",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=freeCodeCamp+free+certifications+learning+paths+students",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-039",
+      "title": "Use NPTEL and SWAYAM courses for internship readiness",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=NPTEL+SWAYAM+free+courses+certificate+Hindi+students",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-040",
+      "title": "Find trustworthy free courses and certificates",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=free+online+courses+certificates+official+Google+CS50+students",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-041",
+      "title": "Set LinkedIn job alerts for student internships",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+internship+job+alerts+students+India+how+to",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-042",
+      "title": "Apply to internships on Internshala step by step",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=Internshala+internship+apply+step+by+step+Hindi+official",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-043",
+      "title": "Find internships on Naukri and company career pages",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=find+internship+Naukri+company+career+pages+students+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-044",
+      "title": "Check PM Internship Scheme eligibility and avoid fake offers",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=PM+Internship+Scheme+eligibility+official+portal+fake+internship+offer+scam+Hindi",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-045",
+      "title": "Write measurable project bullets for a fresher resume",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=resume+project+bullets+measurable+impact+freshers+internship+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-046",
+      "title": "Make an ATS-friendly one-column resume in Hindi",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=ATS+friendly+resume+one+column+freshers+Hindi+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-047",
+      "title": "Tailor a student CV to an internship job description",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=tailor+student+resume+CV+internship+job+description+keywords",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-048",
+      "title": "Create a first resume with no work experience",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=resume+without+experience+students+internship+Hindi+projects",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-049",
+      "title": "Write a concise internship cover letter for a specific role",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=internship+cover+letter+student+tailored+role+example+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-050",
+      "title": "Cold email a hiring manager with a clear subject line",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=cold+email+hiring+manager+internship+students+subject+line",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-051",
+      "title": "Follow up with a recruiter after an internship application",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=recruiter+follow+up+after+internship+application+Hindi+students",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-052",
+      "title": "Build a LinkedIn Featured section for student projects",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+Featured+section+student+projects+internship+profile",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-053",
+      "title": "Network with alumni on LinkedIn as a student",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+alumni+networking+students+internship+Hindi+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-054",
+      "title": "Write an authentic LinkedIn About section as a fresher",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+About+section+fresher+students+examples+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-055",
+      "title": "Create a useful README for a student GitHub project",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=GitHub+README+student+project+internship+portfolio+guide",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-056",
+      "title": "Pin the right repositories on a GitHub student profile",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=GitHub+profile+pin+repositories+students+Hindi+internship",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-057",
+      "title": "Publish and maintain a student portfolio with GitHub Pages",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=GitHub+Pages+student+portfolio+deploy+guide+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-058",
+      "title": "Use the STAR method for fresher interview answers",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=STAR+method+interview+answers+freshers+students+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-059",
+      "title": "Practice internship interviews with mock questions in Hindi",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=mock+interview+internship+freshers+questions+Hindi+India+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-060",
+      "title": "Explain a project clearly in a technical interview",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=explain+projects+technical+interview+students+internship+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-061",
+      "title": "Improve spoken English and clarity for campus interviews",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=spoken+English+communication+campus+interview+students+India+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-062",
+      "title": "Quantitative aptitude: percentages, ratios, and averages",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=quantitative+aptitude+percentages+ratio+averages+placement+Hindi+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-063",
+      "title": "Logical reasoning: syllogisms and seating arrangements",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=logical+reasoning+syllogism+seating+arrangement+placement+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-064",
+      "title": "Prepare a weekly aptitude practice plan for placements",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=weekly+aptitude+practice+plan+campus+placements+students",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-065",
+      "title": "Solve array problems with two pointers and sliding windows",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=arrays+two+pointers+sliding+window+internship+coding+interview+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-066",
+      "title": "Practice string problems for coding interviews in Hindi",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=string+coding+interview+problems+Hindi+students+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-067",
+      "title": "C and C++ interview fundamentals for internship applicants",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=C+C%2B%2B+interview+questions+freshers+internship+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-068",
+      "title": "Java, Python, and SQL interview questions for students",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=Java+Python+SQL+interview+questions+freshers+students+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-069",
+      "title": "Prepare HTML, CSS, and JavaScript for a web internship",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=HTML+CSS+JavaScript+web+development+internship+interview+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-070",
+      "title": "Build a data analysis project for an AI internship portfolio",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=data+analysis+Python+portfolio+project+AI+internship+Hindi+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-071",
+      "title": "Prepare a Figma case study for a UI/UX internship portfolio",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=Figma+UI+UX+case+study+portfolio+internship+students+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-072",
+      "title": "Review SQL and data fundamentals for analytics internships",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=SQL+data+analyst+internship+interview+fundamentals+playlist+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-073",
+      "title": "Make your first open-source contribution with Git and GitHub",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=first+open+source+contribution+Git+GitHub+beginner+playlist",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-074",
+      "title": "Join a student hackathon and present a small project",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=student+hackathon+beginner+team+project+demo+Hindi+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-075",
+      "title": "Plan a beginner-friendly Google Summer of Code application",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=Google+Summer+of+Code+beginner+contributor+proposal+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-076",
+      "title": "Write a clear professional email to your internship mentor",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=professional+email+internship+mentor+students+examples+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-077",
+      "title": "Manage time and priorities during a remote internship",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=time+management+remote+internship+students+Hindi+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-078",
+      "title": "Write a concise internship report with evidence of your work",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=internship+report+writing+format+students+India+English",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-079",
+      "title": "Choose NPTEL courses and understand certificate requirements",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=NPTEL+course+selection+certificate+exam+requirements+India",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-080",
+      "title": "Explore SWAYAM, Google learning resources, and freeCodeCamp",
+      "channel": "YouTube search",
+      "url": "https://www.youtube.com/results?search_query=SWAYAM+Google+freeCodeCamp+free+learning+certificates+Hindi+students",
+      "status": "unverified",
+      "reason": "YouTube search link; no video ID was supplied or verified"
+    },
+    {
+      "id": "prep-081",
+      "title": "How to Spot a Fake Internship or Job | 7 Warning Signs That You Shouldn’t Miss",
+      "channel": "Internshala",
+      "url": "https://www.youtube.com/watch?v=3TqQF-YAlNg",
+      "status": "verified",
+      "returnedTitle": "How to Spot a Fake Internship or Job | 7 Warning Signs That You Shouldn’t Miss",
+      "returnedChannel": "Internshala"
+    },
+    {
+      "id": "prep-082",
+      "title": "Fake Internships on Internshala? How to Identify Job Scams",
+      "channel": "Internshala",
+      "url": "https://www.youtube.com/watch?v=28XNEYJFgHc",
+      "status": "verified",
+      "returnedTitle": "Fake Internships on Internshala? How to Identify Job Scams",
+      "returnedChannel": "Internshala"
+    },
+    {
+      "id": "prep-083",
+      "title": "How to Apply for Internships & Jobs on Internshala 2026 🚀 | Step-by-Step Guide for Students",
+      "channel": "Namma Study World",
+      "url": "https://www.youtube.com/watch?v=83t-d_taLHs",
+      "status": "verified",
+      "returnedTitle": "How to Apply for Internships & Jobs on Internshala 2026 🚀 | Step-by-Step Guide for Students",
+      "returnedChannel": "Namma Study World"
+    },
+    {
+      "id": "prep-084",
+      "title": "Internship scams on internshala in 2025 || how to apply on internship",
+      "channel": "Shivam Sharma",
+      "url": "https://www.youtube.com/watch?v=k5hCIpoaS2o",
+      "status": "verified",
+      "returnedTitle": "Internship scams on internshala in 2025 || how to apply on internship",
+      "returnedChannel": "Shivam Sharma"
+    },
+    {
+      "id": "prep-085",
+      "title": "Resume Format For College Students With NO Experience",
+      "channel": "Internshala",
+      "url": "https://www.youtube.com/watch?v=Xcuu5-MuC74",
+      "status": "verified",
+      "returnedTitle": "Resume Format For College Students With NO Experience",
+      "returnedChannel": "Internshala"
+    },
+    {
+      "id": "prep-086",
+      "title": "5 Resume Formats ATS Always Rejects — Free Template for Freshers (2026)",
+      "channel": "Internshala",
+      "url": "https://www.youtube.com/watch?v=18qMKn_RtMw",
+      "status": "verified",
+      "returnedTitle": "5 Resume Formats ATS Always Rejects — Free Template for Freshers (2026)",
+      "returnedChannel": "Internshala"
+    },
+    {
+      "id": "prep-087",
+      "title": "HR Approved Resume Format for Freshers (2026)",
+      "channel": "Fresher Jobs by Internshala",
+      "url": "https://www.youtube.com/watch?v=Lw1nqDvyuvY",
+      "status": "verified",
+      "returnedTitle": "HR Approved Resume Format for Freshers (2026)",
+      "returnedChannel": "Fresher Jobs by Internshala"
+    },
+    {
+      "id": "prep-088",
+      "title": "ATS Friendly Resume Kaise Banaye FREE में | ChatGPT + Canva Resume Tutorial Hindi",
+      "channel": "Marketer Trilok",
+      "url": "https://www.youtube.com/watch?v=W-psjYBMqsk",
+      "status": "verified",
+      "returnedTitle": "ATS Friendly Resume Kaise Banaye FREE में | ChatGPT + Canva Resume Tutorial Hindi",
+      "returnedChannel": "Marketer Trilok"
+    },
+    {
+      "id": "prep-089",
+      "title": "How To Write An Email Asking For Summer Internship| FREE Template| Internshala",
+      "channel": "Internshala",
+      "url": "https://www.youtube.com/watch?v=aXbHB7Lf35M",
+      "status": "verified",
+      "returnedTitle": "How To Write An Email Asking For Summer Internship| FREE Template| Internshala",
+      "returnedChannel": "Internshala"
+    },
+    {
+      "id": "prep-090",
+      "title": "Cover Letter Format For Freshers | For Internships & Jobs",
+      "channel": "Internshala",
+      "url": "https://www.youtube.com/watch?v=UJWysbZJSVE",
+      "status": "verified",
+      "returnedTitle": "Cover Letter Format For Freshers | For Internships & Jobs",
+      "returnedChannel": "Internshala"
+    },
+    {
+      "id": "prep-091",
+      "title": "Email for Job Application | How to Write a Professional Email for Job Application?",
+      "channel": "Internshala",
+      "url": "https://www.youtube.com/watch?v=I_8222HOOQw",
+      "status": "verified",
+      "returnedTitle": "Email for Job Application | How to Write a Professional Email for Job Application?",
+      "returnedChannel": "Internshala"
+    },
+    {
+      "id": "prep-092",
+      "title": "How To Write Professional Email To Get A Paid Internship",
+      "channel": "Internshala",
+      "url": "https://www.youtube.com/watch?v=Vzh9v2qYqp8",
+      "status": "verified",
+      "returnedTitle": "How To Write Professional Email To Get A Paid Internship",
+      "returnedChannel": "Internshala"
+    },
+    {
+      "id": "prep-093",
+      "title": "How Students Can Build a Strong LinkedIn Profile for Internships",
+      "channel": "Karishmaa Singhal",
+      "url": "https://www.youtube.com/watch?v=fyAWhw937Uw",
+      "status": "verified",
+      "returnedTitle": "How Students Can Build a Strong LinkedIn Profile for Internships",
+      "returnedChannel": "Karishmaa Singhal"
+    },
+    {
+      "id": "prep-094",
+      "title": "How to create a Great LinkedIn Profile in 2026 | for College Students",
+      "channel": "Apna College",
+      "url": "https://www.youtube.com/watch?v=lzuiuRgwwrc",
+      "status": "verified",
+      "returnedTitle": "How to create a Great LinkedIn Profile in 2026 | for College Students",
+      "returnedChannel": "Apna College"
+    },
+    {
+      "id": "prep-095",
+      "title": "Ultimate LinkedIn Profile Setup Guide| Professional Profile| LinkedIn for freshers and students",
+      "channel": "CS Daksh Acharya",
+      "url": "https://www.youtube.com/watch?v=vLlU6w8dWfE",
+      "status": "verified",
+      "returnedTitle": "Ultimate LinkedIn Profile Setup Guide| Professional Profile| LinkedIn for freshers and students",
+      "returnedChannel": "CS Daksh Acharya"
+    },
+    {
+      "id": "prep-096",
+      "title": "LinkedIn profile for Freshers (This Strategy Got Me 20+ Interview Calls)",
+      "channel": "Akber Shaikh",
+      "url": "https://www.youtube.com/watch?v=_bDUwOlBO7g",
+      "status": "verified",
+      "returnedTitle": "LinkedIn profile for Freshers (This Strategy Got Me 20+ Interview Calls)",
+      "returnedChannel": "Akber Shaikh"
+    },
+    {
+      "id": "prep-097",
+      "title": "How to Upload Project on Github (with README & Folder Setup) | Github Tutorial | How to use Github",
+      "channel": "Tech Classes",
+      "url": "https://www.youtube.com/watch?v=TNoNJYyZm3o",
+      "status": "verified",
+      "returnedTitle": "How to Upload Project on Github (with README & Folder Setup) | Github Tutorial | How to use Github",
+      "returnedChannel": "Tech Classes"
+    },
+    {
+      "id": "prep-098",
+      "title": "Killer GitHub Readme 🐱‍👤",
+      "channel": "CodeWithHarry",
+      "url": "https://www.youtube.com/watch?v=tn08E8NGAi8",
+      "status": "verified",
+      "returnedTitle": "Killer GitHub Readme 🐱‍👤",
+      "returnedChannel": "CodeWithHarry"
+    },
+    {
+      "id": "prep-099",
+      "title": "How to create Professional Github Readme Profile (Step By Step)",
+      "channel": "Cloud Champ",
+      "url": "https://www.youtube.com/watch?v=rCt9DatF63I",
+      "status": "verified",
+      "returnedTitle": "How to create Professional Github Readme Profile (Step By Step)",
+      "returnedChannel": "Cloud Champ"
+    },
+    {
+      "id": "prep-100",
+      "title": "How to Create a GitHub Profile README | Customize Your GitHub Profile 🔥 #github #githubreadme",
+      "channel": "Pie Coding Schools",
+      "url": "https://www.youtube.com/watch?v=gZcndpLTUdY",
+      "status": "verified",
+      "returnedTitle": "How to Create a GitHub Profile README | Customize Your GitHub Profile 🔥 #github #githubreadme",
+      "returnedChannel": "Pie Coding Schools"
+    },
+    {
+      "id": "prep-101",
+      "title": "Tell me about yourself | Interview Question #1",
+      "channel": "Apna College",
+      "url": "https://www.youtube.com/watch?v=rtVbdyMbjRI",
+      "status": "verified",
+      "returnedTitle": "Tell me about yourself | Interview Question #1",
+      "returnedChannel": "Apna College"
+    },
+    {
+      "id": "prep-102",
+      "title": "Easy Group Discussion Tips for College Students | GD Tips and Techniques",
+      "channel": "Internshala",
+      "url": "https://www.youtube.com/watch?v=c8RCFp6KIdA",
+      "status": "verified",
+      "returnedTitle": "Easy Group Discussion Tips for College Students | GD Tips and Techniques",
+      "returnedChannel": "Internshala"
+    },
+    {
+      "id": "prep-103",
+      "title": "7 body language tips to impress at your next job interview",
+      "channel": "Cognitive Group | Recruiting For Your Future ",
+      "url": "https://www.youtube.com/watch?v=PCWVi5pAa30",
+      "status": "verified",
+      "returnedTitle": "7 body language tips to impress at your next job interview",
+      "returnedChannel": "Cognitive Group | Recruiting For Your Future "
+    },
+    {
+      "id": "prep-104",
+      "title": "Interview में 'Tell Me About Yourself' का सही उत्तर कैसे दें? | Best Self Introduction Tips",
+      "channel": "Jagran Josh",
+      "url": "https://www.youtube.com/watch?v=7TR8XNFbHe4",
+      "status": "verified",
+      "returnedTitle": "Interview में 'Tell Me About Yourself' का सही उत्तर कैसे दें? | Best Self Introduction Tips",
+      "returnedChannel": "Jagran Josh"
+    },
+    {
+      "id": "prep-105",
+      "title": "Introduction to Aptitude and Reasoning",
+      "channel": "Neso Academy",
+      "url": "https://www.youtube.com/watch?v=AFh1-fqdaf4",
+      "status": "verified",
+      "returnedTitle": "Introduction to Aptitude and Reasoning",
+      "returnedChannel": "Neso Academy"
+    },
+    {
+      "id": "prep-106",
+      "title": "Ratio",
+      "channel": "Neso Academy",
+      "url": "https://www.youtube.com/watch?v=nKK4QguTQc8",
+      "status": "verified",
+      "returnedTitle": "Ratio",
+      "returnedChannel": "Neso Academy"
+    },
+    {
+      "id": "prep-107",
+      "title": "Percentage -  Shortcuts & Tricks for Placement Tests, Job Interviews & Exams",
+      "channel": "CareerRide",
+      "url": "https://www.youtube.com/watch?v=RWdNhJWwzSs",
+      "status": "verified",
+      "returnedTitle": "Percentage -  Shortcuts & Tricks for Placement Tests, Job Interviews & Exams",
+      "returnedChannel": "CareerRide"
+    },
+    {
+      "id": "prep-108",
+      "title": "Aptitude For Campus Placements | Aptitude Test Preparation",
+      "channel": "Knowledge Topper",
+      "url": "https://www.youtube.com/watch?v=SwGebzPBkI4",
+      "status": "verified",
+      "returnedTitle": "Aptitude For Campus Placements | Aptitude Test Preparation",
+      "returnedChannel": "Knowledge Topper"
+    },
+    {
+      "id": "prep-109",
+      "title": "Find Second Largest Element in Array | Remove duplicates from Sorted Array | Arrays Intro Video",
+      "channel": "take U forward",
+      "url": "https://www.youtube.com/watch?v=37E9ckMDdTk",
+      "status": "verified",
+      "returnedTitle": "Find Second Largest Element in Array | Remove duplicates from Sorted Array | Arrays Intro Video",
+      "returnedChannel": "take U forward"
+    },
+    {
+      "id": "prep-110",
+      "title": "Rotate Array by K places | Union, Intersection of Sorted Arrays | Move Zeros to End | Arrays Part-2",
+      "channel": "take U forward",
+      "url": "https://www.youtube.com/watch?v=wvcQg43_V8U",
+      "status": "verified",
+      "returnedTitle": "Rotate Array by K places | Union, Intersection of Sorted Arrays | Move Zeros to End | Arrays Part-2",
+      "returnedChannel": "take U forward"
+    },
+    {
+      "id": "prep-111",
+      "title": "🔥 Top 20 Java String Coding Interview Questions | Most Practiced Java Programs | Java Interview 2026",
+      "channel": "Java Full Stack Interview Questions & Answers ",
+      "url": "https://www.youtube.com/watch?v=q8LsWowUPAw",
+      "status": "verified",
+      "returnedTitle": "🔥 Top 20 Java String Coding Interview Questions | Most Practiced Java Programs | Java Interview 2026",
+      "returnedChannel": "Java Full Stack Interview Questions & Answers "
+    },
+    {
+      "id": "prep-112",
+      "title": "Arrays In C: C Tutorial In Hindi #23",
+      "channel": "CodeWithHarry",
+      "url": "https://www.youtube.com/watch?v=qKFBtCPwjgI",
+      "status": "verified",
+      "returnedTitle": "Arrays In C: C Tutorial In Hindi #23",
+      "returnedChannel": "CodeWithHarry"
+    },
+    {
+      "id": "prep-113",
+      "title": "Introduction to HTML, CSS, JavaScript & How websites work? | Web Development Tutorials #1",
+      "channel": "CodeWithHarry",
+      "url": "https://www.youtube.com/watch?v=6mbwJ2xhgzM",
+      "status": "verified",
+      "returnedTitle": "Introduction to HTML, CSS, JavaScript & How websites work? | Web Development Tutorials #1",
+      "returnedChannel": "CodeWithHarry"
+    },
+    {
+      "id": "prep-114",
+      "title": "How to create your first UX case study (2026 beginner tutorial)",
+      "channel": "Aliena Cai",
+      "url": "https://www.youtube.com/watch?v=044MI9uH1c4",
+      "status": "verified",
+      "returnedTitle": "How to create your first UX case study (2026 beginner tutorial)",
+      "returnedChannel": "Aliena Cai"
+    },
+    {
+      "id": "prep-115",
+      "title": "COMPLETE Data Analytics Portfolio Project in 6 EASY Steps | Python + SQL + Power BI",
+      "channel": "Amlan Mohanty",
+      "url": "https://www.youtube.com/watch?v=5PrZvPeUw60",
+      "status": "verified",
+      "returnedTitle": "COMPLETE Data Analytics Portfolio Project in 6 EASY Steps | Python + SQL + Power BI",
+      "returnedChannel": "Amlan Mohanty"
+    },
+    {
+      "id": "prep-116",
+      "title": "3 projects for your data science portfolio",
+      "channel": "Maggie In Data",
+      "url": "https://www.youtube.com/watch?v=TWjv4j1g02g",
+      "status": "verified",
+      "returnedTitle": "3 projects for your data science portfolio",
+      "returnedChannel": "Maggie In Data"
+    },
+    {
+      "id": "prep-117",
+      "title": "GSoC 2026 Complete Roadmap | How to Get Selected in Google Summer of Code (Step-by-Step Guide)",
+      "channel": "Saumya Singh",
+      "url": "https://www.youtube.com/watch?v=viU_64adkEo",
+      "status": "verified",
+      "returnedTitle": "GSoC 2026 Complete Roadmap | How to Get Selected in Google Summer of Code (Step-by-Step Guide)",
+      "returnedChannel": "Saumya Singh"
+    },
+    {
+      "id": "prep-118",
+      "title": "Open Source for Beginners | How to Contribute to Open Source",
+      "channel": "Saumya Singh",
+      "url": "https://www.youtube.com/watch?v=2do4WZ0e8UU",
+      "status": "verified",
+      "returnedTitle": "Open Source for Beginners | How to Contribute to Open Source",
+      "returnedChannel": "Saumya Singh"
+    },
+    {
+      "id": "prep-119",
+      "title": "GSoC 2026 Complete Roadmap | Google Summer of Code",
+      "channel": "Apna College",
+      "url": "https://www.youtube.com/watch?v=sPM2WiwA1us",
+      "status": "verified",
+      "returnedTitle": "GSoC 2026 Complete Roadmap | Google Summer of Code",
+      "returnedChannel": "Apna College"
+    },
+    {
+      "id": "prep-120",
+      "title": "All About Hackathons | How to Find, Participate & Win! | Hackathon Success Secrets",
+      "channel": "GeeksforGeeks",
+      "url": "https://www.youtube.com/watch?v=o6YzZvQfVqE",
+      "status": "verified",
+      "returnedTitle": "All About Hackathons | How to Find, Participate & Win! | Hackathon Success Secrets",
+      "returnedChannel": "GeeksforGeeks"
+    },
+    {
+      "id": "prep-121",
+      "title": "Email Writing: Step-by-Step Guide✨",
+      "channel": "English Insights with Khushi",
+      "url": "https://www.youtube.com/watch?v=TuyeNSPNKBE",
+      "status": "verified",
+      "returnedTitle": "Email Writing: Step-by-Step Guide✨",
+      "returnedChannel": "English Insights with Khushi"
+    },
+    {
+      "id": "prep-122",
+      "title": "How To Write a Follow-Up Email After an Interview? | Useful Tip To Get Some Internship",
+      "channel": "Internshala",
+      "url": "https://www.youtube.com/watch?v=dlyaPEG5nQI",
+      "status": "verified",
+      "returnedTitle": "How To Write a Follow-Up Email After an Interview? | Useful Tip To Get Some Internship",
+      "returnedChannel": "Internshala"
+    },
+    {
+      "id": "prep-123",
+      "title": "Career Skills – Remote Internship Playbook | How to Succeed at a Virtual Internship",
+      "channel": "Mind Facts - Why ?",
+      "url": "https://www.youtube.com/watch?v=6IcKAWGLyG8",
+      "status": "verified",
+      "returnedTitle": "Career Skills – Remote Internship Playbook | How to Succeed at a Virtual Internship",
+      "returnedChannel": "Mind Facts - Why ?"
+    },
+    {
+      "id": "prep-124",
+      "title": "We’re Overcomplicating Time Management | Samantha Lane | TEDxJohnsonCity",
+      "channel": "TEDx Talks",
+      "url": "https://www.youtube.com/watch?v=SxbDsuC-Ch4",
+      "status": "verified",
+      "returnedTitle": "We’re Overcomplicating Time Management | Samantha Lane | TEDxJohnsonCity",
+      "returnedChannel": "TEDx Talks"
+    },
+    {
+      "id": "prep-125",
+      "title": "NPTEL Complete Guide 2026 🔥 | Courses | Internships | Certificates | Exams | Goodies | Domain 🥇",
+      "channel": "Mayank Yadav",
+      "url": "https://www.youtube.com/watch?v=gaLHgUpOayQ",
+      "status": "verified",
+      "returnedTitle": "NPTEL Complete Guide 2026 🔥 | Courses | Internships | Certificates | Exams | Goodies | Domain 🥇",
+      "returnedChannel": "Mayank Yadav"
+    },
+    {
+      "id": "prep-126",
+      "title": "Govt. Free Online Courses With Certificate | Swayam Courses Online | NPTEL Courses | Free Courses",
+      "channel": "Kapil Samuel",
+      "url": "https://www.youtube.com/watch?v=xBgsUi9r6sw",
+      "status": "verified",
+      "returnedTitle": "Govt. Free Online Courses With Certificate | Swayam Courses Online | NPTEL Courses | Free Courses",
+      "returnedChannel": "Kapil Samuel"
+    },
+    {
+      "id": "prep-127",
+      "title": "📢 SWAYAM NPTEL 2026: Free IIT Courses | Enroll Before Last Date!",
+      "channel": "About computer code ",
+      "url": "https://www.youtube.com/watch?v=Di8dTJt7-_8",
+      "status": "verified",
+      "returnedTitle": "📢 SWAYAM NPTEL 2026: Free IIT Courses | Enroll Before Last Date!",
+      "returnedChannel": "About computer code "
+    },
+    {
+      "id": "prep-128",
+      "title": "freeCodeCamp Turns 10 & Major Certification Updates",
+      "channel": "freeCodeCamp.org",
+      "url": "https://www.youtube.com/watch?v=1fZ0hTX-ut4",
+      "status": "verified",
+      "returnedTitle": "freeCodeCamp Turns 10 & Major Certification Updates",
+      "returnedChannel": "freeCodeCamp.org"
+    }
+  ]
+}

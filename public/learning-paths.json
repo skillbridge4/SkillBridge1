@@ -1,0 +1,232 @@
+[
+  {
+    "id": "web-development-basics",
+    "title": "Web Development Basics",
+    "field": "Software Engineering",
+    "level": "Beginner",
+    "description": "Learn core web foundations and responsive interface basics.",
+    "estimatedHours": 12,
+    "items": [
+      {
+        "type": "video",
+        "id": "prep-113",
+        "required": true
+      },
+      {
+        "type": "course",
+        "id": "crs-01",
+        "required": true
+      },
+      {
+        "type": "course",
+        "id": "crs-02",
+        "required": true
+      }
+    ],
+    "requiredItems": [
+      "prep-113",
+      "crs-01",
+      "crs-02"
+    ],
+    "passMark": 70,
+    "questionCount": 10
+  },
+  {
+    "id": "python-foundations",
+    "title": "Python Foundations",
+    "field": "Data & AI",
+    "level": "Beginner",
+    "description": "Build foundational Python and computational thinking skills.",
+    "estimatedHours": 14,
+    "items": [
+      {
+        "type": "course",
+        "id": "crs-05",
+        "required": true
+      },
+      {
+        "type": "course",
+        "id": "crs-06",
+        "required": true
+      },
+      {
+        "type": "video",
+        "id": "prep-115",
+        "required": true
+      }
+    ],
+    "requiredItems": [
+      "crs-05",
+      "crs-06",
+      "prep-115"
+    ],
+    "passMark": 70,
+    "questionCount": 10
+  },
+  {
+    "id": "c-programming-basics",
+    "title": "C and Embedded Programming Basics",
+    "field": "Electronics & Embedded",
+    "level": "Beginner",
+    "description": "Review C programming foundations and an introductory embedded-C course.",
+    "estimatedHours": 10,
+    "items": [
+      {
+        "type": "video",
+        "id": "prep-112",
+        "required": true
+      },
+      {
+        "type": "video",
+        "id": "prep-109",
+        "required": true
+      },
+      {
+        "type": "course",
+        "id": "crs-25",
+        "required": true
+      }
+    ],
+    "requiredItems": [
+      "prep-112",
+      "prep-109",
+      "crs-25"
+    ],
+    "passMark": 70,
+    "questionCount": 10
+  },
+  {
+    "id": "data-and-ai-foundations",
+    "title": "Data and AI Foundations",
+    "field": "Data & AI",
+    "level": "Beginner",
+    "description": "Explore data preparation, analytics projects, and machine-learning fundamentals.",
+    "estimatedHours": 16,
+    "items": [
+      {
+        "type": "video",
+        "id": "prep-115",
+        "required": true
+      },
+      {
+        "type": "video",
+        "id": "prep-116",
+        "required": true
+      },
+      {
+        "type": "course",
+        "id": "crs-06",
+        "required": true
+      },
+      {
+        "type": "course",
+        "id": "crs-07",
+        "required": true
+      }
+    ],
+    "requiredItems": [
+      "prep-115",
+      "prep-116",
+      "crs-06",
+      "crs-07"
+    ],
+    "passMark": 70,
+    "questionCount": 10
+  },
+  {
+    "id": "resume-and-interview-preparation",
+    "title": "Resume and Interview Preparation",
+    "field": "Education",
+    "level": "Beginner",
+    "description": "Prepare a truthful student application and practice interview fundamentals.",
+    "estimatedHours": 8,
+    "items": [
+      {
+        "type": "video",
+        "id": "prep-085",
+        "required": true
+      },
+      {
+        "type": "video",
+        "id": "prep-090",
+        "required": true
+      },
+      {
+        "type": "video",
+        "id": "prep-093",
+        "required": true
+      },
+      {
+        "type": "video",
+        "id": "prep-101",
+        "required": true
+      }
+    ],
+    "requiredItems": [
+      "prep-085",
+      "prep-090",
+      "prep-093",
+      "prep-101"
+    ],
+    "passMark": 70,
+    "questionCount": 10
+  },
+  {
+    "id": "ui-ux-foundations",
+    "title": "UI/UX Foundations",
+    "field": "Design",
+    "level": "Beginner",
+    "description": "Practice user research, wireframing, and portfolio case-study basics.",
+    "estimatedHours": 11,
+    "items": [
+      {
+        "type": "video",
+        "id": "prep-114",
+        "required": true
+      },
+      {
+        "type": "course",
+        "id": "crs-04",
+        "required": true
+      },
+      {
+        "type": "course",
+        "id": "crs-18",
+        "required": true
+      }
+    ],
+    "requiredItems": [
+      "prep-114",
+      "crs-04",
+      "crs-18"
+    ],
+    "passMark": 70,
+    "questionCount": 10
+  },
+  {
+    "id": "cybersecurity-foundations",
+    "title": "Cybersecurity Foundations",
+    "field": "Cybersecurity",
+    "level": "Beginner",
+    "description": "Review network defense, secure web application practices, and common security concepts.",
+    "estimatedHours": 12,
+    "items": [
+      {
+        "type": "course",
+        "id": "crs-11",
+        "required": true
+      },
+      {
+        "type": "course",
+        "id": "crs-24",
+        "required": true
+      }
+    ],
+    "requiredItems": [
+      "crs-11",
+      "crs-24"
+    ],
+    "passMark": 70,
+    "questionCount": 10
+  }
+]

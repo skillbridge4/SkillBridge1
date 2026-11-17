@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SkillBridge, Youth Skill Development and Internship Finder. Discover skills, explore internships, and track your career growth.">
+  <meta name="theme-color" content="#4f46e5">
+  <title>SkillBridge | Youth Skill Development and Internship Finder</title>
+
+  <!-- PWA Manifest & Icons -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/ai-features.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       Global Navigation Header
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="#home" class="brand-logo" data-route="home" aria-label="SkillBridge Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+        </div>
+        <span class="brand-text">SkillBridge</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" role="navigation" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active" data-route="home">Home</a>
+        <a href="#internships" class="nav-link" data-route="internships">Internships</a>
+        <a href="#companies" class="nav-link" data-route="companies">Companies</a>
+        <a href="#courses" class="nav-link" data-route="courses">Skills & Courses</a>
+        <a href="#videos" class="nav-link" data-route="videos">Video Classes</a>
+        <a href="#tracker" class="nav-link" data-route="tracker">
+          Tracker <span class="nav-count-badge" id="tracker-nav-count" style="display: none;">0</span>
+        </a>
+        <div class="nav-more">
+          <button type="button" class="nav-link nav-more-toggle" data-more-toggle aria-expanded="false" aria-controls="desktop-more-menu">More</button>
+          <div class="nav-more-menu" id="desktop-more-menu" data-more-menu role="menu" hidden>
+            <a href="#my-learning" data-route="my-learning" role="menuitem">My Learning</a>
+            <a href="#skill-gap" data-route="skill-gap" role="menuitem">Skill-Gap Matcher</a>
+            <a href="#ai-guidance" data-route="ai-guidance" role="menuitem">AI Guidance</a>
+            <a href="#resume-analyser" data-route="resume-analyser" role="menuitem">Resume Analyser</a>
+            <a href="/verify/" data-route="verify" role="menuitem">Verify a certificate</a>
+            <a href="#admin" data-route="admin" id="admin-nav-link" role="menuitem" hidden>Admin</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Header Right Utilities -->
+      <div class="header-actions">
+        <button id="auth-action-btn" class="btn btn-outline btn-sm" type="button" disabled aria-busy="true">Checking session…</button>
+        <!-- Theme Toggle -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle light or dark theme" title="Toggle theme">
+          <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61e-5.01-.77.08-1.56.24-2.32 1.24-5.83 6.96-10.05 12.79-8.81.76.16 1.5.42 2.2.78C18.07 4.74 15.22 3 12 3z"/></svg>
+        </button>
+
+        <!-- User Profile Quick Nav -->
+        <button class="header-profile-btn" data-route="profile" aria-label="View user profile">
+          <div class="avatar-circle" id="header-avatar">SB</div>
+          <span class="header-profile-name" id="header-profile-name">Profile</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Main Application Views Container
+       ======================================================================== -->
+  <main id="main-content" role="main">
+    <div class="container">
+      <div id="catalog-error-banner" class="catalog-error-banner" role="status" hidden>
+        <span>Some catalog requests failed. Showing locally bundled data where available.</span>
+        <button type="button" class="btn btn-ghost btn-sm" data-error-dismiss aria-label="Dismiss catalog message">Dismiss</button>
+      </div>
+
+      <!-- ====================================================================
+           VIEW 1: HOME
+           ==================================================================== -->
+      <section id="view-home" class="view-section active" aria-labelledby="home-hero-title">
+        <!-- Hero Section -->
+        <div class="hero-section">
+          <h1 id="home-hero-title" class="hero-title">
+            Bridge the Gap Between <span class="hero-gradient-text">Learning</span> and <span class="hero-gradient-text">Earning</span>
+          </h1>
+          <p class="hero-subtitle">
+            Discover in-demand skills, explore internships that link to official sites, and track applications from Saved to Offer. We currently list <span id="hero-internship-count"></span>.
+          </p>
+
+          <!-- Search Bar -->
+          <div class="hero-search-wrapper">
+            <div class="search-box">
+              <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+              <input type="text" id="hero-search-input" class="search-input" placeholder="Search internships by role, company, or skill (e.g., React, AI, Figma)..." aria-label="Search internships">
+              <button class="btn btn-primary" id="hero-search-btn">Search</button>
+            </div>
+          </div>
+
+          <!-- Quick Category Chips -->
+          <div class="quick-categories">
+            <span class="quick-category-title">Explore fields:</span>
+            <div id="home-quick-chips" style="display: inline-flex; flex-wrap: wrap; gap: 0.4rem;">
+              <!-- Generated dynamically by app.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Statistics Counter -->
+        <div id="home-stats-banner" class="stats-grid" aria-label="Platform Statistics">
+          <!-- Populated by app.js -->
+        </div>
+
+        <!-- How It Works Section -->
+        <div style="margin: 4rem 0;">
+          <div class="section-header">
+            <div>
+              <h2 class="section-header-title">How SkillBridge Works</h2>
+              <p class="section-header-desc">Three simple steps to unlock your first career milestone</p>
+            </div>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">01</div>
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9z"/></svg>
+              </div>
+              <h3>Explore In-Demand Skills</h3>
+              <p>Browse curated free and affordable courses across Software, AI, Design, and Marketing from Harvard, Google, and freeCodeCamp.</p>
+              <a href="#courses" data-route="courses" class="btn btn-ghost btn-sm" style="margin-top: 1rem; padding-left: 0;">Browse Courses &rarr;</a>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number">02</div>
+              <div class="step-icon" style="background: var(--secondary-light); color: var(--secondary-hover);">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"/></svg>
+              </div>
+              <h3>Match Your Skill Gap</h3>
+              <p>Select your skills in our interactive matcher. See your percentage match for top internships and get instant course recommendations for missing skills.</p>
+              <a href="#skill-gap" data-route="skill-gap" class="btn btn-ghost btn-sm" style="margin-top: 1rem; padding-left: 0;">Try Matcher &rarr;</a>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number">03</div>
+              <div class="step-icon" style="background: var(--accent-light); color: var(--accent);">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              </div>
+              <h3>Apply & Track Progress</h3>
+              <p>Save favorite internships, manage statuses from Saved to Interview and Offer, log interview dates, and keep personalized prep notes in one place.</p>
+              <a href="#tracker" data-route="tracker" class="btn btn-ghost btn-sm" style="margin-top: 1rem; padding-left: 0;">View Tracker &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Internships Showcase -->
+        <div style="margin: 3.5rem 0;">
+          <div class="section-header">
+            <div>
+              <h2 class="section-header-title">Featured Opportunities</h2>
+              <p class="section-header-desc">Top handpicked internships open for applications right now</p>
+            </div>
+            <a href="#internships" data-route="internships" class="btn btn-outline">
+              View Internships &rarr;
+            </a>
+          </div>
+
+          <div id="home-featured-grid" class="internships-grid">
+            <!-- Populated by app.js -->
+          </div>
+        </div>
+
+        <!-- Skill Gap Call to Action Card -->
+        <div class="card" style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(6, 182, 212, 0.1)); border-color: rgba(79, 70, 229, 0.3); text-align: center; padding: 3rem 1.5rem; margin-top: 3.5rem;">
+          <h2 style="font-size: 1.85rem; margin-bottom: 0.75rem;">Not sure which internships fit your background?</h2>
+          <p style="max-width: 580px; margin: 0 auto 1.75rem; color: var(--text-secondary);">
+            Use our Skill-Gap Matcher to pinpoint what you're ready for and exactly what to learn next to land your dream role.
+          </p>
+          <div class="flex justify-center gap-3" style="flex-wrap: wrap;">
+            <a href="#skill-gap" data-route="skill-gap" class="btn btn-primary btn-lg">Launch Skill-Gap Matcher</a>
+            <a href="#courses" data-route="courses" class="btn btn-outline btn-lg">Explore All Courses</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           VIEW 2: INTERNSHIPS DIRECTORY
+           ==================================================================== -->
+      <section id="view-internships" class="view-section" aria-labelledby="internships-page-title">
+        <div class="section-header">
+          <div>
+            <h1 id="internships-page-title" class="section-header-title">Internships Directory</h1>
+            <p class="section-header-desc">Explore verified student and youth internships across top tech, product, and design teams</p>
+          </div>
+        </div>
+
+        <!-- Filter & Search Toolbar -->
+        <div class="filter-toolbar" role="search" aria-label="Filter internships">
+          <div class="filter-top-row">
+            <div class="filter-search-box search-box">
+              <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+              <input type="text" id="internship-search-input" class="search-input" placeholder="Search by role, company name, skill, or keywords..." aria-label="Search internships">
+            </div>
+            <button class="btn btn-outline" id="btn-clear-filters">Reset Filters</button>
+          </div>
+
+          <div class="filter-selects-row">
+            <div class="form-group">
+              <label for="filter-field" class="form-label">Field</label>
+              <select id="filter-field" class="form-select">
+                <!-- Dynamically populated -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-state" class="form-label">State</label>
+              <select id="filter-state" class="form-select">
+                <option value="all">All States</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-location" class="form-label">City</label>
+              <select id="filter-location" class="form-select">
+                <option value="all">All Cities</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-mode" class="form-label">Work Mode</label>
+              <select id="filter-mode" class="form-select">
+                <option value="all">All Modes</option>
+                <option value="remote">Remote Only</option>
+                <option value="hybrid">Hybrid</option>
+                <option value="on-site">On-site</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-comp" class="form-label">Compensation</label>
+              <select id="filter-comp" class="form-select">
+                <option value="all">All Stipends</option>
+                <option value="paid">Paid Only</option>
+                <option value="unpaid">Unpaid</option>
+                <option value="unknown">Not specified</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-stipend-range" class="form-label">Stipend range</label>
+              <select id="filter-stipend-range" class="form-select">
+                <option value="all">Any stipend</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-duration" class="form-label">Duration</label>
+              <select id="filter-duration" class="form-select">
+                <option value="all">Any Duration</option>
+                <option value="short">Up to 3 months</option>
+                <option value="long">More than 3 months</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-sort" class="form-label">Sort By</label>
+              <select id="filter-sort" class="form-select">
+                <option value="newest">Newest First</option>
+                <option value="deadline">Deadline Closing Soon</option>
+                <option value="stipend">Highest Stipend</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="filter-company-type" class="form-label">Company type</label>
+              <select id="filter-company-type" class="form-select">
+                <option value="all">All types</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="filter-eligibility" class="form-label">Eligibility</label>
+              <select id="filter-eligibility" class="form-select">
+                <option value="all">All eligibility</option>
+              </select>
+            </div>
+            <label class="form-group filter-check"><input id="filter-verified" type="checkbox"> Verified only</label>
+            <label class="form-group filter-check"><input id="filter-deadline-soon" type="checkbox"> Deadline in 7 days</label>
+          </div>
+
+          <div class="filter-bottom-status">
+            <span id="internships-result-count" class="font-semibold">Loading opportunities...</span>
+          </div>
+          <div id="active-filter-chips" class="active-filter-chips" aria-label="Active internship filters"></div>
+        </div>
+
+        <!-- Internships Grid Container -->
+        <div id="internships-list" class="internships-grid" aria-live="polite">
+          <!-- Populated by app.js -->
+        </div>
+      </section>
+
+      <section id="view-companies" class="view-section" aria-labelledby="companies-page-title">
+        <div class="section-header">
+          <div>
+            <h1 id="companies-page-title" class="section-header-title">Companies & Programs</h1>
+            <p class="section-header-desc">Browse organizations; official links and location details are shown only when confirmed.</p>
+          </div>
+        </div>
+        <div class="filter-toolbar">
+          <div class="filter-top-row">
+            <div class="filter-search-box search-box">
+              <input id="company-search-input" class="search-input" type="search" placeholder="Search companies and programs..." aria-label="Search companies">
+            </div>
+          </div>
+          <div class="filter-bottom-status">
+            <span id="companies-result-count" class="font-semibold" aria-live="polite"></span>
+          </div>
+        </div>
+        <div id="companies-list" class="courses-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="view-admin" class="view-section" aria-labelledby="admin-page-title">
+        <div class="section-header">
+          <div>
+            <h1 id="admin-page-title" class="section-header-title">Catalog Admin</h1>
+            <p class="section-header-desc">Only admin accounts can save or delete catalog records. Data is validated against shared constants before writing.</p>
+          </div>
+        </div>
+        <p id="admin-status" role="status" aria-live="polite"></p>
+        <div class="admin-grid">
+          <section class="course-card">
+            <h2 class="course-title">Companies</h2>
+            <div class="form-group">
+              <label class="form-label" for="admin-company-select">Existing companies</label>
+              <select id="admin-company-select" class="form-select"><option value="">Select a company</option></select>
+            </div>
+            <div class="card-actions">
+              <button id="admin-load-company" class="btn btn-outline btn-sm" type="button">Load for editing</button>
+              <button id="admin-delete-company" class="btn btn-ghost btn-sm" type="button">Delete selected</button>
+            </div>
+            <form id="admin-company-form">
+              <label class="form-label" for="admin-company-json">Company JSON record</label>
+              <textarea id="admin-company-json" class="form-input admin-json-input" rows="12" spellcheck="false" required></textarea>
+              <button class="btn btn-primary" type="submit">Save company</button>
+            </form>
+          </section>
+          <section class="course-card">
+            <h2 class="course-title">Internships</h2>
+            <div class="form-group">
+              <label class="form-label" for="admin-internship-select">Existing internships</label>
+              <select id="admin-internship-select" class="form-select"><option value="">Select an internship</option></select>
+            </div>
+            <div class="card-actions">
+              <button id="admin-load-internship" class="btn btn-outline btn-sm" type="button">Load for editing</button>
+              <button id="admin-delete-internship" class="btn btn-ghost btn-sm" type="button">Delete selected</button>
+            </div>
+            <form id="admin-internship-form">
+              <label class="form-label" for="admin-internship-json">Internship JSON record</label>
+              <textarea id="admin-internship-json" class="form-input admin-json-input" rows="12" spellcheck="false" required></textarea>
+              <button class="btn btn-primary" type="submit">Save internship</button>
+            </form>
+          </section>
+          <section class="course-card admin-certificates">
+            <h2 class="course-title">Certificate administration</h2>
+            <p class="text-muted">Review and revoke issued SkillBridge certificates.</p>
+            <button id="admin-load-certificates" class="btn btn-outline btn-sm" type="button">Load certificates</button>
+            <div id="admin-certificates-list" aria-live="polite"></div>
+          </section>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           VIEW 3: SKILLS & COURSES DIRECTORY
+           ==================================================================== -->
+      <section id="view-courses" class="view-section" aria-labelledby="courses-page-title">
+        <div class="section-header">
+          <div>
+            <h1 id="courses-page-title" class="section-header-title">Skills & Courses</h1>
+            <p class="section-header-desc">Build verified skills with high-quality free and recognized certificate courses</p>
+          </div>
+        </div>
+
+        <!-- Filter Toolbar -->
+        <div class="filter-toolbar" role="search" aria-label="Filter courses">
+          <div class="filter-top-row">
+            <div class="filter-search-box search-box">
+              <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+              <input type="text" id="course-search-input" class="search-input" placeholder="Search by course name, topic, or provider..." aria-label="Search courses">
+            </div>
+          </div>
+
+          <div class="filter-selects-row">
+            <div class="form-group">
+              <label for="filter-course-category" class="form-label">Category</label>
+              <select id="filter-course-category" class="form-select">
+                <option value="all">All Categories</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-course-level" class="form-label">Level</label>
+              <select id="filter-course-level" class="form-select">
+                <option value="all">All Levels</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-course-price" class="form-label">Price</label>
+              <select id="filter-course-price" class="form-select">
+                <option value="all">Free & Paid</option>
+                <option value="free">Free Courses</option>
+                <option value="paid">Paid / Certificate</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-bottom-status">
+            <span id="courses-result-count" class="font-semibold">Loading courses...</span>
+          </div>
+        </div>
+
+        <section class="learning-paths-embed" aria-labelledby="course-paths-title">
+          <h2 id="course-paths-title">SkillBridge learning paths</h2>
+          <p class="text-muted">Complete the in-app steps and final quiz to earn a SkillBridge certificate. External course completion is self-declared only.</p>
+          <div id="course-learning-paths" class="learning-path-grid"></div>
+        </section>
+
+        <!-- Courses Grid Container -->
+        <div id="courses-list" class="courses-grid" aria-live="polite">
+          <!-- Populated by app.js -->
+        </div>
+      </section>
+
+      <section id="view-videos" class="view-section" aria-labelledby="videos-page-title">
+        <div class="section-header">
+          <div>
+            <h1 id="videos-page-title" class="section-header-title">Video Classes</h1>
+            <p class="section-header-desc">Curated YouTube searches for internship readiness. Videos remain the property of their creators.</p>
+          </div>
+        </div>
+
+        <div class="video-category-tabs" role="tablist" aria-label="Video class categories">
+          <button type="button" class="video-category-tab" id="video-tab-skills" role="tab" aria-selected="false" aria-controls="video-class-panel" data-video-category="Skills" tabindex="-1">Skills</button>
+          <button type="button" class="video-category-tab active" id="video-tab-prep" role="tab" aria-selected="true" aria-controls="video-class-panel" data-video-category="Internship Prep" tabindex="0">Internship Prep</button>
+        </div>
+
+        <div id="video-class-panel" role="tabpanel" aria-labelledby="video-tab-prep">
+          <section class="video-learning-path" aria-labelledby="video-path-title">
+            <div class="video-path-heading">
+              <div>
+                <h2 id="video-path-title">Start here</h2>
+                <p class="text-muted">A suggested path from finding an opening to preparing your application.</p>
+              </div>
+              <span id="video-path-progress-label" class="badge badge-primary">0 of 8 watched</span>
+            </div>
+            <div class="progress-bar-track" role="progressbar" aria-label="Internship preparation learning path" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div id="video-path-progress" class="progress-bar-fill" style="width: 0%;"></div>
+            </div>
+            <div id="video-learning-path-list" class="video-learning-path-list"></div>
+          </section>
+          <section class="learning-paths-embed" aria-labelledby="video-paths-title">
+            <h2 id="video-paths-title">Earn a SkillBridge certificate</h2>
+            <p class="text-muted">Choose a structured path, complete its steps, and pass the final quiz.</p>
+            <div id="video-learning-paths" class="learning-path-grid"></div>
+          </section>
+
+          <div class="video-topic-chips" id="video-topic-chips" aria-label="Filter by internship preparation topic"></div>
+
+          <div class="video-filter-toolbar">
+            <div class="form-group video-search-group">
+              <label for="video-search" class="form-label">Search classes</label>
+              <input id="video-search" class="form-input" type="search" placeholder="Search internships, resume, interview..." autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="video-language-filter" class="form-label">Language</label>
+              <select id="video-language-filter" class="form-select">
+                <option value="all">All languages</option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Other">Other / unspecified</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="video-level-filter" class="form-label">Level</label>
+              <select id="video-level-filter" class="form-select">
+                <option value="all">All levels</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="video-duration-filter" class="form-label">Duration</label>
+              <select id="video-duration-filter" class="form-select">
+                <option value="all">All durations</option>
+                <option value="under-10">Under 10 minutes</option>
+                <option value="10-30">10–30 minutes</option>
+                <option value="over-30">Over 30 minutes</option>
+                <option value="varies">Not listed</option>
+              </select>
+            </div>
+          </div>
+          <p id="video-result-count" class="video-result-count" aria-live="polite"></p>
+          <div id="video-classes-list" class="video-classes-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="view-my-learning" class="view-section" aria-labelledby="my-learning-title">
+        <div class="section-header">
+          <div>
+            <h1 id="my-learning-title" class="section-header-title">My Learning</h1>
+            <p class="section-header-desc">Track required learning-path steps, final quiz results, and SkillBridge certificates.</p>
+          </div>
+        </div>
+        <div id="my-learning-paths" class="learning-path-grid" aria-live="polite"></div>
+        <section class="card earned-certificates-section" aria-labelledby="learning-certificates-title">
+          <h2 id="learning-certificates-title">My SkillBridge certificates</h2>
+          <div id="learning-certificates-list" aria-live="polite"></div>
+        </section>
+        <section class="card certificate-verifier-entry">
+          <h2>Verify a certificate</h2>
+          <form id="learning-verify-form" class="certificate-verify-form">
+            <label for="learning-cert-id" class="form-label">Certificate ID</label>
+            <input id="learning-cert-id" class="form-input" maxlength="24" autocomplete="off" placeholder="SB-2026-XXXXXXXXXXXX-XX" required>
+            <button class="btn btn-outline" type="submit">Verify</button>
+          </form>
+        </section>
+      </section>
+
+      <section id="view-verify" class="view-section" aria-labelledby="verify-page-title">
+        <div class="section-header">
+          <div>
+            <h1 id="verify-page-title" class="section-header-title">Verify a SkillBridge certificate</h1>
+            <p class="section-header-desc">Check a certificate ID or open a verification link from its QR code.</p>
+          </div>
+        </div>
+        <form id="public-verify-form" class="certificate-verify-form card">
+          <label for="public-cert-id" class="form-label">Certificate ID</label>
+          <input id="public-cert-id" class="form-input" maxlength="24" autocomplete="off" placeholder="SB-2026-XXXXXXXXXXXX-XX" required>
+          <button class="btn btn-primary" type="submit">Verify certificate</button>
+        </form>
+        <div id="certificate-verification-result" class="certificate-verification-result" role="status" aria-live="polite"></div>
+      </section>
+
+      <!-- ====================================================================
+           VIEW 4: SKILL-GAP MATCHER
+           ==================================================================== -->
+      <section id="view-skill-gap" class="view-section" aria-labelledby="skill-gap-page-title">
+        <div class="section-header">
+          <div>
+            <h1 id="skill-gap-page-title" class="section-header-title">Skill-Gap Matcher</h1>
+            <p class="section-header-desc">Calculate your qualification match percentage for each internship and discover courses to bridge your gap</p>
+          </div>
+        </div>
+
+        <!-- Interactive Skill Selector Cloud -->
+        <div class="skill-matcher-box">
+          <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <h2 class="skill-selector-title">Select Your Current Skills</h2>
+            <span id="selected-skills-count" class="badge badge-primary font-bold">0 selected</span>
+          </div>
+          <p class="skill-selector-desc">Click any tag below to toggle it on/off, add your own custom skills, or sync from your Profile.</p>
+
+          <!-- Skills Cloud -->
+          <div id="skills-picker-cloud" class="skills-picker-cloud" aria-label="Available skill tags to toggle">
+            <!-- Populated by app.js -->
+          </div>
+
+          <!-- Add Custom Skill Input -->
+          <form id="custom-skill-form" class="custom-skill-form">
+            <input type="text" id="custom-skill-input" class="form-input" placeholder="Type a custom skill (e.g. Flutter, Kotlin)..." aria-label="Custom skill name">
+            <button type="submit" class="btn btn-outline btn-sm">+ Add Skill</button>
+          </form>
+
+          <!-- Matcher Action Bar -->
+          <div class="matcher-action-bar">
+            <div class="flex items-center gap-2">
+              <button class="btn btn-secondary btn-sm" id="btn-sync-profile-skills">
+                Sync From Profile
+              </button>
+              <button class="btn btn-ghost btn-sm" id="btn-clear-selected-skills">
+                Clear All
+              </button>
+            </div>
+            <span class="text-muted" style="font-size: 0.85rem;">Rankings update instantly below</span>
+          </div>
+        </div>
+
+        <!-- Ranked Internship Match Results -->
+        <div id="ai-skill-gap-note" class="ai-status" aria-live="polite"></div>
+        <div id="skill-gap-results" aria-live="polite">
+          <!-- Populated by app.js -->
+        </div>
+      </section>
+
+      <section id="view-ai-guidance" class="view-section" aria-labelledby="ai-guidance-title">
+        <div class="section-header">
+          <div>
+            <h1 id="ai-guidance-title" class="section-header-title">AI Guidance</h1>
+            <p class="section-header-desc">Build a practical learning plan from your interests, skills, and our course, video, and internship catalogs.</p>
+          </div>
+        </div>
+        <p id="guidance-service-status" class="ai-status" role="status" aria-live="polite">Checking guidance availability…</p>
+        <form id="guidance-form" class="card ai-form">
+          <div class="ai-form-grid">
+            <label class="form-group"><span class="form-label">Education level</span>
+              <select class="form-input" name="education">
+                <option value="">Choose if you like</option><option>School student</option><option>Diploma</option><option>Undergraduate</option><option>Graduate</option><option>Other</option>
+              </select>
+            </label>
+            <label class="form-group"><span class="form-label">Branch or subject</span><input class="form-input" name="branch" maxlength="120" placeholder="For example, Computer Science"></label>
+            <label class="form-group"><span class="form-label">Current year</span>
+              <select class="form-input" name="year"><option value="">Choose if you like</option><option>Year 1</option><option>Year 2</option><option>Year 3</option><option>Year 4+</option><option>Recent graduate</option></select>
+            </label>
+            <label class="form-group"><span class="form-label">Career goal (optional)</span><input class="form-input" name="careerGoal" maxlength="500" placeholder="What would you like to work towards?"></label>
+            <label class="form-group"><span class="form-label">Preferred location</span><input class="form-input" name="preferredLocation" maxlength="120" placeholder="City, state, or Anywhere"></label>
+            <label class="form-group"><span class="form-label">Preferred work mode</span>
+              <select class="form-input" name="preferredMode"><option value="">No preference</option><option>Remote</option><option>Hybrid</option><option>On-site</option></select>
+            </label>
+            <label class="form-group"><span class="form-label">Time available per week</span><input class="form-input" type="number" name="hoursPerWeek" min="0" max="100" step="1" placeholder="For example, 5"></label>
+          </div>
+          <fieldset class="ai-fieldset">
+            <legend>Interests</legend>
+            <div id="guidance-interests" class="ai-choice-grid"></div>
+            <label class="form-group"><span class="form-label">Other interests (comma separated)</span><input class="form-input" name="customInterests" maxlength="500" placeholder="For example, public health, robotics"></label>
+          </fieldset>
+          <fieldset class="ai-fieldset">
+            <legend>Skills you have today</legend>
+            <div id="guidance-skills" class="ai-tags" aria-label="Selected skills"></div>
+            <div class="ai-inline-input">
+              <label class="sr-only" for="guidance-skill-input">Add a skill</label>
+              <input id="guidance-skill-input" class="form-input" list="guidance-skill-suggestions" maxlength="100" placeholder="Search or type a skill">
+              <datalist id="guidance-skill-suggestions"></datalist>
+              <button id="guidance-add-skill" class="btn btn-outline btn-sm" type="button">Add skill</button>
+            </div>
+          </fieldset>
+          <label class="ai-consent"><input type="checkbox" name="consent" required>
+            <span>I agree to send these details to the SkillBridge server and, when enabled, its AI provider for this request. My data is not saved unless I choose to save a result. I will not include sensitive information.</span>
+          </label>
+          <div class="ai-actions">
+            <button id="guidance-generate" class="btn btn-primary" type="submit">Create my guidance</button>
+            <button id="guidance-cancel" class="btn btn-outline" type="button" hidden>Cancel</button>
+            <button id="guidance-save-roadmap" class="btn btn-secondary" type="button">Save roadmap</button>
+            <button id="guidance-delete-data" class="btn btn-ghost" type="button">Delete my AI data</button>
+          </div>
+          <p id="guidance-status" class="ai-status" role="status" aria-live="polite"></p>
+        </form>
+        <div id="guidance-results" class="ai-report" aria-live="polite" aria-busy="false"></div>
+      </section>
+
+      <section id="view-resume-analyser" class="view-section" aria-labelledby="resume-page-title">
+        <div class="section-header">
+          <div>
+            <h1 id="resume-page-title" class="section-header-title">Resume Analyser</h1>
+            <p class="section-header-desc">Get a clear, practical review of your resume text and compare your listed skills with a catalog internship.</p>
+          </div>
+        </div>
+        <p id="resume-service-status" class="ai-status" role="status" aria-live="polite">Checking review availability…</p>
+        <form id="resume-form" class="card ai-form">
+          <div class="ai-form-grid">
+            <label class="form-group"><span class="form-label">Upload a PDF or DOCX (up to 2 MB)</span>
+              <input id="resume-file" class="form-input" type="file" accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            </label>
+            <label class="form-group"><span class="form-label">Compare with a catalog internship (optional)</span>
+              <select id="resume-internship" class="form-input" name="internshipId"></select>
+            </label>
+          </div>
+          <label class="form-group"><span class="form-label">Or paste resume text</span>
+            <textarea id="resume-text" class="form-input" name="resumeText" rows="9" maxlength="20000" placeholder="Paste readable resume text here. Do not include information you want to keep private."></textarea>
+          </label>
+          <p class="text-muted">Files are processed in memory and are not saved. Scanned PDFs and encrypted files are not supported.</p>
+          <label class="ai-consent"><input type="checkbox" name="consent" required>
+            <span>I agree to send my resume text to the SkillBridge server and, when enabled, its AI provider for this request. The file and text are not saved unless I choose to save the report. I will not include sensitive information.</span>
+          </label>
+          <div class="ai-actions">
+            <button id="resume-analyze" class="btn btn-primary" type="submit">Analyse resume</button>
+            <button id="resume-cancel" class="btn btn-outline" type="button" hidden>Cancel</button>
+            <button id="resume-compare" class="btn btn-outline" type="button">Compare selected internship</button>
+            <button id="resume-save-report" class="btn btn-secondary" type="button">Save report</button>
+            <button id="resume-download-pdf" class="btn btn-outline" type="button">Download as PDF</button>
+            <button id="resume-print" class="btn btn-ghost" type="button">Print report</button>
+            <button id="resume-delete-data" class="btn btn-ghost" type="button">Delete my AI data</button>
+          </div>
+          <p id="resume-status" class="ai-status" role="status" aria-live="polite"></p>
+        </form>
+        <div id="resume-results" class="ai-report resume-report" aria-live="polite" aria-busy="false"></div>
+        <p class="ai-disclaimer">AI suggestions are advice, not a guarantee of hiring. Review every claim, link, and example before using it.</p>
+      </section>
+
+      <!-- ====================================================================
+           VIEW 5: APPLICATION TRACKER
+           ==================================================================== -->
+      <section id="view-tracker" class="view-section" aria-labelledby="tracker-page-title">
+        <div class="section-header">
+          <div>
+            <h1 id="tracker-page-title" class="section-header-title">Application Tracker & Bookmarks</h1>
+            <p class="section-header-desc">Manage every stage of your career pipeline with interview dates and personal notes</p>
+          </div>
+          <button class="btn btn-outline" id="btn-export-tracker">
+            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            Export Backup (.json)
+          </button>
+        </div>
+        <p id="tracker-auth-notice" class="auth-page-notice" role="status" hidden>
+          Your tracker is saved in this browser. Sign in to use cloud sync.
+          <button class="btn btn-ghost btn-sm" type="button" data-auth-prompt="cloud sync">Sign in to use this</button>
+        </p>
+
+        <!-- Metrics Dashboard -->
+        <div id="tracker-metrics-grid" class="tracker-metrics-grid">
+          <!-- Populated by app.js -->
+        </div>
+
+        <!-- Status Filter Tabs -->
+        <div id="tracker-status-tabs" class="tracker-tabs" role="tablist">
+          <!-- Populated by app.js -->
+        </div>
+
+        <!-- Applications Pipeline List -->
+        <div id="tracker-items-list" role="tabpanel" aria-live="polite">
+          <!-- Populated by app.js -->
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           VIEW 6: PROFILE & LEARNING PROGRESS
+           ==================================================================== -->
+      <section id="view-profile" class="view-section" aria-labelledby="profile-page-title">
+        <div class="section-header">
+          <div>
+            <h1 id="profile-page-title" class="section-header-title">Student Profile & Learning Progress</h1>
+            <p class="section-header-desc">Customize your personal background, portfolio links, and monitor course completion milestones</p>
+          </div>
+        </div>
+        <p id="profile-auth-notice" class="auth-page-notice" role="status" hidden>
+          Your profile is saved in this browser. Sign in to use cloud sync.
+          <button class="btn btn-ghost btn-sm" type="button" data-auth-prompt="cloud sync">Sign in to use this</button>
+        </p>
+
+        <div class="profile-layout">
+          <!-- Left Summary Card -->
+          <aside class="profile-card">
+            <div class="profile-big-avatar" id="profile-big-avatar">SB</div>
+            <h2 id="profile-card-name" style="font-size: 1.35rem; margin-bottom: 0.25rem;">Your Name</h2>
+            <div id="profile-card-headline" class="text-muted" style="font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem;">
+              Add your education or career headline
+            </div>
+
+            <!-- Learning Progress Meter -->
+            <div class="progress-container">
+              <div class="flex items-center justify-between">
+                <span class="font-bold" style="font-size: 0.85rem;">Course Completion</span>
+                <span id="profile-progress-percent" class="badge badge-success font-bold">0%</span>
+              </div>
+              <div class="progress-bar-track">
+                <div id="profile-progress-fill" class="progress-bar-fill" style="width: 0%;"></div>
+              </div>
+              <p id="profile-progress-summary" class="text-muted" style="font-size: 0.8rem; margin-top: 0.35rem;">
+                0 courses completed
+              </p>
+            </div>
+
+            <!-- Completed Courses Mini List -->
+            <div style="width: 100%; text-align: left; margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 1.25rem;">
+              <h3 style="font-size: 0.95rem; margin-bottom: 0.75rem;">Completed Courses</h3>
+              <div id="profile-completed-courses-list" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <!-- Populated by app.js -->
+              </div>
+            </div>
+          </aside>
+
+          <!-- Right Edit Forms -->
+          <div>
+            <!-- Basic Info Form -->
+            <div class="card" style="margin-bottom: 2rem;">
+              <h2 style="font-size: 1.25rem; margin-bottom: 1.25rem;">Personal Information</h2>
+              <form id="profile-edit-form">
+                <div class="grid grid-cols-2 gap-4" style="margin-bottom: 1rem;">
+                  <div class="form-group">
+                    <label for="profile-name-input" class="form-label">Full Name</label>
+                    <input type="text" id="profile-name-input" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="profile-headline-input" class="form-label">Education / Headline</label>
+                    <input type="text" id="profile-headline-input" class="form-input" required>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4" style="margin-bottom: 1rem;">
+                  <div class="form-group">
+                    <label for="profile-email-input" class="form-label">Email Address</label>
+                    <input type="email" id="profile-email-input" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="profile-phone-input" class="form-label">Phone Number</label>
+                    <input type="text" id="profile-phone-input" class="form-input">
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1rem;">
+                  <label for="profile-location-input" class="form-label">Location / Target Regions</label>
+                  <input type="text" id="profile-location-input" class="form-input">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                  <label for="profile-bio-input" class="form-label">Bio & Career Goals</label>
+                  <textarea id="profile-bio-input" class="form-textarea" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save Profile Changes</button>
+              </form>
+            </div>
+
+            <!-- Profile Skills Management -->
+            <div class="card">
+              <h2 style="font-size: 1.25rem; margin-bottom: 0.5rem;">My Verified Skills</h2>
+              <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.25rem;">
+                These skills sync directly with the Skill-Gap Matcher to score your internship qualification rate.
+              </p>
+
+              <div id="profile-skills-list" class="skills-tag-wrap" style="margin-bottom: 1.25rem;">
+                <!-- Populated by app.js -->
+              </div>
+
+              <form id="profile-add-skill-form" class="custom-skill-form">
+                <input type="text" id="profile-add-skill-input" class="form-input" placeholder="Add a new skill (e.g. Next.js, SQL)..." aria-label="Add skill to profile">
+                <button type="submit" class="btn btn-outline btn-sm">+ Add</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <section class="card earned-certificates-section profile-earned-certificates" aria-labelledby="profile-certificates-title">
+          <h2 id="profile-certificates-title">SkillBridge certificates</h2>
+          <div id="profile-certificates-list" aria-live="polite"></div>
+        </section>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       Mobile Bottom Navigation Tab Bar
+       ======================================================================== -->
+  <nav class="bottom-nav" role="navigation" aria-label="Mobile Navigation">
+    <a href="#home" class="bottom-nav-item active" data-route="home">
+      <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="#internships" class="bottom-nav-item" data-route="internships">
+      <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+      <span>Internships</span>
+    </a>
+    <a href="#companies" class="bottom-nav-item" data-route="companies">
+      <svg viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zm2-4h14V5H5v12zm4-9h2v2H9V8zm0 4h2v2H9v-2zm4-4h2v2h-2V8zm0 4h2v2h-2v-2z"/></svg>
+      <span>Companies</span>
+    </a>
+    <a href="#courses" class="bottom-nav-item" data-route="courses">
+      <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9z"/></svg>
+      <span>Courses</span>
+    </a>
+    <a href="#videos" class="bottom-nav-item" data-route="videos">
+      <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM2 3v18h20V3H2zm8 4v10l8-5-8-5z"/></svg>
+      <span>Videos</span>
+    </a>
+    <a href="#skill-gap" class="bottom-nav-item" data-route="skill-gap">
+      <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"/></svg>
+      <span>Skill Gap</span>
+    </a>
+    <a href="#tracker" class="bottom-nav-item" data-route="tracker">
+      <svg viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+      <span>Tracker</span>
+      <span class="bottom-nav-badge" id="mobile-tracker-badge" style="display: none;">0</span>
+    </a>
+    <a href="#profile" class="bottom-nav-item" data-route="profile">
+      <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+      <span>Profile</span>
+    </a>
+    <div class="bottom-nav-more nav-more">
+      <button type="button" class="bottom-nav-item nav-more-toggle" data-more-toggle aria-expanded="false" aria-controls="mobile-more-menu" aria-label="More navigation">
+        <span class="more-dots" aria-hidden="true">...</span><span>More</span>
+      </button>
+      <div class="nav-more-menu" id="mobile-more-menu" data-more-menu role="menu" hidden>
+        <a href="#companies" data-route="companies" role="menuitem">Companies</a>
+        <a href="#videos" data-route="videos" role="menuitem">Video Classes</a>
+        <a href="#my-learning" data-route="my-learning" role="menuitem">My Learning</a>
+        <a href="#skill-gap" data-route="skill-gap" role="menuitem">Skill-Gap Matcher</a>
+        <a href="#ai-guidance" data-route="ai-guidance" role="menuitem">AI Guidance</a>
+        <a href="#resume-analyser" data-route="resume-analyser" role="menuitem">Resume Analyser</a>
+        <a href="#profile" data-route="profile" role="menuitem">Profile</a>
+        <a href="/verify/" data-route="verify" role="menuitem">Verify a certificate</a>
+        <a href="#admin" data-route="admin" id="mobile-admin-nav-link" role="menuitem" hidden>Admin</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       Global Footer
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+            </div>
+            <span class="brand-text">SkillBridge</span>
+          </div>
+          <p>
+            An open platform empowering young people to bridge their skill gap, discover transparent internship opportunities, and launch meaningful careers.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <ul class="footer-links">
+            <li><a href="#home" data-route="home">Home</a></li>
+            <li><a href="#internships" data-route="internships">Internships Directory</a></li>
+            <li><a href="#companies" data-route="companies">Companies & Programs</a></li>
+            <li><a href="#courses" data-route="courses">Courses & Certifications</a></li>
+            <li><a href="#videos" data-route="videos">Video Classes</a></li>
+            <li><a href="#my-learning" data-route="my-learning">My Learning</a></li>
+            <li><a href="/verify/" data-route="verify">Verify a certificate</a></li>
+            <li><a href="#skill-gap" data-route="skill-gap">Skill-Gap Matcher</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Tools</h5>
+          <ul class="footer-links">
+            <li><a href="#tracker" data-route="tracker">Application Tracker</a></li>
+            <li><a href="#profile" data-route="profile">Student Profile</a></li>
+            <li><a href="manifest.json" target="_blank">PWA Manifest</a></li>
+            <li><a href="#home" onclick="window.scrollTo(0,0);">Back to top</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Tech Standards</h5>
+          <ul class="footer-links">
+            <li><span class="badge badge-success">SkillBridge Platform</span></li>
+            <li><span class="badge badge-primary">Offline PWA Ready</span></li>
+            <li><span class="badge badge-neutral">localStorage Persistence</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 SkillBridge. YouTube videos belong to their creators; SkillBridge links to YouTube and does not host them.</div>
+        <div>Installable Progressive Web App (PWA)</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Global Modal Dialog Container (Accessible Dialog)
+       ======================================================================== -->
+  <div id="global-modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div id="global-modal-dialog" class="modal-dialog">
+      <!-- Injected dynamically by app.js -->
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Toast Notifications Container
+       ======================================================================== -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+[
+  {
+    "id": "web-development-basics",
+    "title": "Web Development Basics",
+    "field": "Software Engineering",
+    "level": "Beginner",
+    "description": "Learn core web foundations and responsive interface basics.",
+    "estimatedHours": 12,
+    "items": [
+      { "type": "video", "id": "prep-113", "required": true },
+      { "type": "course", "id": "crs-01", "required": true },
+      { "type": "course", "id": "crs-02", "required": true }
+    ],
+    "requiredItems": ["prep-113", "crs-01", "crs-02"],
+    "passMark": 70,
+    "quiz": {
+      "questions": [
+        { "id": "web-01", "prompt": "What is the primary purpose of semantic HTML?", "options": ["Describe the meaning and structure of content", "Add visual animation", "Store user passwords", "Replace all CSS"], "correctIndex": 0, "explanation": "Semantic elements communicate the role of page content to browsers and assistive technology.", "topicTags": ["HTML"] },
+        { "id": "web-02", "prompt": "Which language is primarily responsible for styling a web page?", "options": ["CSS", "SQL", "Bash", "JSON"], "correctIndex": 0, "explanation": "CSS controls layout, colors, typography, and other visual presentation.", "topicTags": ["CSS"] },
+        { "id": "web-03", "prompt": "What does responsive design aim to support?", "options": ["Layouts that adapt to different screen sizes", "One fixed desktop width", "Only printed pages", "A database schema"], "correctIndex": 0, "explanation": "Responsive layouts adapt content and controls for different viewport sizes.", "topicTags": ["Responsive design"] },
+        { "id": "web-04", "prompt": "Which HTML element is best suited for a page's main content?", "options": ["main", "b", "small", "style"], "correctIndex": 0, "explanation": "The main element identifies the dominant content of a document.", "topicTags": ["HTML"] },
+        { "id": "web-05", "prompt": "What does a CSS media query commonly evaluate?", "options": ["Viewport or device characteristics", "A user's password", "A SQL result", "An image's copyright"], "correctIndex": 0, "explanation": "Media queries apply styles conditionally, often based on viewport width.", "topicTags": ["CSS"] },
+        { "id": "web-06", "prompt": "Why should form controls have associated labels?", "options": ["To provide an accessible name and clickable label", "To make the server faster", "To hide validation", "To remove keyboard access"], "correctIndex": 0, "explanation": "Labels help screen-reader users identify controls and improve the click target.", "topicTags": ["Accessibility"] },
+        { "id": "web-07", "prompt": "Which CSS layout system is designed for two-dimensional rows and columns?", "options": ["CSS Grid", "HTML comments", "localStorage", "HTTP"], "correctIndex": 0, "explanation": "CSS Grid provides two-dimensional row-and-column layout.", "topicTags": ["CSS"] },
+        { "id": "web-08", "prompt": "What is the DOM?", "options": ["A structured representation of a document that scripts can access", "A CSS color format", "A hosting provider", "A JavaScript package manager"], "correctIndex": 0, "explanation": "The DOM represents document nodes and exposes them to browser APIs.", "topicTags": ["Web fundamentals"] },
+        { "id": "web-09", "prompt": "Which attribute provides alternative text for an informative image?", "options": ["alt", "target", "rel", "async"], "correctIndex": 0, "explanation": "The alt attribute supplies a text alternative when an image conveys information.", "topicTags": ["Accessibility"] },
+        { "id": "web-10", "prompt": "What is a sensible first step when a page overflows on mobile?", "options": ["Inspect its layout and test at a narrow viewport", "Remove all labels", "Disable zoom", "Set every element to 1200px wide"], "correctIndex": 0, "explanation": "Testing at the target viewport helps locate fixed widths and other overflow causes.", "topicTags": ["Responsive design"] }
+      ]
+    }
+  },
+  {
+    "id": "python-foundations",
+    "title": "Python Foundations",
+    "field": "Data & AI",
+    "level": "Beginner",
+    "description": "Build foundational Python and computational thinking skills.",
+    "estimatedHours": 14,
+    "items": [
+      { "type": "course", "id": "crs-05", "required": true },
+      { "type": "course", "id": "crs-06", "required": true },
+      { "type": "video", "id": "prep-115", "required": true }
+    ],
+    "requiredItems": ["crs-05", "crs-06", "prep-115"],
+    "passMark": 70,
+    "quiz": {
+      "questions": [
+        { "id": "py-01", "prompt": "Which Python type represents a sequence that cannot be changed after creation?", "options": ["tuple", "list", "dict", "set"], "correctIndex": 0, "explanation": "Tuples are immutable sequences; lists can be changed.", "topicTags": ["Data types"] },
+        { "id": "py-02", "prompt": "What does a for loop do?", "options": ["Repeats a block over an iterable", "Defines a class only", "Ends the program", "Creates a database"], "correctIndex": 0, "explanation": "A for loop iterates over items from an iterable.", "topicTags": ["Control flow"] },
+        { "id": "py-03", "prompt": "What is the usual purpose of a function?", "options": ["Package reusable behavior", "Change a file extension", "Create a network cable", "Render CSS"], "correctIndex": 0, "explanation": "Functions name reusable blocks of behavior and can accept inputs.", "topicTags": ["Functions"] },
+        { "id": "py-04", "prompt": "Which value represents the absence of a value in Python?", "options": ["None", "null", "void", "undefined"], "correctIndex": 0, "explanation": "Python uses None for the absence of a value.", "topicTags": ["Data types"] },
+        { "id": "py-05", "prompt": "What is a dictionary commonly used for?", "options": ["Mapping keys to values", "Sorting pixels", "Defining HTML tags", "Compiling CSS"], "correctIndex": 0, "explanation": "Dictionaries store key-value mappings.", "topicTags": ["Data structures"] },
+        { "id": "py-06", "prompt": "What does an if statement enable?", "options": ["Conditional execution", "Automatic package publishing", "Database backup", "Text styling"], "correctIndex": 0, "explanation": "An if statement chooses behavior based on a condition.", "topicTags": ["Control flow"] },
+        { "id": "py-07", "prompt": "Why use a virtual environment for a Python project?", "options": ["Isolate project dependencies", "Encrypt every source file", "Replace the interpreter", "Generate UI designs"], "correctIndex": 0, "explanation": "Virtual environments isolate installed packages for a project.", "topicTags": ["Tooling"] },
+        { "id": "py-08", "prompt": "What does a pandas DataFrame represent?", "options": ["Labeled tabular data", "A web browser", "A Python loop", "A compiled executable"], "correctIndex": 0, "explanation": "A DataFrame is a two-dimensional labeled data structure.", "topicTags": ["Pandas"] },
+        { "id": "py-09", "prompt": "What is an exception?", "options": ["An event that interrupts normal program flow", "A variable naming style", "A chart type", "A package index"], "correctIndex": 0, "explanation": "Exceptions report errors or unusual conditions during execution.", "topicTags": ["Errors"] },
+        { "id": "py-10", "prompt": "What is a good way to check a small function?", "options": ["Try representative inputs and expected edge cases", "Assume it works from its name", "Remove all return statements", "Only inspect its color"], "correctIndex": 0, "explanation": "Testing representative and edge inputs helps verify behavior.", "topicTags": ["Testing"] }
+      ]
+    }
+  },
+  {
+    "id": "c-programming-basics",
+    "title": "C and Embedded Programming Basics",
+    "field": "Electronics & Embedded",
+    "level": "Beginner",
+    "description": "Review C programming foundations and an introductory embedded-C course.",
+    "estimatedHours": 10,
+    "items": [
+      { "type": "video", "id": "prep-112", "required": true },
+      { "type": "video", "id": "prep-109", "required": true },
+      { "type": "course", "id": "crs-25", "required": true }
+    ],
+    "requiredItems": ["prep-112", "prep-109", "crs-25"],
+    "passMark": 70,
+    "quiz": {
+      "questions": [
+        { "id": "c-01", "prompt": "Which function is the conventional entry point of a hosted C program?", "options": ["main", "start", "init", "run"], "correctIndex": 0, "explanation": "A hosted C program begins execution in main.", "topicTags": ["C basics"] },
+        { "id": "c-02", "prompt": "What is the index of the first element in a C array?", "options": ["0", "1", "-1", "Depends on the compiler"], "correctIndex": 0, "explanation": "C arrays use zero-based indexing.", "topicTags": ["Arrays"] },
+        { "id": "c-03", "prompt": "Which operator obtains the address of an object?", "options": ["&", "*", "%", "->"], "correctIndex": 0, "explanation": "The unary & operator produces an object's address.", "topicTags": ["Pointers"] },
+        { "id": "c-04", "prompt": "What does sizeof return?", "options": ["The size in bytes of a type or object", "The number of array values always", "A memory address", "The current line number"], "correctIndex": 0, "explanation": "sizeof yields the number of bytes occupied by its operand's type.", "topicTags": ["Types"] },
+        { "id": "c-05", "prompt": "Which format specifier is commonly used to print an int with printf?", "options": ["%d", "%s", "%f", "%p"], "correctIndex": 0, "explanation": "%d is used for a signed decimal integer in printf.", "topicTags": ["Input and output"] },
+        { "id": "c-06", "prompt": "What is a pointer?", "options": ["An object that stores an address", "A loop statement", "A character array only", "A preprocessor directive"], "correctIndex": 0, "explanation": "A pointer stores the address of another object or function.", "topicTags": ["Pointers"] },
+        { "id": "c-07", "prompt": "What does break do inside a loop?", "options": ["Exits the nearest loop", "Restarts the program", "Declares an integer", "Skips compilation"], "correctIndex": 0, "explanation": "break terminates the nearest enclosing loop or switch.", "topicTags": ["Control flow"] },
+        { "id": "c-08", "prompt": "What is the purpose of a header file?", "options": ["Share declarations and interfaces", "Store runtime output", "Replace source files", "Allocate the stack"], "correctIndex": 0, "explanation": "Headers commonly provide declarations shared between source files.", "topicTags": ["Build"] },
+        { "id": "c-09", "prompt": "What does a function parameter represent?", "options": ["An input supplied to a function", "A compiler warning", "A file path only", "A memory leak"], "correctIndex": 0, "explanation": "Parameters let a function receive values from its caller.", "topicTags": ["Functions"] },
+        { "id": "c-10", "prompt": "Why should a program check array bounds?", "options": ["C does not automatically enforce array bounds", "Arrays grow without limit", "Bounds checks change variable types", "It disables pointers"], "correctIndex": 0, "explanation": "Out-of-bounds access has undefined behavior in C.", "topicTags": ["Arrays", "Safety"] }
+      ]
+    }
+  },
+  {
+    "id": "data-and-ai-foundations",
+    "title": "Data and AI Foundations",
+    "field": "Data & AI",
+    "level": "Beginner",
+    "description": "Explore data preparation, analytics projects, and machine-learning fundamentals.",
+    "estimatedHours": 16,
+    "items": [
+      { "type": "video", "id": "prep-115", "required": true },
+      { "type": "video", "id": "prep-116", "required": true },
+      { "type": "course", "id": "crs-06", "required": true },
+      { "type": "course", "id": "crs-07", "required": true }
+    ],
+    "requiredItems": ["prep-115", "prep-116", "crs-06", "crs-07"],
+    "passMark": 70,
+    "quiz": {
+      "questions": [
+        { "id": "ai-01", "prompt": "What is a common first step before analyzing a dataset?", "options": ["Inspect and clean the data", "Train a model without checking it", "Delete all missing values blindly", "Publish private records"], "correctIndex": 0, "explanation": "Inspection and thoughtful cleaning help identify quality problems before analysis.", "topicTags": ["Data preparation"] },
+        { "id": "ai-02", "prompt": "What is a feature in a supervised learning dataset?", "options": ["An input variable used to make predictions", "The final model score", "A chart title", "A programming language"], "correctIndex": 0, "explanation": "Features are input variables used by a model.", "topicTags": ["Machine learning"] },
+        { "id": "ai-03", "prompt": "What is a target label?", "options": ["The value a supervised model is trained to predict", "A file extension", "A Python package", "A graph axis"], "correctIndex": 0, "explanation": "The target is the outcome associated with each training example.", "topicTags": ["Machine learning"] },
+        { "id": "ai-04", "prompt": "Why separate training and test data?", "options": ["To estimate performance on unseen examples", "To make the dataset larger", "To remove the need for evaluation", "To hide model inputs"], "correctIndex": 0, "explanation": "A held-out test set helps assess generalization to unseen data.", "topicTags": ["Evaluation"] },
+        { "id": "ai-05", "prompt": "What is overfitting?", "options": ["A model fits training details but performs poorly on new data", "A model has too few rows", "A chart has too many labels", "A database uses a primary key"], "correctIndex": 0, "explanation": "Overfit models capture noise or training-specific patterns and generalize poorly.", "topicTags": ["Evaluation"] },
+        { "id": "ai-06", "prompt": "Which pandas structure is two-dimensional and tabular?", "options": ["DataFrame", "Series", "Tuple", "Generator"], "correctIndex": 0, "explanation": "A DataFrame organizes tabular data in labeled rows and columns.", "topicTags": ["Pandas"] },
+        { "id": "ai-07", "prompt": "What does a SQL SELECT statement do?", "options": ["Reads data from a table or query", "Changes a Python variable", "Draws a plot", "Installs a package"], "correctIndex": 0, "explanation": "SELECT retrieves data from relational tables or other query sources.", "topicTags": ["SQL"] },
+        { "id": "ai-08", "prompt": "Why document a data project?", "options": ["To explain data, methods, assumptions, and results", "To guarantee a model is unbiased", "To replace all tests", "To hide data sources"], "correctIndex": 0, "explanation": "Documentation makes the project understandable and reproducible.", "topicTags": ["Data projects"] },
+        { "id": "ai-09", "prompt": "What is a baseline model useful for?", "options": ["Providing a simple performance reference", "Proving a model is perfect", "Replacing validation data", "Encrypting the target"], "correctIndex": 0, "explanation": "A baseline helps assess whether a more complex approach adds value.", "topicTags": ["Evaluation"] },
+        { "id": "ai-10", "prompt": "What is an important practice when sharing a data portfolio?", "options": ["Avoid exposing personal or confidential data", "Include private credentials", "Claim unsupported accuracy", "Remove all source notes"], "correctIndex": 0, "explanation": "Portfolio data should respect privacy and be presented with accurate limitations.", "topicTags": ["Responsible AI"] }
+      ]
+    }
+  },
+  {
+    "id": "resume-and-interview-preparation",
+    "title": "Resume and Interview Preparation",
+    "field": "Education",
+    "level": "Beginner",
+    "description": "Prepare a truthful student application and practice interview fundamentals.",
+    "estimatedHours": 8,
+    "items": [
+      { "type": "video", "id": "prep-085", "required": true },
+      { "type": "video", "id": "prep-090", "required": true },
+      { "type": "video", "id": "prep-093", "required": true },
+      { "type": "video", "id": "prep-101", "required": true }
+    ],
+    "requiredItems": ["prep-085", "prep-090", "prep-093", "prep-101"],
+    "passMark": 70,
+    "quiz": {
+      "questions": [
+        { "id": "career-01", "prompt": "What should a student without job experience emphasize on a resume?", "options": ["Relevant projects, coursework, and skills", "Invented employment", "Unrelated personal data", "Unsupported claims"], "correctIndex": 0, "explanation": "Relevant projects and coursework can demonstrate skills without overstating experience.", "topicTags": ["Resume"] },
+        { "id": "career-02", "prompt": "What makes a resume bullet more informative?", "options": ["A clear action and truthful result or scope", "Several vague adjectives", "An unverified percentage", "A long paragraph"], "correctIndex": 0, "explanation": "Specific, accurate actions and outcomes make experience easier to understand.", "topicTags": ["Resume"] },
+        { "id": "career-03", "prompt": "What should a tailored cover letter do?", "options": ["Connect relevant evidence to the role", "Repeat the entire resume", "Promise guaranteed results", "Use the same company name everywhere"], "correctIndex": 0, "explanation": "A focused letter connects the applicant's relevant evidence to the position.", "topicTags": ["Cover letter"] },
+        { "id": "career-04", "prompt": "What is appropriate in a professional recruiter message?", "options": ["A concise introduction and a specific, respectful request", "Repeated messages every hour", "An attachment with sensitive information", "An unsupported job claim"], "correctIndex": 0, "explanation": "Concise, respectful outreach is easier for a recruiter to respond to.", "topicTags": ["Outreach"] },
+        { "id": "career-05", "prompt": "How should a student describe a project they did not complete alone?", "options": ["State their contribution accurately", "Claim all teammates' work", "Hide collaboration", "Invent a client"], "correctIndex": 0, "explanation": "Clearly describing individual contributions is honest and useful.", "topicTags": ["Projects"] },
+        { "id": "career-06", "prompt": "What is a useful structure for 'Tell me about yourself'?", "options": ["Relevant background, evidence, and role interest", "A complete life story", "Only a list of adjectives", "A salary demand first"], "correctIndex": 0, "explanation": "A concise, role-related answer gives the interviewer useful context.", "topicTags": ["Interview"] },
+        { "id": "career-07", "prompt": "If you do not know an interview answer, what is a constructive response?", "options": ["Be honest and explain how you would reason or learn", "Invent a confident answer", "Blame the interviewer", "Leave immediately"], "correctIndex": 0, "explanation": "Honest reasoning can demonstrate problem-solving even when a fact is unfamiliar.", "topicTags": ["Interview"] },
+        { "id": "career-08", "prompt": "What should you do before sending an application?", "options": ["Check the role details and proofread your materials", "Assume every role is legitimate", "Attach unrelated files", "Send the same untargeted note"], "correctIndex": 0, "explanation": "Reviewing the listing and materials helps catch errors and assess legitimacy.", "topicTags": ["Applications"] },
+        { "id": "career-09", "prompt": "Which LinkedIn profile practice is most appropriate?", "options": ["Use accurate experience and a clear student headline", "Claim skills you do not have", "Publish private contact details indiscriminately", "Copy another person's profile"], "correctIndex": 0, "explanation": "Accurate profile information makes your background clear and credible.", "topicTags": ["LinkedIn"] },
+        { "id": "career-10", "prompt": "What is a useful way to prepare for an interview?", "options": ["Practice concise examples and research the role", "Memorize fabricated stories", "Avoid learning about the organization", "Prepare no questions"], "correctIndex": 0, "explanation": "Practice and role research support relevant, truthful answers.", "topicTags": ["Interview"] }
+      ]
+    }
+  },
+  {
+    "id": "ui-ux-foundations",
+    "title": "UI/UX Foundations",
+    "field": "Design",
+    "level": "Beginner",
+    "description": "Practice user research, wireframing, and portfolio case-study basics.",
+    "estimatedHours": 11,
+    "items": [
+      { "type": "video", "id": "prep-114", "required": true },
+      { "type": "course", "id": "crs-04", "required": true },
+      { "type": "course", "id": "crs-18", "required": true }
+    ],
+    "requiredItems": ["prep-114", "crs-04", "crs-18"],
+    "passMark": 70,
+    "quiz": {
+      "questions": [
+        { "id": "ux-01", "prompt": "What is the goal of user research?", "options": ["Understand users, context, and needs", "Prove a design is already perfect", "Choose colors without evidence", "Replace accessibility testing"], "correctIndex": 0, "explanation": "Research helps designers understand people and the context in which they use a product.", "topicTags": ["Research"] },
+        { "id": "ux-02", "prompt": "What is a wireframe?", "options": ["A simplified representation of structure and layout", "A final production database", "A brand license", "A user interview transcript"], "correctIndex": 0, "explanation": "Wireframes communicate basic page structure before visual polish.", "topicTags": ["Wireframing"] },
+        { "id": "ux-03", "prompt": "What is a prototype useful for?", "options": ["Exploring and testing an interaction before implementation", "Guaranteeing the product has no bugs", "Replacing user feedback", "Storing source code"], "correctIndex": 0, "explanation": "Prototypes let teams explore ideas and gather feedback early.", "topicTags": ["Prototyping"] },
+        { "id": "ux-04", "prompt": "What should a design case study explain?", "options": ["The problem, process, decisions, and outcome", "Only decorative screenshots", "A guaranteed business result", "Private user information"], "correctIndex": 0, "explanation": "A case study should make the design problem-solving process understandable.", "topicTags": ["Portfolio"] },
+        { "id": "ux-05", "prompt": "Why test a design with representative users?", "options": ["To discover usability issues and learn from behavior", "To confirm every assumption", "To avoid iteration", "To measure code coverage"], "correctIndex": 0, "explanation": "Usability testing reveals where people struggle and what may need revision.", "topicTags": ["Usability testing"] },
+        { "id": "ux-06", "prompt": "What is a useful accessibility practice for text and backgrounds?", "options": ["Maintain sufficient contrast", "Use color as the only instruction", "Make text impossible to resize", "Remove keyboard focus"], "correctIndex": 0, "explanation": "Sufficient contrast improves readability for many users.", "topicTags": ["Accessibility"] },
+        { "id": "ux-07", "prompt": "What does visual hierarchy help users understand?", "options": ["Which content is most important and how it relates", "The designer's private notes", "The database password", "A source file's size"], "correctIndex": 0, "explanation": "Hierarchy helps guide attention through content and actions.", "topicTags": ["Visual design"] },
+        { "id": "ux-08", "prompt": "When should a designer iterate on a prototype?", "options": ["When feedback or testing reveals a useful change", "Only after launch", "Never after the first draft", "Whenever a random color is available"], "correctIndex": 0, "explanation": "Iteration uses evidence and feedback to improve a solution.", "topicTags": ["Iteration"] },
+        { "id": "ux-09", "prompt": "What should a portfolio screenshot avoid?", "options": ["Exposing private or sensitive user data", "Showing a clear interface", "Using a concise caption", "Explaining the designer's role"], "correctIndex": 0, "explanation": "Portfolios should protect privacy and remove sensitive information.", "topicTags": ["Portfolio"] },
+        { "id": "ux-10", "prompt": "What is a good way to frame a design decision?", "options": ["Explain the constraint, evidence, and trade-off", "Claim it is objectively perfect", "Hide alternative ideas", "Invent user research"], "correctIndex": 0, "explanation": "Explaining evidence and trade-offs makes design reasoning transparent.", "topicTags": ["Design process"] }
+      ]
+    }
+  },
+  {
+    "id": "cybersecurity-foundations",
+    "title": "Cybersecurity Foundations",
+    "field": "Cybersecurity",
+    "level": "Beginner",
+    "description": "Review network defense, secure web application practices, and common security concepts.",
+    "estimatedHours": 12,
+    "items": [
+      { "type": "course", "id": "crs-11", "required": true },
+      { "type": "course", "id": "crs-24", "required": true }
+    ],
+    "requiredItems": ["crs-11", "crs-24"],
+    "passMark": 70,
+    "quiz": {
+      "questions": [
+        { "id": "cyber-01", "prompt": "What is the main goal of confidentiality in information security?", "options": ["Prevent unauthorized disclosure of information", "Make every service publicly accessible", "Guarantee that software has no bugs", "Increase network bandwidth"], "correctIndex": 0, "explanation": "Confidentiality limits information access to authorized people and systems.", "topicTags": ["Security principles"] },
+        { "id": "cyber-02", "prompt": "How does authentication differ from authorization?", "options": ["Authentication verifies identity; authorization determines permitted actions", "Authentication grants every permission; authorization encrypts data", "They are identical concepts", "Authorization verifies identity; authentication sets network routes"], "correctIndex": 0, "explanation": "Authentication checks who a user is, while authorization checks what that identity may do.", "topicTags": ["Identity and access"] },
+        { "id": "cyber-03", "prompt": "How should an application store user passwords?", "options": ["With a purpose-built password hash and unique salt", "As readable plain text", "In a client-side JavaScript constant", "In an unprotected URL"], "correctIndex": 0, "explanation": "Password storage should use a password-hashing function with a unique salt, not reversible plaintext.", "topicTags": ["Authentication"] },
+        { "id": "cyber-04", "prompt": "What does the principle of least privilege recommend?", "options": ["Grant only the access needed for a task", "Give every account administrator access", "Share one account among all users", "Disable access reviews"], "correctIndex": 0, "explanation": "Least privilege reduces unnecessary access and limits the impact of mistakes or compromise.", "topicTags": ["Access control"] },
+        { "id": "cyber-05", "prompt": "What does HTTPS primarily protect while a browser communicates with a website?", "options": ["Data in transit between the browser and the server", "All data stored on the user's device", "The truth of every statement on the website", "A server from every denial-of-service attack"], "correctIndex": 0, "explanation": "HTTPS uses TLS to protect the connection in transit and authenticate the server.", "topicTags": ["Network security"] },
+        { "id": "cyber-06", "prompt": "Why validate untrusted input on the server?", "options": ["Clients can send values that bypass interface checks", "It removes the need for authorization", "It guarantees the client device is secure", "It prevents every network outage"], "correctIndex": 0, "explanation": "Server-side validation is necessary because client-side checks can be bypassed.", "topicTags": ["Input validation"] },
+        { "id": "cyber-07", "prompt": "What is a standard way to reduce SQL injection risk in database queries?", "options": ["Use parameterized queries for untrusted values", "Concatenate raw input into SQL strings", "Hide the submit button", "Encrypt only the page title"], "correctIndex": 0, "explanation": "Parameterized queries separate data from SQL commands.", "topicTags": ["Web security"] },
+        { "id": "cyber-08", "prompt": "What security benefit does multi-factor authentication provide?", "options": ["It requires additional independent evidence during sign-in", "It removes the need to protect accounts", "It makes passwords public", "It guarantees that a device has no malware"], "correctIndex": 0, "explanation": "A second factor can reduce account takeover risk when a password is compromised.", "topicTags": ["Authentication"] },
+        { "id": "cyber-09", "prompt": "What is a safer response to a suspicious attachment?", "options": ["Do not open it and report it through the approved channel", "Forward it to all colleagues", "Disable endpoint protection", "Enter account credentials to inspect it"], "correctIndex": 0, "explanation": "Avoid interacting with suspicious files and report them so the appropriate team can assess them.", "topicTags": ["Phishing"] },
+        { "id": "cyber-10", "prompt": "What should a learner do after noticing a possible security incident?", "options": ["Report it promptly using the organization's incident process", "Delete logs before anyone sees them", "Publish private details online", "Ignore it until a service fails"], "correctIndex": 0, "explanation": "Prompt reporting through established channels helps responders investigate and limit impact.", "topicTags": ["Incident response"] }
+      ]
+    }
+  }
+]

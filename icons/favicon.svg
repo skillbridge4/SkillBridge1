@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#favGrad)" />
+  <!-- Graduation Cap -->
+  <path d="M 32 15 L 50 24 L 32 33 L 14 24 Z" fill="#ffffff" />
+  <path d="M 20 28 L 20 37 C 20 42 44 42 44 37 L 44 28 L 32 34 Z" fill="#e0e7ff" />
+  <!-- Bridge Arch -->
+  <path d="M 12 50 C 22 38 42 38 52 50 Z" fill="#ffffff" />
+</svg>

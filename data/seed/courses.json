@@ -1,0 +1,751 @@
+[
+  {
+    "id": "crs-01",
+    "name": "Modern JavaScript (ES6+) From Scratch",
+    "category": "Frontend Development",
+    "level": "Beginner",
+    "duration": "20 hours",
+    "durationWeeks": 4,
+    "isFree": true,
+    "price": "Free",
+    "provider": "freeCodeCamp",
+    "skillsCovered": [
+      "JavaScript",
+      "ES6",
+      "DOM Manipulation",
+      "Git"
+    ],
+    "description": "Master JavaScript fundamentals: let/const, arrow functions, destructuring, promises, async/await, DOM APIs, and fetch.",
+    "syllabus": [
+      "Variables, Data Types, and Operators",
+      "Functions, Scope, and Closures",
+      "DOM Manipulation and Event Handling",
+      "Asynchronous JS: Callbacks, Promises, and Async/Await",
+      "ES6+ Modules and Modern Tooling Basics"
+    ],
+    "link": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/",
+    "featured": true,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-02",
+    "name": "Responsive Web Design & Modern CSS",
+    "category": "Frontend Development",
+    "level": "Beginner",
+    "duration": "15 hours",
+    "durationWeeks": 3,
+    "isFree": true,
+    "price": "Free",
+    "provider": "web.dev by Google",
+    "skillsCovered": [
+      "HTML5",
+      "CSS3",
+      "Accessibility",
+      "Responsive Design"
+    ],
+    "description": "Build beautiful, mobile-friendly websites using modern CSS Grid, Flexbox, custom variables, fluid typography, and media queries.",
+    "syllabus": [
+      "Semantic HTML5 & Accessibility (a11y) essentials",
+      "Deep dive into CSS Flexbox & Grid layouts",
+      "Fluid sizing with clamp(), min(), max()",
+      "CSS Custom Properties and Theme Switching",
+      "Mobile-first responsive optimization"
+    ],
+    "link": "https://web.dev/learn/design/",
+    "featured": true,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-03",
+    "name": "React 18 & Next.js Complete Guide",
+    "category": "Frontend Development",
+    "level": "Intermediate",
+    "duration": "35 hours",
+    "durationWeeks": 6,
+    "isFree": false,
+    "price": "$19.99",
+    "provider": "Scrimba",
+    "skillsCovered": [
+      "React",
+      "Next.js",
+      "JavaScript",
+      "CSS3"
+    ],
+    "description": "Learn component architecture, state management with hooks, server-side rendering, and the Next.js App Router through interactive coding.",
+    "syllabus": [
+      "Components, Props, and JSX",
+      "State Management with useState and useEffect",
+      "Custom Hooks and Context API",
+      "Next.js 14 App Router, Server Components & Routing",
+      "Deploying Full-Stack apps on Vercel"
+    ],
+    "link": "https://scrimba.com/learn/learnreact",
+    "featured": true,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-04",
+    "name": "Figma for UI/UX Designers: Zero to Hero",
+    "category": "UI/UX Design",
+    "level": "Beginner",
+    "duration": "18 hours",
+    "durationWeeks": 4,
+    "isFree": true,
+    "price": "Free",
+    "provider": "Coursera & CalArts",
+    "skillsCovered": [
+      "Figma",
+      "UI Design",
+      "Wireframing",
+      "Prototyping",
+      "Design Systems"
+    ],
+    "description": "Learn professional UI design in Figma: auto-layout 5.0, variables, reusable components, interactive prototyping, and design systems.",
+    "syllabus": [
+      "Figma Interface, Canvas, and Frames",
+      "Mastering Auto-Layout and Responsive Constraints",
+      "Color Systems, Typography scales, and Accessibility",
+      "Interactive Micro-Animations & Smart Animate",
+      "Building scalable Component Libraries and Design Tokens"
+    ],
+    "link": "https://www.coursera.org/specializations/ui-ux-design",
+    "featured": true,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-05",
+    "name": "CS50: Introduction to Computer Science",
+    "category": "Computer Science",
+    "level": "Beginner",
+    "duration": "60 hours",
+    "durationWeeks": 10,
+    "isFree": true,
+    "price": "Free (Optional Cert $149)",
+    "provider": "Harvard University / edX",
+    "skillsCovered": [
+      "C/C++",
+      "Python",
+      "SQL",
+      "Data Structures",
+      "Algorithms"
+    ],
+    "description": "Harvard's legendary foundational course covering computational thinking, memory allocation, data structures, algorithms, and web basics.",
+    "syllabus": [
+      "Computational Thinking and Scratch",
+      "C programming: Memory, Pointers, Arrays",
+      "Algorithms: Sorting, Searching, Big-O Complexity",
+      "Data Structures: Linked Lists, Trees, Hash Tables",
+      "Python, SQL, and Full-Stack Project Capstone"
+    ],
+    "link": "https://pll.harvard.edu/course/cs50-introduction-computer-science",
+    "featured": true,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-06",
+    "name": "Python for Data Analysis & Pandas",
+    "category": "Data Science & AI",
+    "level": "Beginner",
+    "duration": "22 hours",
+    "durationWeeks": 4,
+    "isFree": true,
+    "price": "Free",
+    "provider": "Kaggle Learn",
+    "skillsCovered": [
+      "Python",
+      "Pandas",
+      "Data Analysis",
+      "Mathematics"
+    ],
+    "description": "Learn to clean messy datasets, perform exploratory data analysis, calculate summary metrics, and visualize trends with Pandas & Seaborn.",
+    "syllabus": [
+      "Python syntax, lists, dictionaries, and list comprehensions",
+      "Creating and indexing Pandas DataFrames",
+      "Handling Missing Values and Data Transformation",
+      "Grouping, Aggregating, and Reshaping data",
+      "Visualizing distributions with Matplotlib & Seaborn"
+    ],
+    "link": null,
+    "featured": true,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-07",
+    "name": "Machine Learning Specialization",
+    "category": "Data Science & AI",
+    "level": "Intermediate",
+    "duration": "40 hours",
+    "durationWeeks": 8,
+    "isFree": false,
+    "price": "$49/mo",
+    "provider": "DeepLearning.AI / Andrew Ng",
+    "skillsCovered": [
+      "Machine Learning",
+      "Python",
+      "PyTorch",
+      "Mathematics"
+    ],
+    "description": "Supervised and unsupervised learning, gradient descent, neural networks, decision trees, and best practices for production AI.",
+    "syllabus": [
+      "Linear Regression and Cost Functions",
+      "Logistic Regression and Regularization",
+      "Neural Networks and Forward Propagation",
+      "Decision Trees, Random Forests, and XGBoost",
+      "Unsupervised Learning: K-Means, PCA, Recommender Systems"
+    ],
+    "link": "https://www.deeplearning.ai/courses/machine-learning-specialization/",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-08",
+    "name": "Node.js & Express RESTful API Development",
+    "category": "Backend Development",
+    "level": "Intermediate",
+    "duration": "25 hours",
+    "durationWeeks": 5,
+    "isFree": true,
+    "price": "Free",
+    "provider": "The Odin Project",
+    "skillsCovered": [
+      "Node.js",
+      "REST APIs",
+      "SQL",
+      "MongoDB",
+      "Git"
+    ],
+    "description": "Build production-ready backend servers with authentication, database models, input validation, error middleware, and automated tests.",
+    "syllabus": [
+      "Node.js Event Loop, File System, and Streams",
+      "Express Routing, Middleware, and Static Serving",
+      "Database integration with PostgreSQL and Prisma / Mongoose",
+      "JWT Authentication, Password Hashing with Bcrypt",
+      "API Security: CORS, Helmet, Rate Limiting"
+    ],
+    "link": "https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-09",
+    "name": "SQL & Relational Database Mastery",
+    "category": "Data Science & AI",
+    "level": "Beginner",
+    "duration": "16 hours",
+    "durationWeeks": 3,
+    "isFree": true,
+    "price": "Free",
+    "provider": "Khan Academy",
+    "skillsCovered": [
+      "SQL",
+      "Data Analysis",
+      "Database Optimization"
+    ],
+    "description": "Master relational data modeling, complex multi-table joins, subqueries, group by aggregations, window functions, and indexing.",
+    "syllabus": [
+      "Relational Database Concepts and Table Creation",
+      "SELECT, WHERE, ORDER BY, and Filtering operators",
+      "INNER, LEFT, RIGHT, and FULL OUTER JOINs",
+      "Aggregations, GROUP BY, and HAVING",
+      "Window functions (ROW_NUMBER, RANK, DENSE_RANK)"
+    ],
+    "link": "https://www.khanacademy.org/computing/computer-programming/sql",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-10",
+    "name": "Git & GitHub Version Control Masterclass",
+    "category": "Software Engineering",
+    "level": "Beginner",
+    "duration": "8 hours",
+    "durationWeeks": 2,
+    "isFree": true,
+    "price": "Free",
+    "provider": "freeCodeCamp",
+    "skillsCovered": [
+      "Git",
+      "CI/CD"
+    ],
+    "description": "Never fear merge conflicts again. Learn branching, rebasing, pull requests, cherry-picking, stash, and GitHub collaborative workflows.",
+    "syllabus": [
+      "Git Architecture: Working Directory, Staging, Repository",
+      "Branching, Merging, and Conflict Resolution",
+      "Interactive Rebasing and Commit Squashing",
+      "Remote Collaboration: Forks, Pull Requests, Code Reviews",
+      "GitHub Actions CI/CD Basics"
+    ],
+    "link": "https://www.freecodecamp.org/learn/",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-11",
+    "name": "Cybersecurity Fundamentals & Network Defense",
+    "category": "Cybersecurity",
+    "level": "Beginner",
+    "duration": "30 hours",
+    "durationWeeks": 6,
+    "isFree": true,
+    "price": "Free",
+    "provider": "Cisco Networking Academy",
+    "skillsCovered": [
+      "Cybersecurity",
+      "Networking",
+      "Linux",
+      "Wireshark"
+    ],
+    "description": "Understand common cyber threats, defense in depth, firewall configuration, encryption mechanisms, and network packet sniffing.",
+    "syllabus": [
+      "Threat Landscape: Malware, Phishing, Ransomware, Social Engineering",
+      "OSI and TCP/IP Networking Basics",
+      "Packet Inspection using Wireshark",
+      "Cryptography: Symmetric vs Asymmetric, Hashing, SSL/TLS",
+      "Security Operations Center (SOC) incident investigation"
+    ],
+    "link": "https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-12",
+    "name": "Docker & Kubernetes for Cloud Beginners",
+    "category": "Cloud & DevOps",
+    "level": "Intermediate",
+    "duration": "22 hours",
+    "durationWeeks": 4,
+    "isFree": false,
+    "price": "$18.99",
+    "provider": "Udemy / Bret Fisher",
+    "skillsCovered": [
+      "Docker",
+      "Kubernetes",
+      "Linux",
+      "CI/CD"
+    ],
+    "description": "Package applications into lightweight, reproducible Docker containers and orchestrate multi-service deployments with Kubernetes.",
+    "syllabus": [
+      "Container fundamentals vs Virtual Machines",
+      "Writing efficient multi-stage Dockerfiles",
+      "Docker Compose for multi-container local environments",
+      "Kubernetes Architecture: Pods, Services, Deployments",
+      "ConfigMaps, Secrets, and Ingress controllers"
+    ],
+    "link": "https://www.udemy.com/course/docker-mastery/",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-13",
+    "name": "AWS Certified Cloud Practitioner Foundations",
+    "category": "Cloud & DevOps",
+    "level": "Beginner",
+    "duration": "16 hours",
+    "durationWeeks": 3,
+    "isFree": true,
+    "price": "Free",
+    "provider": "AWS Skill Builder",
+    "skillsCovered": [
+      "AWS",
+      "Cloud Computing",
+      "Networking"
+    ],
+    "description": "Learn the core building blocks of Amazon Web Services: EC2 compute, S3 object storage, RDS databases, VPC networking, and IAM security.",
+    "syllabus": [
+      "Introduction to Cloud Computing and the AWS Global Infrastructure",
+      "Compute Services: EC2, Lambda, and ECS",
+      "Storage & Databases: S3, EBS, RDS, and DynamoDB",
+      "Networking: VPC, Subnets, Security Groups, Route 53",
+      "Security, Pricing, and Architecture Best Practices"
+    ],
+    "link": "https://explore.skillbuilder.aws/",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-14",
+    "name": "Product Management Fundamentals",
+    "category": "Product Management",
+    "level": "Beginner",
+    "duration": "18 hours",
+    "durationWeeks": 4,
+    "isFree": true,
+    "price": "Free",
+    "provider": "Product School",
+    "skillsCovered": [
+      "Product Management",
+      "User Research",
+      "Roadmapping",
+      "Agile"
+    ],
+    "description": "Learn how to identify user pain points, write PRDs, prioritize feature backlogs using RICE, and collaborate with engineering teams.",
+    "syllabus": [
+      "The Role of a PM in Modern Tech Companies",
+      "User Research, Customer Interviews, and Persona Creation",
+      "Writing impactful Product Requirement Documents (PRDs)",
+      "Prioritization frameworks: RICE, MoSCoW, Kano Model",
+      "Metrics that Matter: North Star, Retention, and Churn"
+    ],
+    "link": "https://productschool.com/",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-15",
+    "name": "SEO & Inbound Content Marketing Masterclass",
+    "category": "Marketing",
+    "level": "Beginner",
+    "duration": "12 hours",
+    "durationWeeks": 3,
+    "isFree": true,
+    "price": "Free",
+    "provider": "HubSpot Academy",
+    "skillsCovered": [
+      "SEO",
+      "Content Writing",
+      "Copywriting",
+      "Google Analytics"
+    ],
+    "description": "Discover search engine optimization strategies: on-page SEO, keyword intent mapping, technical site audits, and high-converting copy.",
+    "syllabus": [
+      "Search Engine Crawling, Indexing, and Ranking Algorithms",
+      "Keyword Research and Search Intent Analysis",
+      "On-Page Optimization: Headers, Meta Tags, Internal Links",
+      "Link Building and Content Distribution Tactics",
+      "Measuring Organic Traffic with Google Search Console"
+    ],
+    "link": "https://academy.hubspot.com/courses/seo-training",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-16",
+    "name": "Flutter & Dart: Cross-Platform Mobile Apps",
+    "category": "Mobile Development",
+    "level": "Intermediate",
+    "duration": "32 hours",
+    "durationWeeks": 6,
+    "isFree": false,
+    "price": "$15.99",
+    "provider": "Udemy / Angela Yu",
+    "skillsCovered": [
+      "Flutter",
+      "Dart",
+      "Mobile Dev",
+      "REST APIs"
+    ],
+    "description": "Build native iOS and Android apps with a single codebase using Google Flutter framework and expressive Dart programming.",
+    "syllabus": [
+      "Dart Programming Language Essentials",
+      "Stateless vs Stateful Widgets, Layouts & Theming",
+      "State Management with Provider and Bloc",
+      "Consuming REST APIs and JSON Serialization",
+      "Local persistence with Hive and SQLite"
+    ],
+    "link": "https://www.udemy.com/course/flutter-bootcamp-with-dart/",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-17",
+    "name": "Deep Learning with PyTorch",
+    "category": "Data Science & AI",
+    "level": "Advanced",
+    "duration": "36 hours",
+    "durationWeeks": 6,
+    "isFree": true,
+    "price": "Free",
+    "provider": "PyTorch / Udacity",
+    "skillsCovered": [
+      "PyTorch",
+      "Python",
+      "Machine Learning",
+      "Computer Vision"
+    ],
+    "description": "Build and train convolutional networks, recurrent architectures, and transformers using PyTorch on real computer vision datasets.",
+    "syllabus": [
+      "Tensors, Autograd, and GPU acceleration",
+      "Building Multilayer Perceptrons (MLP)",
+      "Convolutional Neural Networks (CNN) for Image Classification",
+      "Transfer Learning with ResNet and ViT backbones",
+      "Model Deployment with TorchScript and ONNX"
+    ],
+    "link": "https://pytorch.org/tutorials/",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-18",
+    "name": "User Experience (UX) Research & Wireframing",
+    "category": "UI/UX Design",
+    "level": "Beginner",
+    "duration": "14 hours",
+    "durationWeeks": 3,
+    "isFree": true,
+    "price": "Free",
+    "provider": "Interaction Design Foundation (IxDF)",
+    "skillsCovered": [
+      "User Research",
+      "Wireframing",
+      "Prototyping",
+      "UI Design"
+    ],
+    "description": "Master qualitative user interviews, card sorting, low-fidelity wireframing, and usability testing methodologies.",
+    "syllabus": [
+      "User Research Methodologies: Qualitative vs Quantitative",
+      "Conducting Non-Biased User Interviews",
+      "Affinity Mapping and User Journey Maps",
+      "Rapid Low-Fidelity Wireframing on Paper and Digital",
+      "Moderated and Unmoderated Usability Testing"
+    ],
+    "link": "https://www.interaction-design.org/courses/user-research-methods-and-best-practices",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-19",
+    "name": "Linux Command Line & Bash Scripting",
+    "category": "Cloud & DevOps",
+    "level": "Beginner",
+    "duration": "14 hours",
+    "durationWeeks": 3,
+    "isFree": true,
+    "price": "Free",
+    "provider": "Linux Foundation / edX",
+    "skillsCovered": [
+      "Linux",
+      "CI/CD"
+    ],
+    "description": "Become confident in the Linux terminal: navigation, file permissions, piped commands (grep, awk, sed), and automated bash scripts.",
+    "syllabus": [
+      "Linux Filesystem Hierarchy and Essential Commands",
+      "File Permissions (chmod, chown) and User Management",
+      "Text Processing with grep, awk, sed, and Regular Expressions",
+      "Writing robust Bash Scripts with functions and loops",
+      "Process Management (ps, top, kill, systemd)"
+    ],
+    "link": "https://www.edx.org/learn/linux/the-linux-foundation-introduction-to-linux",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-20",
+    "name": "Tableau Desktop for Data Visualization",
+    "category": "Data Science & AI",
+    "level": "Beginner",
+    "duration": "16 hours",
+    "durationWeeks": 3,
+    "isFree": true,
+    "price": "Free (Student Trial)",
+    "provider": "Tableau for Students",
+    "skillsCovered": [
+      "Tableau",
+      "Data Analysis",
+      "SQL"
+    ],
+    "description": "Create interactive dashboards, calculated fields, geographic maps, and executive business charts in Tableau Desktop.",
+    "syllabus": [
+      "Connecting to Excel, CSV, and SQL Data Sources",
+      "Building Bar Charts, Line Trends, and Scatter Plots",
+      "Custom Calculated Fields and Level of Detail (LOD) Expressions",
+      "Designing Interactive Dashboards with Filter Actions",
+      "Publishing to Tableau Public for your portfolio"
+    ],
+    "link": "https://www.tableau.com/academic/students",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-21",
+    "name": "Full Stack Swift & SwiftUI iOS Development",
+    "category": "Mobile Development",
+    "level": "Intermediate",
+    "duration": "28 hours",
+    "durationWeeks": 6,
+    "isFree": true,
+    "price": "Free",
+    "provider": "100 Days of SwiftUI by Paul Hudson",
+    "skillsCovered": [
+      "Swift",
+      "SwiftUI",
+      "iOS Dev",
+      "Git"
+    ],
+    "description": "A complete, structured curriculum for learning modern declarative iOS development with SwiftUI, state, animations, and CoreData.",
+    "syllabus": [
+      "Swift Basics: Types, Optionals, Enums, and Structs",
+      "SwiftUI Views, Modifiers, and Stacks",
+      "State Management: @State, @Binding, and @Observable",
+      "Navigation, Sheets, and Alert Dialogs",
+      "Building and testing 15 complete iOS portfolio apps"
+    ],
+    "link": "https://www.hackingwithswift.com/100/swiftui",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-22",
+    "name": "Automated E2E Testing with Playwright",
+    "category": "Software Engineering",
+    "level": "Intermediate",
+    "duration": "12 hours",
+    "durationWeeks": 3,
+    "isFree": true,
+    "price": "Free",
+    "provider": "Playwright Official / Microsoft",
+    "skillsCovered": [
+      "Playwright",
+      "Testing",
+      "JavaScript",
+      "CI/CD"
+    ],
+    "description": "Write fast, reliable, resilient end-to-end browser tests for modern web applications across Chromium, Firefox, and WebKit.",
+    "syllabus": [
+      "Playwright Test Runner setup and configuration",
+      "Locators, Auto-waiting, and User actions",
+      "Handling Authentication state and API mocking",
+      "Visual Regression testing and Trace Viewer debugging",
+      "Running automated tests in GitHub Actions CI"
+    ],
+    "link": "https://playwright.dev/docs/intro",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-23",
+    "name": "Effective Communication & Interview Mastery for Tech",
+    "category": "Career & Soft Skills",
+    "level": "Beginner",
+    "duration": "8 hours",
+    "durationWeeks": 2,
+    "isFree": true,
+    "price": "Free",
+    "provider": "Google Career Certificates",
+    "skillsCovered": [
+      "Communication",
+      "Public Speaking",
+      "Problem Solving"
+    ],
+    "description": "Ace behavioral interviews using the STAR method, write professional emails, network on LinkedIn, and negotiate offers with confidence.",
+    "syllabus": [
+      "Framing your story: The Elevator Pitch",
+      "Structuring behavioral answers using the STAR method",
+      "Technical communication and whiteboarding clarity",
+      "Cold outreach on LinkedIn that gets 40%+ reply rates",
+      "Offer evaluation and polite salary negotiation"
+    ],
+    "link": "https://grow.google/certificates/",
+    "featured": true,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-24",
+    "name": "Ethical Hacking & Web App Security (OWASP Top 10)",
+    "category": "Cybersecurity",
+    "level": "Intermediate",
+    "duration": "24 hours",
+    "durationWeeks": 5,
+    "isFree": true,
+    "price": "Free",
+    "provider": "PortSwigger Web Security Academy",
+    "skillsCovered": [
+      "Cybersecurity",
+      "Linux",
+      "Incident Response",
+      "Testing"
+    ],
+    "description": "Hands-on interactive lab exercises exploiting and defending against SQL Injection, Cross-Site Scripting (XSS), CSRF, and SSRF.",
+    "syllabus": [
+      "Web fundamentals and Burp Suite Community setup",
+      "SQL Injection: Discovery, Union attacks, and Blind SQLi",
+      "Cross-Site Scripting (XSS): Reflected, Stored, and DOM-based",
+      "Broken Access Control and Privilege Escalation",
+      "Writing professional security penetration reports"
+    ],
+    "link": "https://portswigger.net/web-security",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-25",
+    "name": "Microcontrollers & Embedded C with Raspberry Pi Pico",
+    "category": "Software Engineering",
+    "level": "Beginner",
+    "duration": "18 hours",
+    "durationWeeks": 4,
+    "isFree": true,
+    "price": "Free",
+    "provider": "Raspberry Pi Foundation",
+    "skillsCovered": [
+      "Microcontrollers",
+      "C/C++",
+      "Python",
+      "Linux"
+    ],
+    "description": "Learn embedded systems by programming the RP2040 microcontroller: GPIO pins, PWM motor control, I2C OLED displays, and sensors.",
+    "syllabus": [
+      "RP2040 Architecture, Pinout, and Breadboarding",
+      "Digital I/O: LEDs, Buttons, and Debouncing",
+      "Analog Inputs (ADC) and Pulse Width Modulation (PWM)",
+      "Interfacing Sensors via I2C and SPI",
+      "Building an autonomous robot rover"
+    ],
+    "link": "https://www.raspberrypi.com/documentation/microcontrollers/",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  },
+  {
+    "id": "crs-26",
+    "name": "Solidity & Smart Contract Security",
+    "category": "Cybersecurity",
+    "level": "Advanced",
+    "duration": "26 hours",
+    "durationWeeks": 5,
+    "isFree": true,
+    "price": "Free",
+    "provider": "Cyfrin Updraft",
+    "skillsCovered": [
+      "Solidity",
+      "Cybersecurity",
+      "Testing",
+      "JavaScript"
+    ],
+    "description": "Learn smart contract development and security auditing: EVM opcodes, re-entrancy attacks, flash loans, and Foundry unit testing.",
+    "syllabus": [
+      "Solidity Syntax, Storage layout, and Gas Optimization",
+      "Writing automated unit and fuzz tests with Foundry",
+      "Deconstructing major real-world DeFi exploits",
+      "Static analysis with Slither and Aderyn",
+      "Conducting formal security code audits"
+    ],
+    "link": "https://updraft.cyfrin.io/",
+    "featured": false,
+    "verified": false,
+    "lastVerified": "2026-11-10"
+  }
+]

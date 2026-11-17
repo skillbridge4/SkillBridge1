@@ -1,0 +1,1136 @@
+{
+  "generatedAt": "2026-11-10T18:54:35.489Z",
+  "total": 187,
+  "counts": {
+    "OK": 167,
+    "redirect": 14,
+    "4xx": 6,
+    "5xx": 0,
+    "timeout": 0,
+    "error": 0
+  },
+  "links": [
+    {
+      "url": "https://www.isro.gov.in/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.isro.gov.in/"
+    },
+    {
+      "url": "https://www.isro.gov.in/InternshipAndProjects.html",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.isro.gov.in/InternshipAndProjects.html"
+    },
+    {
+      "url": "https://pminternship.mca.gov.in/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://pminternship.mca.gov.in/"
+    },
+    {
+      "url": "https://summerofcode.withgoogle.com/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://summerofcode.withgoogle.com/"
+    },
+    {
+      "url": "https://www.ursc.gov.in/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.ursc.gov.in/"
+    },
+    {
+      "url": "https://www.ursc.gov.in/hrd/students.jsp",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.ursc.gov.in/hrd/students.jsp"
+    },
+    {
+      "url": "https://www.sac.gov.in/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.sac.gov.in/"
+    },
+    {
+      "url": "https://www.sac.gov.in/srtd",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.sac.gov.in/srtd"
+    },
+    {
+      "url": "https://www.mcf.gov.in/",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://www.mcf.gov.in/website/"
+    },
+    {
+      "url": "https://www.mcf.gov.in/website/Internship",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.mcf.gov.in/website/Internship"
+    },
+    {
+      "url": "https://www.vssc.gov.in/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.vssc.gov.in/"
+    },
+    {
+      "url": "https://www.vssc.gov.in/STUDENTS/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.vssc.gov.in/STUDENTS/"
+    },
+    {
+      "url": "https://www.iirs.gov.in/",
+      "status": "4xx",
+      "statusCode": 403,
+      "finalUrl": "https://www.iirs.gov.in/"
+    },
+    {
+      "url": "https://www.iirs.gov.in/content/external-student-internship",
+      "status": "4xx",
+      "statusCode": 403,
+      "finalUrl": "https://www.iirs.gov.in/content/external-student-internship"
+    },
+    {
+      "url": "https://www.lpsc.gov.in/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.lpsc.gov.in/"
+    },
+    {
+      "url": "https://www.lpsc.gov.in/Internship.html",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.lpsc.gov.in/Internship.html"
+    },
+    {
+      "url": "https://www.nrsc.gov.in/",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://www.nrsc.gov.in/nrscnew/"
+    },
+    {
+      "url": "https://www.nrsc.gov.in/nrscnew/Training_Student_Eligibility.php",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.nrsc.gov.in/nrscnew/Training_Student_Eligibility.php"
+    },
+    {
+      "url": "https://www.narl.gov.in/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.narl.gov.in/"
+    },
+    {
+      "url": "https://www.prl.res.in/prl-eng/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.prl.res.in/prl-eng/"
+    },
+    {
+      "url": "https://www.prl.res.in/prl-eng/opportunities/summer_internship_program",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.prl.res.in/prl-eng/opportunities/summer_internship_program"
+    },
+    {
+      "url": "https://www.shar.gov.in/",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://www.shar.gov.in/sdscshar/index.jsp"
+    },
+    {
+      "url": "https://www.shar.gov.in/sdscshar/internship.jsp",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.shar.gov.in/sdscshar/internship.jsp"
+    },
+    {
+      "url": "https://www.istrac.gov.in/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.istrac.gov.in/"
+    },
+    {
+      "url": "https://www.istrac.gov.in/Student_Internship.html",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.istrac.gov.in/Student_Internship.html"
+    },
+    {
+      "url": "https://cag.gov.in/",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://cag.gov.in/en"
+    },
+    {
+      "url": "https://cag.gov.in/en/student-internship-programme",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://cag.gov.in/en/student-internship-programme"
+    },
+    {
+      "url": "https://nhrc.nic.in/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://nhrc.nic.in/"
+    },
+    {
+      "url": "https://nhrc.nic.in/training-programmes/internship-programmes",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://nhrc.nic.in/training-programmes/internship-programmes"
+    },
+    {
+      "url": "https://nicsi.nic.in/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://nicsi.nic.in/"
+    },
+    {
+      "url": "https://nicsi.nic.in/nicsi/pdfs/internship/Internship_Notification_2026.pdf",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://nicsi.nic.in/nicsi/pdfs/internship/Internship_Notification_2026.pdf"
+    },
+    {
+      "url": "https://developers.google.com/open-source/gsoc/faq",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://developers.google.com/open-source/gsoc/faq"
+    },
+    {
+      "url": "https://vsscinternship.vssc.gov.in/HRDD_LOGIN",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://vsscinternship.vssc.gov.in/HRDD_LOGIN/"
+    },
+    {
+      "url": "https://www.lpsc.gov.in/projects.html",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.lpsc.gov.in/projects.html"
+    },
+    {
+      "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures"
+    },
+    {
+      "url": "https://web.dev/learn/design/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://web.dev/learn/design/"
+    },
+    {
+      "url": "https://scrimba.com/learn/learnreact",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://scrimba.com/learn/learnreact"
+    },
+    {
+      "url": "https://www.coursera.org/specializations/ui-ux-design",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.coursera.org/specializations/ui-ux-design"
+    },
+    {
+      "url": "https://pll.harvard.edu/course/cs50-introduction-computer-science",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://pll.harvard.edu/course/cs50-introduction-computer-science"
+    },
+    {
+      "url": "https://www.deeplearning.ai/courses/machine-learning-specialization/",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://www.deeplearning.ai/specializations/machine-learning"
+    },
+    {
+      "url": "https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs"
+    },
+    {
+      "url": "https://www.khanacademy.org/computing/computer-programming/sql",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.khanacademy.org/computing/computer-programming/sql"
+    },
+    {
+      "url": "https://www.freecodecamp.org/learn/",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://www.freecodecamp.org/learn"
+    },
+    {
+      "url": "https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://www.netacad.com/courses/introduction-to-cybersecurity"
+    },
+    {
+      "url": "https://www.udemy.com/course/docker-mastery/",
+      "status": "4xx",
+      "statusCode": 403,
+      "finalUrl": "https://www.udemy.com/course/docker-mastery/"
+    },
+    {
+      "url": "https://explore.skillbuilder.aws/",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://skillbuilder.aws/?showRedirectNotFoundBanner=true"
+    },
+    {
+      "url": "https://productschool.com/",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://productschool.com/"
+    },
+    {
+      "url": "https://academy.hubspot.com/courses/seo-training",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://academy.hubspot.com/courses/aeo-fundamentals-certification-en"
+    },
+    {
+      "url": "https://www.udemy.com/course/flutter-bootcamp-with-dart/",
+      "status": "4xx",
+      "statusCode": 403,
+      "finalUrl": "https://www.udemy.com/course/flutter-bootcamp-with-dart/"
+    },
+    {
+      "url": "https://pytorch.org/tutorials/",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://docs.pytorch.org/tutorials/"
+    },
+    {
+      "url": "https://www.interaction-design.org/courses/user-research-methods-and-best-practices",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://ixdf.org/courses/user-research-methods-and-best-practices"
+    },
+    {
+      "url": "https://www.edx.org/learn/linux/the-linux-foundation-introduction-to-linux",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.edx.org/learn/linux/the-linux-foundation-introduction-to-linux"
+    },
+    {
+      "url": "https://www.tableau.com/academic/students",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.tableau.com/academic/students"
+    },
+    {
+      "url": "https://www.hackingwithswift.com/100/swiftui",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.hackingwithswift.com/100/swiftui"
+    },
+    {
+      "url": "https://playwright.dev/docs/intro",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://playwright.dev/docs/intro"
+    },
+    {
+      "url": "https://grow.google/certificates/",
+      "status": "redirect",
+      "statusCode": 200,
+      "finalUrl": "https://grow.google/intl/en_in/certificates/"
+    },
+    {
+      "url": "https://portswigger.net/web-security",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://portswigger.net/web-security"
+    },
+    {
+      "url": "https://www.raspberrypi.com/documentation/microcontrollers/",
+      "status": "4xx",
+      "statusCode": 403,
+      "finalUrl": "https://www.raspberrypi.com/documentation/microcontrollers/"
+    },
+    {
+      "url": "https://updraft.cyfrin.io/",
+      "status": "4xx",
+      "statusCode": 429,
+      "finalUrl": "https://cyfrin.io/updraft"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+internship+search+students+India+Internshala",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=LinkedIn+internship+search+students+India+Internshala"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=Internshala+how+to+apply+internship+Hindi+official",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=Internshala+how+to+apply+internship+Hindi+official"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=how+to+find+internships+company+career+pages+Naukri+students+India",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=how+to+find+internships+company+career+pages+Naukri+students+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=PM+Internship+Scheme+official+how+to+apply+fake+internship+scam+Hindi",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=PM+Internship+Scheme+official+how+to+apply+fake+internship+scam+Hindi"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=ATS+friendly+resume+for+freshers+no+experience+students+India+English",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=ATS+friendly+resume+for+freshers+no+experience+students+India+English"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=fresher+resume+projects+section+Hindi+students",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=fresher+resume+projects+section+Hindi+students"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=one+page+CV+resume+mistakes+freshers+internship+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=one+page+CV+resume+mistakes+freshers+internship+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=how+to+write+cover+letter+internship+students+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=how+to+write+cover+letter+internship+students+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=cold+email+recruiter+internship+students+India+template",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=cold+email+recruiter+internship+students+India+template"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+recruiter+message+internship+Hindi+students",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=LinkedIn+recruiter+message+internship+Hindi+students"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+profile+optimization+students+internships+India+English",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=LinkedIn+profile+optimization+students+internships+India+English"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+headline+About+section+freshers+Hindi+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=LinkedIn+headline+About+section+freshers+Hindi+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=GitHub+profile+README+students+internship+recruiters",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=GitHub+profile+README+students+internship+recruiters"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=portfolio+website+for+students+internship+Hindi+CodeWithHarry",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=portfolio+website+for+students+internship+Hindi+CodeWithHarry"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=GitHub+Pages+portfolio+website+students+freeCodeCamp",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=GitHub+Pages+portfolio+website+students+freeCodeCamp"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=HR+interview+questions+answers+freshers+internship+India+English",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=HR+interview+questions+answers+freshers+internship+India+English"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=tell+me+about+yourself+students+interview+Hindi+freshers",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=tell+me+about+yourself+students+interview+Hindi+freshers"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=technical+interview+basics+internship+students+India+projects",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=technical+interview+basics+internship+students+India+projects"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=group+discussion+communication+skills+campus+placement+students+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=group+discussion+communication+skills+campus+placement+students+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=interview+body+language+confidence+freshers+Hindi+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=interview+body+language+confidence+freshers+Hindi+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=aptitude+preparation+roadmap+campus+placements+India+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=aptitude+preparation+roadmap+campus+placements+India+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=logical+reasoning+basics+off+campus+placement+Hindi+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=logical+reasoning+basics+off+campus+placement+Hindi+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=aptitude+test+practice+timed+placement+students+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=aptitude+test+practice+timed+placement+students+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=Striver+DSA+roadmap+internship+coding+test+playlist",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=Striver+DSA+roadmap+internship+coding+test+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=Love+Babbar+arrays+strings+interview+questions+Hindi",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=Love+Babbar+arrays+strings+interview+questions+Hindi"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=take+U+forward+sorting+searching+interview+problems",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=take+U+forward+sorting+searching+interview+problems"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=C+C%2B%2B+Java+Python+SQL+interview+questions+freshers+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=C+C%2B%2B+Java+Python+SQL+interview+questions+freshers+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=web+development+internship+interview+preparation+students+India",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=web+development+internship+interview+preparation+students+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=data+analyst+AI+internship+interview+preparation+students+India",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=data+analyst+AI+internship+interview+preparation+students+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=UI+UX+case+study+portfolio+internship+Hindi+students",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=UI+UX+case+study+portfolio+internship+Hindi+students"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=data+analyst+portfolio+projects+entry+level+students+India",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=data+analyst+portfolio+projects+entry+level+students+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=Kunal+Kushwaha+open+source+first+contribution+beginner",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=Kunal+Kushwaha+open+source+first+contribution+beginner"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=Google+Summer+of+Code+MLH+hackathon+beginner+students+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=Google+Summer+of+Code+MLH+hackathon+beginner+students+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=professional+email+writing+students+interns+English+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=professional+email+writing+students+interns+English+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=time+management+teamwork+internship+Hindi+students",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=time+management+teamwork+internship+Hindi+students"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=remote+work+etiquette+internship+report+writing+students",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=remote+work+etiquette+internship+report+writing+students"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=free+certifications+NPTEL+SWAYAM+Google+students+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=free+certifications+NPTEL+SWAYAM+Google+students+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=freeCodeCamp+free+certifications+learning+paths+students",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=freeCodeCamp+free+certifications+learning+paths+students"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=NPTEL+SWAYAM+free+courses+certificate+Hindi+students",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=NPTEL+SWAYAM+free+courses+certificate+Hindi+students"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=free+online+courses+certificates+official+Google+CS50+students",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=free+online+courses+certificates+official+Google+CS50+students"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+internship+job+alerts+students+India+how+to",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=LinkedIn+internship+job+alerts+students+India+how+to"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=Internshala+internship+apply+step+by+step+Hindi+official",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=Internshala+internship+apply+step+by+step+Hindi+official"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=find+internship+Naukri+company+career+pages+students+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=find+internship+Naukri+company+career+pages+students+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=PM+Internship+Scheme+eligibility+official+portal+fake+internship+offer+scam+Hindi",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=PM+Internship+Scheme+eligibility+official+portal+fake+internship+offer+scam+Hindi"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=resume+project+bullets+measurable+impact+freshers+internship+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=resume+project+bullets+measurable+impact+freshers+internship+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=ATS+friendly+resume+one+column+freshers+Hindi+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=ATS+friendly+resume+one+column+freshers+Hindi+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=tailor+student+resume+CV+internship+job+description+keywords",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=tailor+student+resume+CV+internship+job+description+keywords"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=resume+without+experience+students+internship+Hindi+projects",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=resume+without+experience+students+internship+Hindi+projects"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=internship+cover+letter+student+tailored+role+example+India",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=internship+cover+letter+student+tailored+role+example+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=cold+email+hiring+manager+internship+students+subject+line",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=cold+email+hiring+manager+internship+students+subject+line"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=recruiter+follow+up+after+internship+application+Hindi+students",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=recruiter+follow+up+after+internship+application+Hindi+students"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+Featured+section+student+projects+internship+profile",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=LinkedIn+Featured+section+student+projects+internship+profile"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+alumni+networking+students+internship+Hindi+India",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=LinkedIn+alumni+networking+students+internship+Hindi+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=LinkedIn+About+section+fresher+students+examples+India",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=LinkedIn+About+section+fresher+students+examples+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=GitHub+README+student+project+internship+portfolio+guide",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=GitHub+README+student+project+internship+portfolio+guide"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=GitHub+profile+pin+repositories+students+Hindi+internship",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=GitHub+profile+pin+repositories+students+Hindi+internship"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=GitHub+Pages+student+portfolio+deploy+guide+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=GitHub+Pages+student+portfolio+deploy+guide+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=STAR+method+interview+answers+freshers+students+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=STAR+method+interview+answers+freshers+students+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=mock+interview+internship+freshers+questions+Hindi+India+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=mock+interview+internship+freshers+questions+Hindi+India+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=explain+projects+technical+interview+students+internship+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=explain+projects+technical+interview+students+internship+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=spoken+English+communication+campus+interview+students+India+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=spoken+English+communication+campus+interview+students+India+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=quantitative+aptitude+percentages+ratio+averages+placement+Hindi+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=quantitative+aptitude+percentages+ratio+averages+placement+Hindi+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=logical+reasoning+syllogism+seating+arrangement+placement+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=logical+reasoning+syllogism+seating+arrangement+placement+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=weekly+aptitude+practice+plan+campus+placements+students",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=weekly+aptitude+practice+plan+campus+placements+students"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=arrays+two+pointers+sliding+window+internship+coding+interview+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=arrays+two+pointers+sliding+window+internship+coding+interview+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=string+coding+interview+problems+Hindi+students+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=string+coding+interview+problems+Hindi+students+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=C+C%2B%2B+interview+questions+freshers+internship+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=C+C%2B%2B+interview+questions+freshers+internship+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=Java+Python+SQL+interview+questions+freshers+students+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=Java+Python+SQL+interview+questions+freshers+students+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=HTML+CSS+JavaScript+web+development+internship+interview+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=HTML+CSS+JavaScript+web+development+internship+interview+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=data+analysis+Python+portfolio+project+AI+internship+Hindi+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=data+analysis+Python+portfolio+project+AI+internship+Hindi+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=Figma+UI+UX+case+study+portfolio+internship+students+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=Figma+UI+UX+case+study+portfolio+internship+students+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=SQL+data+analyst+internship+interview+fundamentals+playlist+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=SQL+data+analyst+internship+interview+fundamentals+playlist+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=first+open+source+contribution+Git+GitHub+beginner+playlist",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=first+open+source+contribution+Git+GitHub+beginner+playlist"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=student+hackathon+beginner+team+project+demo+Hindi+India",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=student+hackathon+beginner+team+project+demo+Hindi+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=Google+Summer+of+Code+beginner+contributor+proposal+India",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=Google+Summer+of+Code+beginner+contributor+proposal+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=professional+email+internship+mentor+students+examples+India",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=professional+email+internship+mentor+students+examples+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=time+management+remote+internship+students+Hindi+India",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=time+management+remote+internship+students+Hindi+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=internship+report+writing+format+students+India+English",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=internship+report+writing+format+students+India+English"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=NPTEL+course+selection+certificate+exam+requirements+India",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/results?search_query=NPTEL+course+selection+certificate+exam+requirements+India"
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=SWAYAM+Google+freeCodeCamp+free+learning+certificates+Hindi+students",
+      "status": "OK",
+      "statusCode": 204,
+      "finalUrl": "https://www.youtube.com/results?search_query=SWAYAM+Google+freeCodeCamp+free+learning+certificates+Hindi+students"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=3TqQF-YAlNg",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=3TqQF-YAlNg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=28XNEYJFgHc",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=28XNEYJFgHc"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=83t-d_taLHs",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=83t-d_taLHs"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=k5hCIpoaS2o",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=k5hCIpoaS2o"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Xcuu5-MuC74",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=Xcuu5-MuC74"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=18qMKn_RtMw",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=18qMKn_RtMw"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Lw1nqDvyuvY",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=Lw1nqDvyuvY"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=W-psjYBMqsk",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=W-psjYBMqsk"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=aXbHB7Lf35M",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=aXbHB7Lf35M"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=UJWysbZJSVE",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=UJWysbZJSVE"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=I_8222HOOQw",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=I_8222HOOQw"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Vzh9v2qYqp8",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=Vzh9v2qYqp8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=fyAWhw937Uw",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=fyAWhw937Uw"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=lzuiuRgwwrc",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=lzuiuRgwwrc"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=vLlU6w8dWfE",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=vLlU6w8dWfE"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_bDUwOlBO7g",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=_bDUwOlBO7g"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TNoNJYyZm3o",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=TNoNJYyZm3o"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=tn08E8NGAi8",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=tn08E8NGAi8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=rCt9DatF63I",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=rCt9DatF63I"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=gZcndpLTUdY",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=gZcndpLTUdY"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=rtVbdyMbjRI",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=rtVbdyMbjRI"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=c8RCFp6KIdA",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=c8RCFp6KIdA"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=PCWVi5pAa30",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=PCWVi5pAa30"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=7TR8XNFbHe4",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=7TR8XNFbHe4"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=AFh1-fqdaf4",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=AFh1-fqdaf4"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=nKK4QguTQc8",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=nKK4QguTQc8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=RWdNhJWwzSs",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=RWdNhJWwzSs"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=SwGebzPBkI4",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=SwGebzPBkI4"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=37E9ckMDdTk",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=37E9ckMDdTk"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=wvcQg43_V8U",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=wvcQg43_V8U"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=q8LsWowUPAw",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=q8LsWowUPAw"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=qKFBtCPwjgI",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=qKFBtCPwjgI"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=6mbwJ2xhgzM",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=6mbwJ2xhgzM"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=044MI9uH1c4",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=044MI9uH1c4"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=5PrZvPeUw60",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=5PrZvPeUw60"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TWjv4j1g02g",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=TWjv4j1g02g"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=viU_64adkEo",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=viU_64adkEo"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2do4WZ0e8UU",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=2do4WZ0e8UU"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=sPM2WiwA1us",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=sPM2WiwA1us"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=o6YzZvQfVqE",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=o6YzZvQfVqE"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TuyeNSPNKBE",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=TuyeNSPNKBE"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=dlyaPEG5nQI",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=dlyaPEG5nQI"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=6IcKAWGLyG8",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=6IcKAWGLyG8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=SxbDsuC-Ch4",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=SxbDsuC-Ch4"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=gaLHgUpOayQ",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=gaLHgUpOayQ"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=xBgsUi9r6sw",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=xBgsUi9r6sw"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Di8dTJt7-_8",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=Di8dTJt7-_8"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=1fZ0hTX-ut4",
+      "status": "OK",
+      "statusCode": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=1fZ0hTX-ut4"
+    }
+  ]
+}

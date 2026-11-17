@@ -1,0 +1,207 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+    function isAdmin() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+    function boundedString(value, maxLength) {
+      return value is string && value.size() <= maxLength;
+    }
+    function validCompany(data) {
+      return data.keys().hasAll([
+          'id', 'name', 'sector', 'type', 'city', 'state', 'website', 'careersUrl',
+          'logo', 'verified', 'lastVerified'
+        ])
+        && boundedString(data.id, 120)
+        && boundedString(data.name, 160)
+        && boundedString(data.sector, 120)
+        && data.type in ['MNC', 'Startup', 'PSU/Govt', 'Research', 'Program']
+        && (data.city == null || boundedString(data.city, 120))
+        && (data.state == null || boundedString(data.state, 120))
+        && (data.website == null || boundedString(data.website, 2048))
+        && (data.careersUrl == null || boundedString(data.careersUrl, 2048))
+        && (data.logo == null || boundedString(data.logo, 2048))
+        && data.verified is bool
+        && (data.lastVerified == null || boundedString(data.lastVerified, 10));
+    }
+    function validInternship(data) {
+      return data.keys().hasAll([
+          'id', 'title', 'companyId', 'companyName', 'field', 'skills',
+          'city', 'state', 'mode', 'durationMonths', 'stipendMin',
+          'stipendMax', 'isPaid', 'eligibility', 'companyType', 'applyUrl',
+          'source', 'verified', 'lastVerified', 'deadline', 'description',
+          'searchTokens'
+        ])
+        && boundedString(data.id, 120)
+        && boundedString(data.title, 200)
+        && boundedString(data.companyId, 120)
+        && boundedString(data.companyName, 160)
+        && boundedString(data.field, 120)
+        && data.field in [
+          'Software Engineering', 'Data & AI', 'Design', 'Marketing', 'Product',
+          'Cloud & DevOps', 'Cybersecurity', 'Core Engineering', 'Business & Finance',
+          'Research', 'Education'
+        ]
+        && data.skills is list
+        && data.skills.size() <= 40
+        && (data.city == null || boundedString(data.city, 120))
+        && (data.state == null || boundedString(data.state, 120))
+        && data.mode in ['Remote', 'Hybrid', 'On-site']
+        && (data.durationMonths == null
+          || data.durationMonths in [1, 2, 3, 4, 6, 12])
+        && (data.stipendMin == null || data.stipendMin is number)
+        && (data.stipendMax == null || data.stipendMax is number)
+        && (data.stipendMin == null || data.stipendMax == null || data.stipendMin <= data.stipendMax)
+        && (data.isPaid == null || data.isPaid is bool)
+        && data.companyType in ['MNC', 'Startup', 'PSU/Govt', 'Research', 'Program']
+        && data.eligibility in [
+          'Any student', 'Undergraduate', 'Graduate', 'Recent graduate', 'School student'
+        ]
+        && (data.applyUrl == null || boundedString(data.applyUrl, 2048))
+        && (data.source == null || boundedString(data.source, 2048))
+        && data.verified is bool
+        && (data.lastVerified == null || boundedString(data.lastVerified, 10))
+        && (data.deadline == null || boundedString(data.deadline, 10))
+        && boundedString(data.description, 4000)
+        && data.searchTokens is list
+        && data.searchTokens.size() <= 100;
+    }
+
+    match /companies/{companyId} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+        && request.resource.data.id == companyId
+        && validCompany(request.resource.data);
+      allow delete: if isAdmin();
+    }
+    match /internships/{internshipId} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+        && request.resource.data.id == internshipId
+        && validInternship(request.resource.data);
+      allow delete: if isAdmin();
+    }
+    function validCourse(data) {
+      return data.keys().hasAll(['id', 'name', 'category', 'level', 'link', 'verified', 'lastVerified'])
+        && boundedString(data.id, 120)
+        && boundedString(data.name, 240)
+        && data.category in [
+          'Frontend Development', 'UI/UX Design', 'Computer Science',
+          'Data Science & AI', 'Backend Development', 'Software Engineering',
+          'Cybersecurity', 'Cloud & DevOps', 'Product Management', 'Marketing',
+          'Mobile Development', 'Career & Soft Skills'
+        ]
+        && data.level in ['Beginner', 'Intermediate', 'Advanced']
+        && (data.link == null || boundedString(data.link, 2048))
+        && data.verified is bool
+        && (data.lastVerified == null || boundedString(data.lastVerified, 10))
+        && (!('skillsCovered' in data)
+          || (data.skillsCovered is list && data.skillsCovered.size() <= 40));
+    }
+    function validVideo(data) {
+      return data.keys().hasAll([
+          'id', 'title', 'topic', 'field', 'level', 'language', 'url',
+          'verified', 'lastVerified'
+        ])
+        && boundedString(data.id, 120)
+        && boundedString(data.title, 240)
+        && data.topic in [
+          'Finding internships', 'Resume & CV', 'Cover letters & outreach',
+          'LinkedIn & personal brand', 'GitHub & portfolio', 'Interview preparation',
+          'Aptitude & reasoning', 'DSA & coding tests', 'Role-specific preparation',
+          'Open source & hackathons', 'Workplace skills', 'Free certifications'
+        ]
+        && boundedString(data.field, 120)
+        && data.level in ['Beginner', 'Intermediate', 'Advanced']
+        && data.language in ['English', 'Hindi', 'Other']
+        && boundedString(data.url, 2048)
+        && data.verified is bool
+        && boundedString(data.lastVerified, 10);
+    }
+    match /courses/{courseId} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+        && request.resource.data.id == courseId
+        && validCourse(request.resource.data);
+      allow delete: if isAdmin();
+    }
+    match /videos/{videoId} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+        && request.resource.data.id == videoId
+        && validVideo(request.resource.data);
+      allow delete: if isAdmin();
+    }
+    match /admins/{uid} {
+      allow read: if isOwner(uid);
+      allow write: if false;
+    }
+    match /certificates/{certId} {
+      allow read: if signedIn() && resource.data.uid == request.auth.uid;
+      allow create, update, delete: if false;
+    }
+    match /pathCourseDeclarations/{declarationId} {
+      allow read, write: if false;
+    }
+    match /pathQuizLedgers/{ledgerId} {
+      allow read, write: if false;
+    }
+    match /pathQuizAttempts/{attemptId} {
+      allow read, write: if false;
+    }
+    match /pathQuizResults/{resultId} {
+      allow read, write: if false;
+    }
+    match /apiRateLimits/{rateLimitId} {
+      allow read, write: if false;
+    }
+    match /certificateSettings/{uid} {
+      allow read, write: if false;
+    }
+    match /users/{uid} {
+      allow read, delete: if isOwner(uid);
+      allow create, update: if isOwner(uid)
+        && request.resource.data.keys().size() <= 20
+        && request.resource.data.keys().hasOnly([
+          'uid', 'profile', 'name', 'email', 'photoURL', 'headline', 'city', 'state',
+          'bio', 'skills', 'interests', 'bookmarks', 'applications',
+          'watchedVideos', 'completedCourses', 'selectedSkills', 'createdAt', 'updatedAt'
+        ])
+        && (!('uid' in request.resource.data) || request.resource.data.uid == uid)
+        && (!('name' in request.resource.data) || boundedString(request.resource.data.name, 120))
+        && (!('email' in request.resource.data) || boundedString(request.resource.data.email, 254))
+        && (!('bio' in request.resource.data) || boundedString(request.resource.data.bio, 2000))
+        && (!('skills' in request.resource.data)
+          || (request.resource.data.skills is list && request.resource.data.skills.size() <= 100))
+        && (!('profile' in request.resource.data)
+          || (request.resource.data.profile is map && request.resource.data.profile.keys().size() <= 20))
+        && (!('bookmarks' in request.resource.data)
+          || (request.resource.data.bookmarks is list && request.resource.data.bookmarks.size() <= 1000))
+        && (!('applications' in request.resource.data)
+          || (request.resource.data.applications is list && request.resource.data.applications.size() <= 1000))
+        && (!('watchedVideos' in request.resource.data)
+          || (request.resource.data.watchedVideos is list && request.resource.data.watchedVideos.size() <= 1000))
+        && (!('completedCourses' in request.resource.data)
+          || (request.resource.data.completedCourses is list && request.resource.data.completedCourses.size() <= 1000))
+        && (!('selectedSkills' in request.resource.data)
+          || (request.resource.data.selectedSkills is list && request.resource.data.selectedSkills.size() <= 100))
+      match /{userDocument=**} {
+        allow read, delete: if isOwner(uid);
+        allow create, update: if isOwner(uid)
+          && request.resource.data.keys().size() <= 20;
+      }
+      match /aiGuidance/{documentId} {
+        allow read, delete: if isOwner(uid);
+        allow create, update: if isOwner(uid)
+          && request.resource.data.keys().size() <= 20;
+      }
+    }
+  }
+}
