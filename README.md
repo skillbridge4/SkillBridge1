@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SkillBridge - Youth Skill Development and Internship Finder
 
 SkillBridge is a youth skill development and internship finder with a local-first PWA, Firestore catalog services, authentication helpers, and an application tracker.
@@ -310,3 +311,7 @@ Firebase project.
 - `scripts/validate-data.mjs`, `build-search-tokens.mjs`, `seed.mjs`, `check-links.mjs`, `check-videos.mjs`: data validation and maintenance.
 
 Catalog additions still needing official-site review are listed in the data files by `verified: false` and `lastVerified`. No stipend, opening, deadline, eligibility, or official company URL is inferred from missing data.
+=======
+# skillbridge
+The Skill Development and Internship Finder App helps students improve their skills through online training, practical assessments, and learning resources. It connects students with suitable internships and job opportunities based on their skills and interests, helping them gain industry experience, build confidence, and achieve career growth.
+>>>>>>> origin/main
