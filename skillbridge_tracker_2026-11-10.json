@@ -1,0 +1,29 @@
+[
+  {
+    "id": "app-seed-1",
+    "internshipId": "int-01",
+    "status": "Saved",
+    "appliedDate": "",
+    "interviewDate": "",
+    "notes": "Need to review Next.js App Router documentation before applying.",
+    "updatedAt": "2026-11-06T10:00:00.000Z"
+  },
+  {
+    "id": "app-seed-2",
+    "internshipId": "int-02",
+    "status": "Applied",
+    "appliedDate": "2026-11-08",
+    "interviewDate": "",
+    "notes": "Submitted portfolio with 3 case studies.",
+    "updatedAt": "2026-11-08T14:30:00.000Z"
+  },
+  {
+    "id": "app-seed-3",
+    "internshipId": "int-09",
+    "status": "Interview",
+    "appliedDate": "2026-11-02",
+    "interviewDate": "2026-11-18",
+    "notes": "Technical round scheduled with lead backend engineer.",
+    "updatedAt": "2026-11-09T09:15:00.000Z"
+  }
+]

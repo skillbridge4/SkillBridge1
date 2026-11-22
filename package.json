@@ -42,6 +42,7 @@
     "test:certificates": "node --test tests/certificate-utils.test.mjs"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.119.2",
     "dotenv": "^16.6.1",
     "express": "^5.1.0",
     "firebase": "^11.0.0",

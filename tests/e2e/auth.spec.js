@@ -50,6 +50,10 @@ test.describe('Firebase Authentication emulator', () => {
 
   test('email sign-in and wrong-password errors are shown clearly', async ({ page, request }) => {
     const email = uniqueEmail();
+    const consoleErrors = [];
+    page.on('console', message => {
+      if (message.type() === 'error') consoleErrors.push(message.text());
+    });
     await createEmulatorUser(request, email);
     await signIn(page, email);
     await expect(page.locator('#auth-action-btn')).toHaveText('Sign out');
@@ -61,6 +65,35 @@ test.describe('Firebase Authentication emulator', () => {
     await page.locator('#auth-password').fill('WrongPass123!');
     await page.locator('#auth-submit').click();
     await expect(page.locator('#auth-error')).toContainText('email or password is incorrect');
+    await expect.poll(() => consoleErrors.some(message => message.includes('auth/invalid-credential')))
+      .toBe(true);
+  });
+
+  test('registration service validates inputs before calling Firebase', async ({ page }) => {
+    await page.goto('/');
+    const codes = await page.evaluate(async () => {
+      const { registerWithEmail } = await import('/client/src/services/auth.js');
+      const invalidInputs = [
+        ['', 'student@example.test', 'StrongPass123!', 'StrongPass123!'],
+        ['Student', 'invalid-email', 'StrongPass123!', 'StrongPass123!'],
+        ['Student', 'student@example.test', 'short', 'short'],
+        ['Student', 'student@example.test', 'StrongPass123!', 'OtherPass123!']
+      ];
+      return Promise.all(invalidInputs.map(async args => {
+        try {
+          await registerWithEmail(...args);
+          return null;
+        } catch (error) {
+          return error.code;
+        }
+      }));
+    });
+    expect(codes).toEqual([
+      'auth/invalid-name',
+      'auth/invalid-email',
+      'auth/weak-password',
+      'auth/password-confirmation-mismatch'
+    ]);
   });
 
   test('weak password and confirmation mismatch are validated inline', async ({ page }) => {

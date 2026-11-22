@@ -33,6 +33,8 @@ const AUTH_ERROR_MESSAGES = {
   'weak-password': 'Choose a password with at least 8 characters.',
   'too-many-requests': 'Too many attempts. Wait a little while, then try again.',
   'network-request-failed': 'A network error interrupted sign-in. Check your connection and try again.',
+  'invalid-name': 'Enter a name of 1 to 120 characters.',
+  'password-confirmation-mismatch': 'Passwords do not match.',
   'popup-blocked': 'The Google sign-in pop-up was blocked. Continuing with full-page sign-in.',
   'popup-closed-by-user': 'The Google sign-in window closed before completing. Continuing with full-page sign-in.',
   'cancelled-popup-request': 'A Google sign-in request was cancelled. Continuing with full-page sign-in.',
@@ -54,11 +56,11 @@ export function getAuthErrorMessage(error) {
 }
 
 export function logAuthError(error) {
-  console.error('[Auth] Firebase operation failed:', getErrorCode(error));
+  console.error('[Auth] Firebase operation failed:', getErrorCode(error), error);
 }
 
-export function subscribeToAuth(callback) {
-  return onAuthStateChanged(requireAuth(), callback);
+export function subscribeToAuth(callback, onError) {
+  return onAuthStateChanged(requireAuth(), callback, onError);
 }
 
 export function getGoogleRedirectResult() {
@@ -101,13 +103,40 @@ export async function signInWithEmail(email, password) {
   return signInWithEmailAndPassword(requireAuth(), email, password);
 }
 
-export async function registerWithEmail(name, email, password) {
-  const credential = await createUserWithEmailAndPassword(requireAuth(), email, password);
+export async function registerWithEmail(name, email, password, confirmation) {
+  const normalizedName = typeof name === 'string' ? name.trim() : '';
+  const normalizedEmail = typeof email === 'string' ? email.trim() : '';
+  if (!normalizedName || normalizedName.length > 120) {
+    throw createAuthValidationError(
+      'auth/invalid-name',
+      AUTH_ERROR_MESSAGES['invalid-name']
+    );
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(normalizedEmail)) {
+    throw createAuthValidationError('auth/invalid-email', AUTH_ERROR_MESSAGES['invalid-email']);
+  }
+  if (typeof password !== 'string' || password.length < 8) {
+    throw createAuthValidationError('auth/weak-password', AUTH_ERROR_MESSAGES['weak-password']);
+  }
+  if (password !== confirmation) {
+    throw createAuthValidationError(
+      'auth/password-confirmation-mismatch',
+      AUTH_ERROR_MESSAGES['password-confirmation-mismatch']
+    );
+  }
+
+  const credential = await createUserWithEmailAndPassword(
+    requireAuth(),
+    normalizedEmail,
+    password
+  );
   try {
-    await updateProfile(credential.user, { displayName: name });
+    if (normalizedName) {
+      await updateProfile(credential.user, { displayName: normalizedName });
+    }
     await saveUserProfile(credential.user.uid, {
-      name,
-      email: credential.user.email || email
+      name: normalizedName,
+      email: credential.user.email || normalizedEmail
     });
   } catch (error) {
     const profileError = new Error(
@@ -116,7 +145,7 @@ export async function registerWithEmail(name, email, password) {
     profileError.code = error.code || 'auth/profile-save-failed';
     throw profileError;
   }
-  return credential;
+  return credential.user;
 }
 
 export async function sendPasswordReset(email) {
@@ -124,7 +153,14 @@ export async function sendPasswordReset(email) {
     await sendPasswordResetEmail(requireAuth(), email);
   } catch (error) {
     if (getErrorCode(error) !== 'auth/user-not-found') throw error;
+    logAuthError(error);
   }
+}
+
+function createAuthValidationError(code, message) {
+  const error = new Error(message);
+  error.code = code;
+  return error;
 }
 
 export async function signOutUser() {

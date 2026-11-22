@@ -518,6 +518,15 @@ async function initializeAuth() {
         initialStateReceived = true;
         resolveInitialState();
       }
+    }, error => {
+      state.authStatus = 'error';
+      updateAuthPresentation();
+      logAuthError(error);
+      showToast(getAuthErrorMessage(error), 'danger');
+      if (!initialStateReceived) {
+        initialStateReceived = true;
+        resolveInitialState();
+      }
     });
     await initialState;
     if (redirectError) showLoginModal({ initialError: getAuthErrorMessage(redirectError) });
@@ -786,7 +795,8 @@ function showLoginModal({ initialError = '', triggerElement = null } = {}) {
     setAuthRequestInProgress(true, 'auth-forgot-password');
     try {
       if (form.dataset.mode === 'register') {
-        await registerWithEmail(name, email, password);
+        const confirmation = form.querySelector('#auth-password-confirm').value;
+        await registerWithEmail(name, email, password, confirmation);
       } else {
         await signInWithEmail(email, password);
       }
